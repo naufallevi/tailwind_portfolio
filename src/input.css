@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+  --color-body: #d0ddd0;
+  --color-primary: #727d73;
+  --color-dark: #1e2939;
+  --shadow-light: 4px 4px 0 rgba(0, 0, 0, 0.8);
+  --breakpoint-2xl: 1320px;
+}
+
+@layer components {
+  .smooth-transition {
+    @apply transition duration-300 ease-in-out;
+  }
+
+  .skill-item {
+    @apply px-3 py-1 bg-green-50 border-2 border-gray-400 shadow-md shadow-black/30 rounded-full text-gray-500 grayscale-80 flex items-center hover:-translate-y-0.5 hover:grayscale-0 hover:text-dark hover:border-green-600;
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding: --spacing(4);
+}
