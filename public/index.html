@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <!-- FONTS GOOGLE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
     <!-- DEVICON -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <!-- ALPINEJS -->
@@ -44,6 +45,9 @@
                 </li>
                 <li class="group nav-item">
                   <a href="#projects" class="nav-link smooth-transition">Projects</a>
+                </li>
+                <li class="group nav-item">
+                  <a href="#journeys" class="nav-link smooth-transition">Journeys</a>
                 </li>
                 <li class="group nav-item">
                   <a href="#blog" class="nav-link smooth-transition">Blog</a>
@@ -93,14 +97,14 @@
     <!-- HERO END -->
 
     <!-- ABOUT -->
-    <section id="about" class="pt-25">
+    <section id="about" class="pt-25 pb-15">
       <div class="container">
         <div class="flex flex-wrap">
-          <h1 class="w-full text-3xl font-bold text-black mb-8 text-center lg:text-4xl">About <span class="text-green-600">Me</span></h1>
+          <h1 class="w-full text-3xl font-bold mb-10 text-center lg:text-4xl">About <span class="text-green-600">Me</span></h1>
           <div class="w-full px-4 lg:w-1/2 text-center">
             <h2 class="text-2xl font-medium text-green2 mb-5 lg:text-3xl">Honestly, I love the world of web development 😊</h2>
-            <p class="text-base font-medium text-gray-600 max-w-xl mb-5 lg:text-lg">
-              I am a graduate of Information Technology with experience in developing website-based information systems. I am skilled in PHP and JavaScript programming languages, as well as frameworks such as CodeIgniter and Laravel. I am
+            <p class="text-base font-medium text-gray-600 max-w-xl mx-auto mb-5 lg:text-lg">
+              I am a graduate of Information Technology with experience in developing website based information systems. I am skilled in PHP and JavaScript programming languages, as well as frameworks such as CodeIgniter and Laravel. I am
               accustomed to handling projects from the planning and requirements analysis stages to implementation and evaluation. I am experienced in working in teams or individually to develop and contribute.
             </p>
           </div>
@@ -144,47 +148,142 @@
     <!-- SERVICES END -->
 
     <!-- PROJECTS -->
-    <section id="projects" class="pt-36 pb-15">
+    <section id="projects" class="pt-25 pb-15">
       <div class="container">
         <div class="w-full px-4">
-          <div class="max-w-xl mx-auto text-center mb-16">
+          <div class="max-w-xl mx-auto text-center mb-10">
             <h1 class="text-3xl font-bold text-black mb-3 lg:text-4xl">Project <span class="text-green-600">Completed</span></h1>
             <h3 class="text-xl font-light text-gray-600 lg:text-2xl">A featured project that uses multiple tech stacks</h3>
           </div>
-        </div>
-
-        <div x-data="projectList" class="w-full px-4 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          <template x-for="item in projects" :key="item.id">
-            <div class="card-project group smooth-transition">
-              <div class="relative rounded-lg aspect-video overflow-hidden">
-                <img :src="item.image" :alt="item.title" class="card-img" />
-                <div class="img-overlay smooth-transition">
-                  <a :href="item.repoLink" class="btn-card"><i class="fa-solid fa-link me-1"></i>Repo</a>
+          <div x-data="projectList" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <template x-for="item in projects" :key="item.id">
+              <div class="card-project group smooth-transition">
+                <div class="relative aspect-video overflow-hidden">
+                  <img :src="item.image" :alt="item.title" class="card-img" />
+                  <div class="img-overlay smooth-transition">
+                    <a :href="item.repoLink" class="btn-card-project"><i class="fa-solid fa-link me-1"></i>Repo</a>
+                  </div>
+                </div>
+                <div class="p-4 flex flex-col flex-1">
+                  <h3 class="text-lg font-semibold text-green2 mb-1 group-hover:text-green-600 leading-tight smooth-transition" x-text="item.title"></h3>
+                  <p class="text-xs text-gray-600 mb-4 line-clamp-3 leading-relaxed" x-text="item.desc"></p>
+                  <div class="mt-auto border-t-2 border-gray-300 py-4 flex flex-wrap gap-1">
+                    <template x-for="tech in item.techs">
+                      <span class="tech-info smooth-transition" x-text="tech"></span>
+                    </template>
+                  </div>
                 </div>
               </div>
-              <div class="pt-4 px-1 mb-4">
-                <h3 class="text-lg font-semibold text-green2 mb-1 group-hover:text-green-600" x-text="item.title"></h3>
-                <p class="text-xs text-gray-600" x-text="item.desc"></p>
-                <div class="w-[80%] h-[0.5px] my-3 bg-gray-300 rounded-full mx-auto"></div>
-                <template x-for="tech in item.techs">
-                  <span class="tech-info" x-text="tech"></span>
-                </template>
-              </div>
-            </div>
-          </template>
+            </template>
+          </div>
         </div>
       </div>
     </section>
     <!-- PROJECTS END -->
+
+    <!-- JOURNEY -->
+    <section id="journeys" class="pt-25 pb-15 bg-green2">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-15">
+            <h2 class="text-lg font-semibold text-gray-100 mb-2 uppercase lg:text-xl">My Journey</h2>
+            <h1 class="text-3xl font-bold text-white mb-3 lg:text-4xl">Study & Work <span class="text-green-600">Experience</span></h1>
+            <h3 class="text-xl font-light text-gray-400 lg:text-2xl">A journey through my education and professional growth</h3>
+          </div>
+
+          <div x-data="journeyList" class="font-space-grotesk flex flex-col gap-10">
+            <template x-for="item in studies" :key="item.id">
+              <div class="card-studies smooth-transition group">
+                <div class="date-studies smooth-transition" x-text="item.date"></div>
+                <div class="flex flex-col gap-4 items-start sm:flex-row">
+                  <div class="w-14 aspect-square bg-green-300 border-2 flex justify-center items-center shrink-0">
+                    <span class="text-2xl font-bold" x-text="item.id"></span>
+                  </div>
+                  <div class="w-full space-y-2 px-2">
+                    <h1 class="text-2xl font-bold mb-2 leading-none" x-text="item.title"></h1>
+                    <p class="text-xl text-black/70 font-medium" x-text="item.desc"></p>
+                    <div class="w-full mt-3 border-t-2 border-black/30 py-4 flex flex-wrap gap-2">
+                      <template x-for="tech in item.techs">
+                        <span class="tech-studies smooth-transition" x-text="tech"></span>
+                      </template>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
+            <div class="my-2"></div>
+            <template x-for="item in works">
+              <div class="card-works smooth-transition group">
+                <div class="date-works smooth-transition" x-text="item.date"></div>
+                <div class="flex flex-col gap-4 items-start sm:flex-row">
+                  <div class="w-14 aspect-square bg-green-50 border-2 flex justify-center items-center shrink-0">
+                    <span class="text-2xl font-bold" x-text="item.id"></span>
+                  </div>
+                  <div class="w-full space-y-2 px-2">
+                    <h1 class="text-2xl font-bold mb-2 leading-none" x-text="item.title"></h1>
+                    <p class="text-xl text-black/70 font-medium" x-text="item.job"></p>
+                    <p class="text-sm font-medium border-s-4 ps-3 my-3 py-2 bg-white/50" x-text="item.desc"></p>
+                    <div class="w-full mt-3 border-t-2 border-black/30 py-4 flex flex-wrap gap-2">
+                      <template x-for="tech in item.techs">
+                        <span class="tech-works smooth-transition" x-text="tech"></span>
+                      </template>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- JOURNEY END -->
+
+    <!-- BLOG -->
+    <section id="blog" class="pt-25 pb-15 bg-gray-200">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-10">
+            <h1 class="text-3xl font-bold lg:text-4xl">My <span class="text-green-600">Blog</span></h1>
+            <h3 class="text-xl font-light text-gray-400 lg:text-2xl">Thoughts, stories, and experiences worth sharing.</h3>
+          </div>
+
+          <div class="font-space-grotesk grid gap-10 md:grid-cols-2 lg:grid-cols-3" x-data="blogMedium()" x-init="fetchPosts()">
+            <!-- LOADING DATA -->
+            <div x-show="posts.length === 0" class="bg-gray-300 text-black text-center p-10 rounded-md animate-pulse">Loading articles...</div>
+
+            <template x-for="post in posts" :key="post.link">
+              <article class="card-blog smooth-transition group">
+                <div class="relative h-50 overflow-hidden border-b-4 border-black">
+                  <img :src="post.image" :alt="post.title" loading="lazy" class="h-full w-full object-cover group-hover:scale-105 smooth-transition" />
+                  <!-- <span class="absolute top-4 right-4 bg-yellow-400 border-2 border-black px-3 py-1 text-xs font-black uppercase tracking-wider shadow-card-sm">Category</span> -->
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                  <time class="text-sm mb-2 font-bold text-gray-500" x-text="post.date"></time>
+                  <h3 class="text-2xl font-bold leading-tight line-clamp-3 mb-6" x-text="post.title"></h3>
+                  <a :href="post.link" target="_blank" class="btn-card bg-green-300 hover:bg-green-500 smooth-transition">Read More<i class="fa-solid fa-arrow-right ms-1"></i></a>
+                </div>
+              </article>
+            </template>
+          </div>
+          <div class="mt-15 text-center">
+            <a href="https://medium.com/@mrshintaro" target="_blank" class="bg-yellow-500 hover:bg-yellow-600 btn smooth-transition"><i class="fa-brands fa-medium fa-xl me-1"></i>View more on Medium </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- BLOG END -->
 
     <div class="mb-200"></div>
 
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/bc9983641e.js" crossorigin="anonymous"></script>
 
-    <script src="projects.js"></script>
+    <!-- ALPINEJS ASSETS -->
+    <script src="js/projects.js"></script>
+    <script src="js/journey.js"></script>
+    <script src="js/blog.js"></script>
 
     <!-- SCRIPT JS -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

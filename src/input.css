@@ -2,12 +2,19 @@
 
 @theme {
   --font-poppins: "Poppins", sans-serif;
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+
   --color-body: #d0ddd0;
   --color-green1: #727d73;
   --color-green2: #3b4953;
   --color-green3: #5a7863;
+
   --shadow-light: 4px 4px 0 rgba(0, 0, 0, 0.8);
   --shadow-navbar: 0px 4px 20px;
+  --shadow-card: 6px 6px 0px;
+  --shadow-card-sm: 2px 2px 0px;
+  --shadow-button: 4px 4px 0px;
+
   --breakpoint-2xl: 1320px;
   --breakpoint-mobile-l: 425px;
   --breakpoint-mobile-m: 375px;
@@ -16,13 +23,24 @@
 
 @layer components {
   .smooth-transition {
-    @apply transition duration-300 ease-in-out;
+    @apply transition-all duration-300 ease-in-out;
   }
 
-  .skill-item {
+  .btn {
+    @apply inline-flex justify-center items-center px-6 py-3 rounded-md border-2 border-black shadow-none text-base tracking-widest font-bold text-center hover:shadow-button hover:-translate-1
+  }
+
+  .btn-card {
+    @apply mt-auto px-6 py-3 rounded-md border-2 border-black shadow-button text-sm tracking-widest font-bold text-center hover:shadow-none hover:translate-px
+  }
+
+  /* ========== ABOUT ========== */
+    .skill-item {
     @apply px-3 py-1 bg-green-50 border-2 border-gray-400 shadow-md shadow-black/30 rounded-full text-gray-500 grayscale-80 flex items-center hover:-translate-y-0.5 hover:grayscale-0 hover:text-green2 hover:border-green-600;
   }
-
+  /* ========== ABOUT END ========== */
+  
+  
   /* ========== NAVBAR ========== */
   .navbar {
     @apply w-full py-3 top-0 left-0 flex items-center z-50;
@@ -100,7 +118,7 @@
 
   /* ========== PROJECTS ========== */
   .card-project {
-    @apply w-full bg-gray-100/75 p-4 shadow-md rounded-xl flex flex-col justify-center hover:shadow-xl hover:shadow-green-600/20;
+    @apply bg-white shadow-md rounded-xl overflow-hidden flex flex-col hover:shadow-xl hover:shadow-green-600/20;
   }
 
   .card-img {
@@ -111,12 +129,45 @@
     @apply absolute inset-0 bg-green-900/10 group-hover:bg-transparent flex justify-end items-end p-3 delay-300;
   }
 
-  .btn-card {
-    @apply text-sm px-2 py-1 bg-green-600 rounded-full text-white translate-x-50 group-hover:translate-x-0 transition duration-700 ease-in-out;
+  .btn-card-project {
+    @apply text-sm px-2 py-1 bg-green-600 rounded-full text-white translate-x-50 group-hover:translate-x-0 hover:bg-green-800 transition duration-700 ease-in-out;
   }
 
   .tech-info {
-    @apply inline-block m-1 ms-0 py-1 px-2 text-xs text-gray-500 bg-gray-300 rounded-lg group-hover:text-green2;
+    @apply py-1 px-2 text-xs text-gray-500 bg-gray-300 rounded-lg group-hover:text-green2
+    group-hover:font-medium;
+  }
+  /* ========== PROJECTS END ========== */
+
+  /* ========== JOURNEY ========== */
+  .card-studies {
+    @apply relative p-6 bg-gray-200 border-4 border-black shadow-card shadow-black rounded-md hover:bg-gray-300 hover:translate-1 hover:shadow-none;
+  }
+
+  .date-studies {
+    @apply absolute bg-green-300 -top-5 -right-5 px-4 py-1 border-2 shadow-card-sm shadow-black/50 group-hover:rotate-3;
+  }
+
+  .tech-studies {
+    @apply text-xs font-bold uppercase bg-green-300 px-3 py-1 border-2 border-black hover:bg-green-950 hover:text-white;
+  }
+
+  .card-works {
+    @apply relative p-6 bg-yellow-400 border-4 border-black shadow-card shadow-black rounded-md hover:bg-yellow-300 hover:translate-1 hover:shadow-none;
+  }
+
+  .date-works {
+    @apply absolute bg-black text-white -top-5 -right-5 px-4 py-1 border-2 shadow-card-sm shadow-black/50 group-hover:rotate-3;
+  }
+
+  .tech-works {
+    @apply text-xs font-bold uppercase bg-green-50 px-3 py-1 border-2 border-black hover:bg-black hover:text-white;
+  }
+  /* ========== JOURNEY END ========== */
+
+  /* ========== PROJECTS ========== */
+  .card-blog {
+    @apply bg-gray-200 border-4 shadow-card rounded-md overflow-hidden flex flex-col hover:shadow-none hover:translate-1;
   }
   /* ========== PROJECTS END ========== */
 }
