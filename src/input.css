@@ -11,9 +11,12 @@
 
   --shadow-light: 4px 4px 0 rgba(0, 0, 0, 0.8);
   --shadow-navbar: 0px 4px 20px;
+  --shadow-container: 8px 8px 0px;
   --shadow-card: 6px 6px 0px;
   --shadow-card-sm: 2px 2px 0px;
+  --shadow-card-md: 3px 3px 0px;
   --shadow-button: 4px 4px 0px;
+  --shadow-input: 5px 5px 0px;
 
   --breakpoint-2xl: 1320px;
   --breakpoint-mobile-l: 425px;
@@ -27,13 +30,28 @@
   }
 
   .btn {
-    @apply inline-flex justify-center items-center px-6 py-3 rounded-md border-2 border-black shadow-none text-base tracking-widest font-bold text-center hover:shadow-button hover:-translate-1
+    @apply inline-flex justify-center items-center px-6 py-3 rounded-md border-2 border-black shadow-none text-xs tracking-widest font-bold text-center hover:shadow-button hover:-translate-1 sm:text-base;
   }
 
   .btn-card {
     @apply mt-auto px-6 py-3 rounded-md border-2 border-black shadow-button text-sm tracking-widest font-bold text-center hover:shadow-none hover:translate-px
   }
 
+  .form-label {
+    @apply block mb-2 font-bold border-b-2 border-green-500 uppercase w-max lg:text-lg;
+  }
+
+  .form-required {
+    @apply after:absolute after:content-['*'] after:text-red-500 after:ml-0.5
+  }
+
+  .form-input {
+    @apply w-full bg-yellow-500/40 p-3 font-medium rounded-md border-2 border-black focus:shadow-input focus:outline-none focus:bg-white focus:placeholder-transparent;
+  }
+
+  .badge-socmed {
+    @apply inline-flex justify-center px-3 py-5 items-center bg-white rounded-md border-2 shadow-none shadow-black hover:shadow-card-md hover:-translate-1 lg:px-0 lg:py-1 lg:min-w-40;
+  }
   /* ========== ABOUT ========== */
     .skill-item {
     @apply px-3 py-1 bg-green-50 border-2 border-gray-400 shadow-md shadow-black/30 rounded-full text-gray-500 grayscale-80 flex items-center hover:-translate-y-0.5 hover:grayscale-0 hover:text-green2 hover:border-green-600;
