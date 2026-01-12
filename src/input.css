@@ -39,11 +39,6 @@
   .btn-card {
     @apply mt-auto px-6 py-3 rounded-md border-2 border-black shadow-c-lg text-sm tracking-widest font-bold text-center hover:shadow-none hover:translate-px sm:text-base;
   }
-  /* ========== ABOUT ========== */
-  .skill-item {
-    @apply px-3 py-1 bg-green-50 border-2 border-gray-400 shadow-md shadow-black/30 rounded-full text-gray-500 grayscale-80 flex items-center hover:-translate-y-0.5 hover:grayscale-0 hover:text-green2 hover:border-green-600;
-  }
-  /* ========== ABOUT END ========== */
 
   /* ========== NAVBAR ========== */
   .navbar {
@@ -119,6 +114,12 @@
   }
   /* ---------- NAVMENU END */
   /* ========== NAVBAR END ========== */
+
+  /* ========== ABOUT ========== */
+  .skill-item {
+    @apply inline-flex justify-center items-center px-3 py-1 bg-gray-100 border-2 shadow-none rounded-md text-xs font-medium hover:shadow-c-md hover:-translate-1  md:text-sm;
+  }
+  /* ========== ABOUT END ========== */
 
   /* ========== SERVICES ========== */
   .card-services {
