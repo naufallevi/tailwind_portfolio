@@ -1,4 +1,4 @@
-<!-- BLOG BY VANILLA JS -->
+<!-- BLOG VANILLA JS -->
 <section class="max-w-4xl mx-auto py-10">
   <h2 class="text-3xl font-bold mb-6">Latest Articles</h2>
   <div id="blog" class="grid md:grid-cols-2 gap-6"></div>
@@ -37,3 +37,29 @@
       document.getElementById("blog").innerHTML = '<p class="text-gray-500">Failed to load articles.</p>';
     });
 </script>
+
+<!-- PROJECT CARD OLD -->
+<template x-for="item in projects" :key="item.id">
+  <div class="border-2 card-project group smooth-transition">
+    <div class="relative aspect-video overflow-hidden">
+      <img :src="item.image" :alt="item.title" class="card-img" />
+      <div class="img-overlay smooth-transition">
+        <a :href="item.repoLink" class="btn-card-project"><i class="fa-solid fa-link me-1"></i>Repo</a>
+      </div>
+    </div>
+    <div class="p-4 flex flex-col flex-1">
+      <h3 class="text-lg font-semibold text-green2 mb-1 group-hover:text-green-600 leading-tight smooth-transition" x-text="item.title"></h3>
+      <p class="text-xs text-gray-600 mb-4 line-clamp-3 leading-relaxed" x-text="item.desc"></p>
+      <div class="mt-auto border-t-2 border-gray-300 py-4 flex flex-wrap gap-1">
+        <template x-for="tech in item.techs">
+          <span class="tech-info smooth-transition" x-text="tech"></span>
+        </template>
+      </div>
+    </div>
+  </div>
+</template>
+
+/* ========== PROJECTS ========== */ .card-project { @apply bg-white shadow-md rounded-xl overflow-hidden flex flex-col hover:shadow-xl hover:shadow-green-600/20; } .card-img { @apply w-full h-full object-cover group-hover:scale-110
+transition duration-700 ease-in-out; } .img-overlay { @apply absolute inset-0 bg-green-900/10 group-hover:bg-transparent flex justify-end items-end p-3 delay-300; } .btn-card-project { @apply text-sm px-2 py-1 bg-green-600 rounded-full
+text-white translate-x-50 group-hover:translate-x-0 hover:bg-green-800 transition duration-700 ease-in-out; } .tech-info { @apply py-1 px-2 text-xs text-gray-500 bg-gray-300 rounded-lg group-hover:text-green2 group-hover:font-medium; } /*
+========== PROJECTS END ========== */

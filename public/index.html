@@ -6,7 +6,7 @@
     <title>Portfolio</title>
     <!-- FONTS GOOGLE -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet"
     />
     <!-- DEVICON -->
@@ -16,44 +16,45 @@
     <!-- TAILWIND OUTPUT -->
     <link rel="stylesheet" href="output.css" />
   </head>
+
   <body class="font-poppins bg-body">
     <!-- NAVBAR -->
-    <header id="navbar" class="navbar absolute bg-transparent smooth-transition">
+    <header id="navbar" class="navbar absolute bg-transparent smooth-transition-300">
       <div class="container">
         <div class="flex items-center justify-between relative">
           <div class="px-4">
             <a href="#home"><img src="images/logo-navbar.webp" alt="Logo MNP" class="w-30" /></a>
           </div>
           <div class="flex items-center px-4">
-            <button type="button" id="hamburger" class="hamburger smooth-transition lg:hidden">
-              <span class="hamburger-line smooth-transition"></span>
-              <span class="hamburger-line smooth-transition"></span>
-              <span class="hamburger-line smooth-transition"></span>
+            <button type="button" id="hamburger" class="hamburger smooth-transition-300 lg:hidden">
+              <span class="hamburger-line smooth-transition-300"></span>
+              <span class="hamburger-line smooth-transition-300"></span>
+              <span class="hamburger-line smooth-transition-300"></span>
             </button>
 
             <!-- <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-full w-full right-0 top-full mt-6"> -->
             <nav id="nav-menu" class="nav-menu opacity-0 lg:opacity-100">
               <ul class="block lg:flex">
                 <li class="group nav-item">
-                  <a href="#home" class="nav-link smooth-transition">Home</a>
+                  <a href="#home" class="nav-link smooth-transition-300">Home</a>
                 </li>
                 <li class="group nav-item">
-                  <a href="#about" class="nav-link smooth-transition">About</a>
+                  <a href="#about" class="nav-link smooth-transition-300">About</a>
                 </li>
-                <li class="group nav-item smooth-transition">
-                  <a href="#services" class="nav-link smooth-transition">Services</a>
-                </li>
-                <li class="group nav-item">
-                  <a href="#projects" class="nav-link smooth-transition">Projects</a>
+                <li class="group nav-item smooth-transition-300">
+                  <a href="#services" class="nav-link smooth-transition-300">Services</a>
                 </li>
                 <li class="group nav-item">
-                  <a href="#journeys" class="nav-link smooth-transition">Journeys</a>
+                  <a href="#projects" class="nav-link smooth-transition-300">Projects</a>
                 </li>
                 <li class="group nav-item">
-                  <a href="#blog" class="nav-link smooth-transition">Blog</a>
+                  <a href="#journeys" class="nav-link smooth-transition-300">Journeys</a>
                 </li>
                 <li class="group nav-item">
-                  <a href="#contact" class="nav-link smooth-transition">Contact</a>
+                  <a href="#blog" class="nav-link smooth-transition-300">Blog</a>
+                </li>
+                <li class="group nav-item">
+                  <a href="#contact" class="nav-link smooth-transition-300">Contact</a>
                 </li>
               </ul>
             </nav>
@@ -63,272 +64,344 @@
     </header>
     <!-- NAVBAR END -->
 
-    <!-- HERO -->
-    <section id="home" class="h-screen pt-20">
-      <div class="container h-full">
-        <div class="flex flex-wrap items-center h-full">
-          <div class="w-full self-center px-4 lg:w-1/2">
-            <h1 class="text-base font-semibold text-green1 md:text-xl">
-              Hi there!
-              <span class="block text-4xl text-green2 mb-5 lg:text-5xl"> I'm Naufallevi </span>
-            </h1>
-            <h2 class="font-medium text-lg text-gray-700 lg:text-2xl">Web Developer | Informatics Engineer</h2>
-            <p class="font-medium text-gray-600 mb-10">Hustle Loyalty Respect 👌</p>
-            <a href="#" class="inline-block text-base border-gray-400 border-2 p-2.5 bg-gray-300 hover:bg-green-600 hover:border-black hover:shadow-light rounded-lg smooth-transition">My Contact</a>
-          </div>
+    <main>
+      <!-- HERO -->
+      <section id="home" class="h-screen pt-20">
+        <div class="container h-full">
+          <div class="flex flex-wrap items-center h-full">
+            <div class="w-full self-center px-4 lg:w-1/2">
+              <h1 class="text-base font-semibold text-green1 md:text-xl">
+                Hi there!
+                <span class="block text-4xl text-green2 mb-5 lg:text-5xl"> I'm Naufallevi </span>
+              </h1>
+              <h2 class="font-medium text-lg text-gray-700 lg:text-2xl">Web Developer | Informatics Engineer</h2>
+              <p class="font-medium text-gray-600 mb-10">Hustle Loyalty Respect 👌</p>
+              <a href="#" class="inline-block text-base border-gray-400 border-2 p-2.5 bg-gray-300 hover:bg-green-600 hover:border-black hover:shadow-c-lg hover:shadow-black/80 rounded-lg smooth-transition-300">My Contact</a>
+            </div>
 
-          <div class="w-full self-center px-4 lg:w-1/2 lg:flex lg:justify-end">
-            <div class="relative mt-10">
-              <img src="images/hero-picture.webp" alt="My Pictures" class="max-w-full mx-auto -mt-10" />
-              <span class="absolute left-1/2 -translate-x-1/2 -z-10 scale-50 -bottom-10 mobile-m:scale-60 mobile-m:bottom-0 mobile-l:scale-80">
-                <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    fill="#008235"
-                    d="M53.3,-52.6C66.2,-40.4,71.7,-20.2,72,0.3C72.2,20.7,67.2,41.5,54.3,53.7C41.5,65.8,20.7,69.5,-0.8,70.2C-22.2,71,-44.5,68.9,-56.4,56.7C-68.4,44.5,-70,22.2,-67.8,2.3C-65.5,-17.7,-59.3,-35.4,-47.3,-47.6C-35.4,-59.8,-17.7,-66.6,1.3,-67.9C20.2,-69.1,40.4,-64.9,53.3,-52.6Z"
-                    transform="translate(100 100) scale(1.1)"
-                  />
-                </svg>
-              </span>
+            <div class="w-full self-center px-4 lg:w-1/2 lg:flex lg:justify-end">
+              <div class="relative mt-10">
+                <img src="images/hero-picture.webp" alt="My Pictures" class="max-w-full mx-auto -mt-10" />
+                <span class="absolute left-1/2 -translate-x-1/2 -z-10 scale-50 -bottom-10 mobile-m:scale-60 mobile-m:bottom-0 mobile-l:scale-80">
+                  <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill="#008235"
+                      d="M53.3,-52.6C66.2,-40.4,71.7,-20.2,72,0.3C72.2,20.7,67.2,41.5,54.3,53.7C41.5,65.8,20.7,69.5,-0.8,70.2C-22.2,71,-44.5,68.9,-56.4,56.7C-68.4,44.5,-70,22.2,-67.8,2.3C-65.5,-17.7,-59.3,-35.4,-47.3,-47.6C-35.4,-59.8,-17.7,-66.6,1.3,-67.9C20.2,-69.1,40.4,-64.9,53.3,-52.6Z"
+                      transform="translate(100 100) scale(1.1)"
+                    />
+                  </svg>
+                </span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- HERO END -->
+      </section>
+      <!-- HERO END -->
 
-    <!-- ABOUT -->
-    <section id="about" class="pt-25 pb-15">
-      <div class="container">
-        <div class="flex flex-wrap">
-          <h1 class="w-full text-3xl font-bold mb-10 text-center lg:text-4xl">About <span class="text-green-600">Me</span></h1>
-          <div class="w-full px-4 lg:w-1/2 text-center">
-            <h2 class="text-2xl font-medium text-green2 mb-5 lg:text-3xl">Honestly, I love the world of web development 😊</h2>
-            <p class="text-base font-medium text-gray-600 max-w-xl mx-auto mb-5 lg:text-lg">
-              I am a graduate of Information Technology with experience in developing website based information systems. I am skilled in PHP and JavaScript programming languages, as well as frameworks such as CodeIgniter and Laravel. I am
-              accustomed to handling projects from the planning and requirements analysis stages to implementation and evaluation. I am experienced in working in teams or individually to develop and contribute.
-            </p>
-          </div>
+      <!-- ABOUT -->
+      <section id="about" class="pt-25 pb-15">
+        <div class="container">
+          <div class="flex flex-wrap">
+            <h1 class="w-full text-3xl font-bold mb-10 text-center lg:text-4xl">About <span class="text-green-600">Me</span></h1>
+            <div class="w-full px-4 lg:w-1/2 text-center">
+              <h2 class="text-2xl font-medium text-green2 mb-5 lg:text-3xl">Honestly, I love the world of web development 😊</h2>
+              <p class="text-base font-medium text-gray-600 max-w-xl mx-auto mb-5 lg:text-lg">
+                I am a graduate of Information Technology with experience in developing website based information systems. I am skilled in PHP and JavaScript programming languages, as well as frameworks such as CodeIgniter and Laravel. I am
+                accustomed to handling projects from the planning and requirements analysis stages to implementation and evaluation. I am experienced in working in teams or individually to develop and contribute.
+              </p>
+            </div>
 
-          <div class="w-full px-4 lg:w-1/2 text-center">
-            <h3 class="text-xl font-semibold text-green3 uppercase mb-3 lg:text-2xl">My Skill</h3>
-            <p class="text-base font-medium text-gray-600 mb-5 lg:text-lg">Skills that grow from experience and curiosity.</p>
-            <div class="flex flex-wrap gap-4 justify-center items-center lg:max-w-2xl">
-              <span class="skill-item smooth-transition"><i class="devicon-html5-plain colored text-xl me-1.5"></i>HTML5</span>
-              <span class="skill-item smooth-transition"><i class="devicon-css3-plain colored text-xl me-1.5"></i>CSS3</span>
-              <span class="skill-item smooth-transition"><i class="devicon-tailwindcss-plain colored text-xl me-1.5"></i>TailwindCSS</span>
-              <span class="skill-item smooth-transition"><i class="devicon-bootstrap-plain colored text-xl me-1.5"></i>Bootstrap</span>
-              <span class="skill-item smooth-transition"><i class="devicon-javascript-plain colored text-xl me-1.5"></i>Javascript</span>
-              <span class="skill-item smooth-transition"><i class="devicon-mysql-plain colored text-xl me-1.5"></i>MySQL</span>
-              <span class="skill-item smooth-transition"><i class="devicon-codeigniter-plain colored text-xl me-1.5"></i>CodeIgniter</span>
-              <span class="skill-item smooth-transition"><i class="devicon-laravel-plain colored text-xl me-1.5"></i>Laravel</span>
-              <span class="skill-item smooth-transition"><i class="devicon-react-plain colored text-xl me-1.5"></i>React</span>
-              <span class="skill-item smooth-transition"><i class="devicon-git-plain colored text-xl me-1.5"></i>Git</span>
-              <span class="skill-item smooth-transition"><i class="devicon-canva-plain colored text-xl me-1.5"></i>Canva</span>
-              <span class="skill-item smooth-transition"><i class="fa-solid fa-file-word text-blue-600 text-xl me-1.5"></i>Word</span>
-              <span class="skill-item smooth-transition"><i class="fa-solid fa-file-powerpoint text-orange-600 text-xl me-1.5"></i>Powerpoint</span>
-              <span class="skill-item smooth-transition"><i class="fa-solid fa-file-excel text-green-600 text-xl me-1.5"></i>Excel</span>
+            <div class="w-full px-4 lg:w-1/2 text-center">
+              <h3 class="text-xl font-semibold text-green3 uppercase mb-3 lg:text-2xl">My Skill</h3>
+              <p class="text-base font-medium text-gray-600 mb-5 lg:text-lg">Skills that grow from experience and curiosity.</p>
+              <div class="flex flex-wrap gap-4 justify-center items-center lg:max-w-2xl">
+                <span class="skill-item smooth-transition-300"><i class="devicon-html5-plain colored text-xl me-1.5"></i>HTML5</span>
+                <span class="skill-item smooth-transition-300"><i class="devicon-css3-plain colored text-xl me-1.5"></i>CSS3</span>
+                <span class="skill-item smooth-transition-300"><i class="devicon-tailwindcss-plain colored text-xl me-1.5"></i>TailwindCSS</span>
+                <span class="skill-item smooth-transition-300"><i class="devicon-bootstrap-plain colored text-xl me-1.5"></i>Bootstrap</span>
+                <span class="skill-item smooth-transition-300"><i class="devicon-javascript-plain colored text-xl me-1.5"></i>Javascript</span>
+                <span class="skill-item smooth-transition-300"><i class="devicon-mysql-plain colored text-xl me-1.5"></i>MySQL</span>
+                <span class="skill-item smooth-transition-300"><i class="devicon-codeigniter-plain colored text-xl me-1.5"></i>CodeIgniter</span>
+                <span class="skill-item smooth-transition-300"><i class="devicon-laravel-plain colored text-xl me-1.5"></i>Laravel</span>
+                <span class="skill-item smooth-transition-300"><i class="devicon-react-plain colored text-xl me-1.5"></i>React</span>
+                <span class="skill-item smooth-transition-300"><i class="devicon-git-plain colored text-xl me-1.5"></i>Git</span>
+                <span class="skill-item smooth-transition-300"><i class="devicon-canva-plain colored text-xl me-1.5"></i>Canva</span>
+                <span class="skill-item smooth-transition-300"><i class="fa-solid fa-file-word text-blue-600 text-xl me-1.5"></i>Word</span>
+                <span class="skill-item smooth-transition-300"><i class="fa-solid fa-file-powerpoint text-orange-600 text-xl me-1.5"></i>Powerpoint</span>
+                <span class="skill-item smooth-transition-300"><i class="fa-solid fa-file-excel text-green-600 text-xl me-1.5"></i>Excel</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- ABOUT END -->
+      </section>
+      <!-- ABOUT END -->
 
-    <!-- SERVICES -->
-    <section id="services" class="pt-36 pb-15 bg-gray-100">
-      <div class="container">
-        <div class="w-full px-4">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus atque quas ducimus? Distinctio odio ex eligendi fugiat optio ipsam, dignissimos maiores aperiam repellat modi doloremque saepe, facere, reprehenderit quos. Iure
-          ex exercitationem saepe temporibus autem! Delectus dignissimos eos possimus doloribus, eligendi adipisci, et dolore cumque incidunt quo itaque! Incidunt sed rem nisi quam minima. Atque dolor magni ut minus, distinctio eum debitis
-          modi corrupti pariatur perspiciatis porro maxime aut doloribus laboriosam commodi reprehenderit veritatis iure. Debitis iste similique, non ex nihil, totam ratione tempora blanditiis quod magnam ab soluta quibusdam minus ducimus
-          sunt aliquid, quisquam dolore! Exercitationem deserunt commodi architecto?
-        </div>
-      </div>
-    </section>
-    <!-- SERVICES END -->
+      <!-- SERVICES -->
+      <section id="services" class="relative py-25 bg-gray-100">
+        <div class="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-body to-transparent"></div>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="pt-25 pb-15">
-      <div class="container">
-        <div class="w-full px-4">
-          <div class="max-w-xl mx-auto text-center mb-10">
-            <h1 class="text-3xl font-bold text-black mb-3 lg:text-4xl">Project <span class="text-green-600">Completed</span></h1>
-            <h3 class="text-xl font-light text-gray-600 lg:text-2xl">A featured project that uses multiple tech stacks</h3>
-          </div>
-          <div x-data="projectList" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <template x-for="item in projects" :key="item.id">
-              <div class="card-project group smooth-transition">
-                <div class="relative aspect-video overflow-hidden">
-                  <img :src="item.image" :alt="item.title" class="card-img" />
-                  <div class="img-overlay smooth-transition">
-                    <a :href="item.repoLink" class="btn-card-project"><i class="fa-solid fa-link me-1"></i>Repo</a>
-                  </div>
+        <div class="container">
+          <div class="w-full px-4">
+            <div class="max-w-xl mx-auto text-center mb-10">
+              <h1 class="text-3xl font-bold text-black lg:text-4xl">My <span class="text-green-600">Services</span></h1>
+              <h3 class="text-xl font-light text-gray-600 lg:text-2xl">Personalized services for every project</h3>
+            </div>
+            <div class="font-space-grotesk grid gap-8 md:grid-cols-2">
+              <div class="card-services smooth-transition-300 group">
+                <div class="p-5 pe-2 flex-1">
+                  <h3 class="text-xl font-bold mb-3 lg:text-2xl">Web Development</h3>
+                  <p class="text-base">Building responsive, fast, and reliable websites</p>
                 </div>
-                <div class="p-4 flex flex-col flex-1">
-                  <h3 class="text-lg font-semibold text-green2 mb-1 group-hover:text-green-600 leading-tight smooth-transition" x-text="item.title"></h3>
-                  <p class="text-xs text-gray-600 mb-4 line-clamp-3 leading-relaxed" x-text="item.desc"></p>
-                  <div class="mt-auto border-t-2 border-gray-300 py-4 flex flex-wrap gap-1">
-                    <template x-for="tech in item.techs">
-                      <span class="tech-info smooth-transition" x-text="tech"></span>
-                    </template>
-                  </div>
+                <div class="badge-services smooth-transition-300">
+                  <i class="fa-solid fa-laptop-code icon-services text-green-600 smooth-transition-300"></i>
                 </div>
               </div>
-            </template>
+              <div class="card-services smooth-transition-300 group">
+                <div class="p-5 pe-2 flex-1">
+                  <h3 class="text-xl font-bold mb-3 lg:text-2xl">Frontend Development</h3>
+                  <p class="text-base">Creating modern and user-friendly interfaces</p>
+                </div>
+                <div class="badge-services smooth-transition-300">
+                  <i class="fa-solid fa-layer-group icon-services text-green-600 smooth-transition-300"></i>
+                </div>
+              </div>
+              <div class="card-services smooth-transition-300 group">
+                <div class="p-5 pe-2 flex-1">
+                  <h3 class="text-xl font-bold mb-3 lg:text-2xl">Backend Development</h3>
+                  <p class="text-base">Developing secure and scalable applications</p>
+                </div>
+                <div class="badge-services smooth-transition-300">
+                  <i class="fa-solid fa-server icon-services text-green-600 smooth-transition-300"></i>
+                </div>
+              </div>
+              <div class="card-services smooth-transition-300 group">
+                <div class="p-5 pe-2 flex-1">
+                  <h3 class="text-xl font-bold mb-3 lg:text-2xl">Maintenance & Support</h3>
+                  <p class="text-base">Providing ongoing website maintenance and updates</p>
+                </div>
+                <div class="badge-services smooth-transition-300">
+                  <i class="fa-solid fa-screwdriver-wrench icon-services text-green-600 smooth-transition-300"></i>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- PROJECTS END -->
+      </section>
+      <!-- SERVICES END -->
 
-    <!-- JOURNEY -->
-    <section id="journeys" class="pt-25 pb-15 bg-green2">
-      <div class="container">
-        <div class="w-full px-4">
-          <div class="max-w-xl mx-auto text-center mb-15">
-            <h2 class="text-lg font-semibold text-gray-100 mb-2 uppercase lg:text-xl">My Journey</h2>
-            <h1 class="text-3xl font-bold text-white mb-3 lg:text-4xl">Study & Work <span class="text-green-600">Experience</span></h1>
-            <h3 class="text-xl font-light text-gray-400 lg:text-2xl">A journey through my education and professional growth</h3>
-          </div>
+      <!-- PROJECTS -->
+      <section id="projects" class="relative pt-25 pb-15 min-h-screen">
+        <div class="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-gray-100 to-transparent"></div>
 
-          <div x-data="journeyList" class="font-space-grotesk flex flex-col gap-10">
-            <template x-for="item in studies" :key="item.id">
-              <div class="card-studies smooth-transition group">
-                <div class="date-studies smooth-transition" x-text="item.date"></div>
-                <div class="flex flex-col gap-4 items-start sm:flex-row">
-                  <div class="w-14 aspect-square bg-green-300 border-2 flex justify-center items-center shrink-0">
-                    <span class="text-2xl font-bold" x-text="item.id"></span>
+        <div class="container">
+          <div class="w-full px-4">
+            <div class="max-w-xl mx-auto text-center mb-10">
+              <h1 class="text-3xl font-bold text-black mb-3 lg:text-4xl">Project <span class="text-green-600">Completed</span></h1>
+              <h3 class="text-xl font-light text-gray-600 lg:text-2xl">A featured project that uses multiple tech stacks</h3>
+            </div>
+            <div x-data="projectList" class="font-space-grotesk grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              <template x-for="item in projects" :key="item.id">
+                <div class="card-project smooth-transition-300 group">
+                  <div class="bg-yellow-200 border-b-4 p-2 flex justify-between items-center">
+                    <h2 class="text-base font-bold" x-text="'Project ' + item.id"></h2>
+                    <div class="inline-flex items-center gap-2">
+                      <span class="inline-block bg-red-800 px-1 py-1 border-2 rounded-full group-hover:bg-green-600"></span>
+                      <a :href="item.repoLink" class="btn-repo smooth-transition-300">Repo</a>
+                    </div>
                   </div>
-                  <div class="w-full space-y-2 px-2">
-                    <h1 class="text-2xl font-bold mb-2 leading-none" x-text="item.title"></h1>
-                    <p class="text-xl text-black/70 font-medium" x-text="item.desc"></p>
-                    <div class="w-full mt-3 border-t-2 border-black/30 py-4 flex flex-wrap gap-2">
+                  <div class="relative border-b-4 overflow-hidden aspect-video">
+                    <img :src="item.image" :alt="item.title" class="w-full h-full object-cover group-hover:scale-105 smooth-transition-300" />
+                    <div class="absolute bg-green-950/10 inset-0 group-hover:bg-transparent smooth-transition-300"></div>
+                  </div>
+                  <div class="p-5 flex flex-col flex-1">
+                    <h3 class="text-lg font-bold leading-tight mb-2 lg:text-xl" x-text="item.title"></h3>
+                    <p class="text-xs font-medium line-clamp-2 text-gray-700 mb-4 lg:text-sm" x-text="item.desc"></p>
+                    <div class="border-t-2 pt-4 mt-auto flex flex-wrap gap-2">
                       <template x-for="tech in item.techs">
-                        <span class="tech-studies smooth-transition" x-text="tech"></span>
+                        <span class="tech-projects smooth-transition-300" x-text="tech"></span>
                       </template>
                     </div>
                   </div>
                 </div>
-              </div>
-            </template>
-            <div class="my-2"></div>
-            <template x-for="item in works">
-              <div class="card-works smooth-transition group">
-                <div class="date-works smooth-transition" x-text="item.date"></div>
-                <div class="flex flex-col gap-4 items-start sm:flex-row">
-                  <div class="w-14 aspect-square bg-green-50 border-2 flex justify-center items-center shrink-0">
-                    <span class="text-2xl font-bold" x-text="item.id"></span>
-                  </div>
-                  <div class="w-full space-y-2 px-2">
-                    <h1 class="text-2xl font-bold mb-2 leading-none" x-text="item.title"></h1>
-                    <p class="text-xl text-black/70 font-medium" x-text="item.job"></p>
-                    <p class="text-sm font-medium border-s-4 px-3 my-3 py-2 bg-white/50" x-text="item.desc"></p>
-                    <div class="w-full mt-3 border-t-2 border-black/30 py-4 flex flex-wrap gap-2">
-                      <template x-for="tech in item.techs">
-                        <span class="tech-works smooth-transition" x-text="tech"></span>
-                      </template>
+              </template>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PROJECTS END -->
+
+      <!-- JOURNEY -->
+      <section id="journeys" class="relative pt-25 pb-15 bg-green2">
+        <div class="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-body to-transparent to-75%"></div>
+
+        <div class="container">
+          <div class="w-full px-4">
+            <div class="max-w-xl mx-auto text-center mb-15">
+              <h2 class="text-lg font-semibold text-gray-100 mb-2 uppercase lg:text-xl">My Journey</h2>
+              <h1 class="text-3xl font-bold text-white mb-3 lg:text-4xl">Study & Work <span class="text-green-600">Experience</span></h1>
+              <h3 class="text-xl font-light text-gray-400 lg:text-2xl">A journey through my education and professional growth</h3>
+            </div>
+
+            <div x-data="journeyList" class="font-space-grotesk flex flex-col gap-10">
+              <template x-for="item in studies" :key="item.id">
+                <div class="card-studies smooth-transition-300 group">
+                  <div class="date-studies smooth-transition-300" x-text="item.date"></div>
+                  <div class="flex flex-col gap-4 items-start sm:flex-row">
+                    <div class="w-14 aspect-square bg-green-300 border-2 flex justify-center items-center shrink-0">
+                      <span class="text-2xl font-bold" x-text="item.id"></span>
+                    </div>
+                    <div class="w-full space-y-2 px-2">
+                      <h1 class="text-2xl font-bold mb-2 leading-none" x-text="item.title"></h1>
+                      <p class="text-xl text-black/70 font-medium" x-text="item.desc"></p>
+                      <div class="w-full mt-3 border-t-2 border-black/30 py-4 flex flex-wrap gap-2">
+                        <template x-for="tech in item.techs">
+                          <span class="tech-studies smooth-transition-300" x-text="tech"></span>
+                        </template>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </template>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- JOURNEY END -->
-
-    <!-- BLOG -->
-    <section id="blog" class="pt-25 pb-15">
-      <div class="container">
-        <div class="w-full px-4">
-          <div class="max-w-xl mx-auto text-center mb-10">
-            <h1 class="text-3xl font-bold lg:text-4xl">My <span class="text-green-600">Blog</span></h1>
-            <h3 class="text-xl font-light text-gray-600 lg:text-2xl">Thoughts, stories, and experiences worth sharing.</h3>
-          </div>
-
-          <div class="font-space-grotesk grid gap-10 md:grid-cols-2 lg:grid-cols-3" x-data="blogMedium()" x-init="fetchPosts()">
-            <!-- LOADING DATA -->
-            <div x-show="posts.length === 0" class="bg-gray-300 text-black text-center p-10 rounded-md animate-pulse">Loading articles...</div>
-            <!-- LOADING DATA END -->
-            <template x-for="post in posts" :key="post.link">
-              <article class="card-blog smooth-transition group">
-                <div class="relative h-50 overflow-hidden border-b-4 border-black">
-                  <img :src="post.image" :alt="post.title" loading="lazy" class="h-full w-full object-cover group-hover:scale-105 smooth-transition" />
-                  <!-- <span class="absolute top-4 right-4 bg-yellow-400 border-2 border-black px-3 py-1 text-xs font-black uppercase tracking-wider shadow-card-sm">Category</span> -->
-                </div>
-                <div class="p-6 flex flex-col flex-1">
-                  <time class="text-sm mb-2 font-bold text-gray-500" x-text="post.date"></time>
-                  <h3 class="text-2xl font-bold leading-tight line-clamp-2 mb-6" x-text="post.title"></h3>
-                  <a :href="post.link" target="_blank" class="btn-card bg-green-300 hover:bg-green-500 smooth-transition">Read More<i class="fa-solid fa-arrow-right ms-1"></i></a>
-                </div>
-              </article>
-            </template>
-          </div>
-          <div class="mt-15 text-center">
-            <a href="https://medium.com/@mrshintaro" target="_blank" class="btn bg-yellow-500 hover:bg-yellow-400 smooth-transition"><i class="fa-brands fa-medium fa-xl me-1"></i>View more on Medium </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- BLOG END -->
-
-    <!-- CONTACT -->
-    <section id="contact" class="pt-25 pb-15 bg-gray-200">
-      <div class="container">
-        <div class="w-full px-4">
-          <div class="max-w-xl mx-auto text-center mb-10">
-            <h1 class="text-3xl font-bold lg:text-4xl">Contact <span class="text-green-600">Me</span></h1>
-          </div>
-          <div class="w-full lg:w-3/4 mx-auto">
-            <div class="bg-white font-space-grotesk p-4 rounded-md border-4 shadow-container hover:shadow-none hover:translate-1 smooth-transition">
-              <h3 class="text-xl text-center tracking-tighter mb-8 lg:text-2xl">Let’s work together or discuss your next project</h3>
-
-              <form action="" method="POST" class="space-y-6 px-2">
-                <div class="space-y-6 lg:space-y-0 grid lg:grid-cols-2 gap-x-6">
-                  <div>
-                    <label for="name" class="form-label form-required">Name</label>
-                    <input type="text" name="name" id="name" placeholder="Your name..." class="form-input smooth-transition" required />
-                  </div>
-                  <div>
-                    <label for="email" class="form-label form-required">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Your @email..." class="form-input smooth-transition" required />
+              </template>
+              <div class="my-2"></div>
+              <template x-for="item in works">
+                <div class="card-works smooth-transition-300 group">
+                  <div class="date-works smooth-transition-300" x-text="item.date"></div>
+                  <div class="flex flex-col gap-4 items-start sm:flex-row">
+                    <div class="w-14 aspect-square bg-green-50 border-2 flex justify-center items-center shrink-0">
+                      <span class="text-2xl font-bold" x-text="item.id"></span>
+                    </div>
+                    <div class="w-full space-y-2 px-2">
+                      <h1 class="text-2xl font-bold mb-2 leading-none" x-text="item.title"></h1>
+                      <p class="text-xl text-black/70 font-medium" x-text="item.job"></p>
+                      <p class="text-sm font-medium border-s-4 px-3 my-3 py-2 bg-white/50" x-text="item.desc"></p>
+                      <div class="w-full mt-3 border-t-2 border-black/30 py-4 flex flex-wrap gap-2">
+                        <template x-for="tech in item.techs">
+                          <span class="tech-works smooth-transition-300" x-text="tech"></span>
+                        </template>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <label for="messages" class="form-label form-required">Messages</label>
-                  <textarea name="messages" id="messages" placeholder="Your messages..." rows="3" class="form-input resize-y smooth-transition" required></textarea>
+              </template>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- JOURNEY END -->
+
+      <!-- BLOG -->
+      <section id="blog" class="relative pt-25 pb-15">
+        <div class="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-green2 to-transparent to-75%"></div>
+
+        <div class="container">
+          <div class="w-full px-4">
+            <div class="max-w-xl mx-auto text-center mb-10">
+              <h1 class="text-3xl font-bold lg:text-4xl">My <span class="text-green-600">Blog</span></h1>
+              <h3 class="text-xl font-light text-gray-600 lg:text-2xl">Thoughts, stories, and experiences worth sharing.</h3>
+            </div>
+
+            <div x-data="blogMedium()" x-init="fetchPosts()" class="font-space-grotesk grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+              <!-- LOADING DATA -->
+              <div x-show="posts.length === 0" class="bg-gray-300 text-black text-center p-10 rounded-md animate-pulse">Loading articles...</div>
+              <!-- LOADING DATA END -->
+              <template x-for="post in posts" :key="post.link">
+                <article class="card-blog smooth-transition-300 group">
+                  <div class="relative h-50 overflow-hidden border-b-4 border-black">
+                    <img :src="post.image" :alt="post.title" loading="lazy" class="h-full w-full object-cover group-hover:scale-105 smooth-transition-300" />
+                    <!-- <span class="absolute top-4 right-4 bg-yellow-400 border-2 border-black px-3 py-1 text-xs font-black uppercase tracking-wider shadow-c-xs">Category</span> -->
+                  </div>
+                  <div class="p-6 flex flex-col flex-1">
+                    <time class="text-sm mb-2 font-bold text-gray-500" x-text="post.date"></time>
+                    <h3 class="text-2xl font-bold leading-tight line-clamp-2 mb-6" x-text="post.title"></h3>
+                    <a :href="post.link" target="_blank" class="btn-card bg-green-300 hover:bg-green-500 smooth-transition-300">Read More<i class="fa-solid fa-arrow-right ms-1"></i></a>
+                  </div>
+                </article>
+              </template>
+            </div>
+            <div class="mt-15 text-center">
+              <a href="https://medium.com/@mrshintaro" target="_blank" class="btn bg-yellow-500 hover:bg-yellow-400 smooth-transition-300"><i class="fa-brands fa-medium fa-xl me-1"></i>View more on Medium </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- BLOG END -->
+
+      <!-- CONTACT -->
+      <section id="contact" class="relative pt-25 pb-15 bg-gray-100">
+        <div class="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-body to-transparent to-75%"></div>
+
+        <div class="container">
+          <div class="w-full px-4">
+            <div class="max-w-xl mx-auto text-center mb-10">
+              <h1 class="text-3xl font-bold lg:text-4xl">Contact <span class="text-green-600">Me</span></h1>
+            </div>
+            <div class="w-full lg:w-3/4 mx-auto">
+              <div class="bg-white font-space-grotesk p-4 rounded-md border-4 shadow-c-3xl hover:shadow-none hover:translate-1 smooth-transition-300">
+                <h3 class="text-xl text-center tracking-tighter mb-8 lg:text-2xl">Let’s work together or discuss your next project</h3>
+
+                <form action="" method="POST" class="space-y-6 px-2">
+                  <div class="space-y-6 lg:space-y-0 grid lg:grid-cols-2 gap-x-6">
+                    <div>
+                      <label for="name" class="form-label form-required">Name</label>
+                      <input type="text" name="name" id="name" placeholder="Your name..." class="form-input smooth-transition-300" required />
+                    </div>
+                    <div>
+                      <label for="email" class="form-label form-required">Email</label>
+                      <input type="email" name="email" id="email" placeholder="Your @email..." class="form-input smooth-transition-300" required />
+                    </div>
+                  </div>
+                  <div>
+                    <label for="messages" class="form-label form-required">Messages</label>
+                    <textarea name="messages" id="messages" placeholder="Your messages..." class="form-input h-32 resize-y smooth-transition-300" required></textarea>
+                  </div>
+                  <button type="submit" class="block mx-auto btn-card bg-green-300 hover:bg-green-500 lg:w-full smooth-transition-300">Submit<i class="fa-regular fa-paper-plane fa-xl ms-1"></i></button>
+                </form>
+
+                <div class="relative flex items-center justify-center pt-10 pb-8 px-2">
+                  <div class="absolute w-3/4 h-0.5 border-b-4 border-dashed border-black opacity-50"></div>
+
+                  <div class="relative z-10 bg-white border-2 border-black px-4 py-1 shadow-c-xs -rotate-6">
+                    <span class="font-black text-xl">OR</span>
+                  </div>
                 </div>
-                <button type="submit" class="block font-poppins mx-auto text-sm font-bold btn-card bg-green-300 hover:bg-green-500 lg:w-full lg:text-base smooth-transition">Submit<i class="fa-regular fa-paper-plane fa-xl ms-1"></i></button>
-              </form>
 
-              <div class="relative flex items-center justify-center pt-10 pb-8 px-2">
-                <div class="absolute w-3/4 h-0.5 border-b-4 border-dashed border-black opacity-50"></div>
-
-                <div class="relative z-10 bg-white border-2 border-black px-4 py-1 shadow-card-sm -rotate-6">
-                  <span class="font-black text-xl">OR</span>
-                </div>
-              </div>
-
-              <div class="w-3/4 space-y-6 mx-auto px-2 pb-4">
-                <div class="text-center">
-                  <h2 class="text-xl font-bold mb-8 text-black tracking-tighter">Connect With Me</h2>
-                  <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#" class="badge-socmed hover:bg-blue-600/50 smooth-transition"><i class="fa-brands fa-facebook fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">Facebook</span></a>
-                    <a href="#" class="badge-socmed hover:bg-pink-500/50 smooth-transition"><i class="fa-brands fa-instagram fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">Instagram</span></a>
-                    <a href="#" class="badge-socmed hover:bg-red-600/50 smooth-transition"><i class="fa-brands fa-youtube fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">YouTube</span></a>
-                    <a href="#" class="badge-socmed hover:bg-gray-800/50 smooth-transition"><i class="fa-brands fa-github fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">GitHub</span></a>
-                    <a href="#" class="badge-socmed hover:bg-blue-700/50 smooth-transition"><i class="fa-brands fa-github fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">LinkedIn</span></a>
+                <div class="w-3/4 space-y-6 mx-auto px-2 pb-4">
+                  <div class="text-center">
+                    <h2 class="text-xl font-bold mb-8 text-black tracking-tighter">Connect With Me</h2>
+                    <div class="flex flex-wrap justify-center gap-4">
+                      <a href="https://www.facebook.com/mnv26x" target="_blank" class="badge-socmed hover:bg-blue-600/50 smooth-transition-300"
+                        ><i class="fa-brands fa-facebook fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">Facebook</span></a
+                      >
+                      <a href="https://www.instagram.com/naufallevi_" target="_blank" class="badge-socmed hover:bg-pink-500/50 smooth-transition-300"
+                        ><i class="fa-brands fa-instagram fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">Instagram</span></a
+                      >
+                      <a href="https://www.youtube.com/@assassinsx60" target="_blank" class="badge-socmed hover:bg-red-600/50 smooth-transition-300"
+                        ><i class="fa-brands fa-youtube fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">YouTube</span></a
+                      >
+                      <a href="https://github.com/naufallevi" target="_blank" class="badge-socmed hover:bg-gray-800/50 smooth-transition-300"
+                        ><i class="fa-brands fa-github fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">GitHub</span></a
+                      >
+                      <a href="https://www.linkedin.com/in/muhammad-naufal-pahlevi" target="_blank" class="badge-socmed hover:bg-blue-700/50 smooth-transition-300"
+                        ><i class="fa-brands fa-github fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">LinkedIn</span></a
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- CONTACT END -->
+      </section>
+      <!-- CONTACT END -->
+    </main>
 
+    <footer class="bg-gray-200 flex justify-center shadow-2xl">
+      <div class="w-3/4 py-8 border-t-4 border-black/30 text-center rounded-sm">
+        <p class="text-base font-medium">&copy;2026 Naufallevi. Made with <i class="fa-solid fa-heart text-red-500"></i> and <i class="fa-solid fa-mug-hot text-amber-800"></i></p>
+      </div>
+    </footer>
+
+    <a href="#" class="fixed right-5 bottom-5 inline-flex justify-center items-center bg-green-600 text-white p-3 rounded-full"><i class="fa-solid fa-arrow-up"></i></a>
     <!-- <div class="mb-200"></div> -->
 
     <!-- FONTAWESOME -->

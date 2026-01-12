@@ -7,7 +7,7 @@ document.addEventListener("alpine:init", () => {
         desc: "A web-based system for cash management, complaint handling, and mosque activities.",
         image: "images/projects/simas.webp",
         repoLink: "https://github.com/naufallevi/ci4-sistem-pengelolaan-masjid",
-        techs: ["CodeIgniter 4", "PHP", "Bootstrap", "MySQL"],
+        techs: ["CodeIgniter 4", "PHP", "MySQL", "Bootstrap"],
       },
       {
         id: 2,
