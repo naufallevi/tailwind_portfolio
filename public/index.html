@@ -6,7 +6,7 @@
     <title>Portfolio</title>
     <!-- FONTS GOOGLE -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet"
     />
     <!-- DEVICON -->
@@ -17,13 +17,16 @@
     <link rel="stylesheet" href="output.css" />
   </head>
 
-  <body class="font-poppins bg-body">
+  <body class="font-jakarta bg-body-1 bg-grid-dark">
     <!-- NAVBAR -->
     <header id="navbar" class="navbar absolute bg-transparent smooth-transition-300">
       <div class="container">
         <div class="flex items-center justify-between relative">
           <div class="px-4">
-            <a href="#home"><img src="images/logo-navbar.webp" alt="Logo MNP" class="w-30" /></a>
+            <a href="#home" class="flex group">
+              <img src="images/logo-navbar.png" alt="Logo MNP" class="inline-block w-12 group-hover:scale-110 smooth-transition-300" />
+              <span class="inline-block ms-1 font-exo-2 text-lg font-bold italic text-primary tracking-wider translate-y-2 origin-left self-end group-hover:text-quaternary lg:text-xl smooth-transition-300">Naufallevi</span>
+            </a>
           </div>
           <div class="flex items-center px-4">
             <button type="button" id="hamburger" class="hamburger smooth-transition-300 lg:hidden">
@@ -68,29 +71,44 @@
       <!-- HERO -->
       <section id="home" class="h-screen pt-20">
         <div class="container h-full">
-          <div class="flex flex-wrap items-center h-full">
-            <div class="w-full self-center px-4 lg:w-1/2">
-              <h1 class="text-base font-semibold text-green1 md:text-xl">
+          <div class="grid gap-10 items-center h-full lg:grid-cols-2">
+            <div class="order-2 w-full self-center px-4 lg:order-2 boder">
+              <h1 class="text-xl font-bold text-dark mb-4 md:mb-8 lg:text-3xl">
                 Hi there!
-                <span class="block text-4xl text-green2 mb-5 lg:text-5xl"> I'm Naufallevi </span>
+                <span class="block text-3xl font-black tracking-tight lg:text-5xl">
+                  I'm
+                  <span class="text-primary ms-1"> Muhammad Naufal Pahlevi </span>
+                </span>
               </h1>
-              <h2 class="font-medium text-lg text-gray-700 lg:text-2xl">Web Developer | Informatics Engineer</h2>
-              <p class="font-medium text-gray-600 mb-10">Hustle Loyalty Respect 👌</p>
-              <a href="#" class="inline-block text-base border-gray-400 border-2 p-2.5 bg-gray-300 hover:bg-green-600 hover:border-black hover:shadow-c-lg hover:shadow-black/80 rounded-lg smooth-transition-300">My Contact</a>
+              <h2 class="text-lg font-bold text-dark lg:text-xl">Web Developer | Informatics Engineer</h2>
+              <p class="font-medium text-tertiary mb-4 md:mb-8">Turning ideas into functional, scalable, and user-friendly web applications</p>
+              <div class="flex flex-wrap gap-2 md:gap-4">
+                <a href="#" class="btn-1 bg-primary hover:bg-quaternary smooth-transition-200"><i class="fa-solid fa-briefcase me-1"></i>View Portfolio</a>
+                <a href="#" class="btn-1 bg-secondary hover:bg-quinary smooth-transition-200"> <i class="fa-solid fa-envelope me-1"></i>Contact Me</a>
+              </div>
             </div>
 
-            <div class="w-full self-center px-4 lg:w-1/2 lg:flex lg:justify-end">
-              <div class="relative mt-10">
-                <img src="images/hero-picture.webp" alt="My Pictures" class="max-w-full mx-auto -mt-10" />
-                <span class="absolute left-1/2 -translate-x-1/2 -z-10 scale-50 -bottom-10 mobile-m:scale-60 mobile-m:bottom-0 mobile-l:scale-80">
-                  <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      fill="#008235"
-                      d="M53.3,-52.6C66.2,-40.4,71.7,-20.2,72,0.3C72.2,20.7,67.2,41.5,54.3,53.7C41.5,65.8,20.7,69.5,-0.8,70.2C-22.2,71,-44.5,68.9,-56.4,56.7C-68.4,44.5,-70,22.2,-67.8,2.3C-65.5,-17.7,-59.3,-35.4,-47.3,-47.6C-35.4,-59.8,-17.7,-66.6,1.3,-67.9C20.2,-69.1,40.4,-64.9,53.3,-52.6Z"
-                      transform="translate(100 100) scale(1.1)"
-                    />
-                  </svg>
-                </span>
+            <div class="order-1 self-center w-full px-4 flex justify-center lg:justify-end lg:order-2">
+              <div class="relative border-4 rounded-xl shadow-c-xl bg-yellow-200 p-4 max-w-5/6 sm:max-w-3/5 md:max-w-1/2 lg:max-w-10/12">
+                <div class="absolute z-11 -top-6 -right-6 w-20 sm:w-25 sm:-top-8 sm:-right-8 animate-rotate-scale-up">
+                  <img src="images/hero-star.png" alt="" class="max-w-full" />
+                </div>
+                <div class="border-4 rounded-lg h-5/6 bg-green-50 overflow-hidden">
+                  <div class="relative mt-10 z-10">
+                    <img src="images/hero-picture.webp" alt="My Pictures" class="mx-auto -mt-10" />
+                    <span
+                      class="absolute left-1/2 -translate-x-1/2 -z-10 scale-40 -bottom-30 mobile-m:scale-55 mobile-m:-bottom-28 mobile-l:scale-65 mobile-l:-bottom-20 sm:scale-72 sm:-bottom-15 lg:scale-80 xl:scale-95 xl:-bottom-10 animate-pulse"
+                    >
+                      <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill="#00A63E"
+                          d="M53.3,-52.6C66.2,-40.4,71.7,-20.2,72,0.3C72.2,20.7,67.2,41.5,54.3,53.7C41.5,65.8,20.7,69.5,-0.8,70.2C-22.2,71,-44.5,68.9,-56.4,56.7C-68.4,44.5,-70,22.2,-67.8,2.3C-65.5,-17.7,-59.3,-35.4,-47.3,-47.6C-35.4,-59.8,-17.7,-66.6,1.3,-67.9C20.2,-69.1,40.4,-64.9,53.3,-52.6Z"
+                          transform="translate(100 100) scale(1.1)"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -101,31 +119,31 @@
       <!-- ABOUT -->
       <section id="about" class="pt-25 pb-15">
         <div class="container">
-          <div class="max-w-xl mx-auto text-center mb-20">
-            <h1 class="text-3xl font-black text-black tracking-tighter lg:text-4xl">About <span class="text-green-600">Me</span></h1>
+          <div class="max-w-xl mx-auto text-center mb-10 lg:mb-20">
+            <h1 class="text-3xl font-black text-dark tracking-tighter lg:text-4xl">About <span class="text-primary">Me</span></h1>
           </div>
           <div class="flex flex-wrap items-center lg:justify-between">
-            <div class="w-full px-4 mb-10 lg:mb-0 lg:w-1/2">
-              <h2 class="text-lg font-black mb-6 uppercase leading-tight lg:text-2xl">Honestly, I love the world of <span class="bg-yellow-300 px-1">web development</span> 😊</h2>
-              <p class="text-base font-medium text-black leading-relaxed mb-4">
-                I am a Informatics Engineering graduate with a strong interest in web development, specializing in <b>PHP</b> and <b>JavaScript</b>, as well as frameworks such as CodeIgniter and Laravel. I am experienced in handling
-                projects from <b>planning and requirements analysis</b> through <b>implementation and evaluation</b>, both independently and as part of a team.
+            <div class="w-full px-4 mb-15 lg:mb-0 lg:w-1/2">
+              <h2 class="text-lg font-black mb-6 uppercase leading-tight lg:text-2xl">Honestly, I love the world of <span class="bg-quinary px-1">web development</span> 😊</h2>
+              <p class="text-base font-medium text-dark leading-loose mb-4">
+                I am a Informatics Engineering graduate with a strong interest in web development, specializing in <b class="font-black">PHP</b> and <b class="font-black">JavaScript</b>, as well as frameworks such as CodeIgniter and
+                Laravel. I am experienced in handling projects from <b class="font-black">planning and requirements analysis</b> through <b class="font-black">implementation and evaluation</b>, both independently and as part of a team.
               </p>
-              <p class="text-base font-medium text-black leading-relaxed mb-4">
-                In addition to software development, I have experience in <b>computer networking</b> through an internship program, and I have also worked in a government institution, which has strengthened my ability to work in structured,
-                professional environments.
+              <p class="text-base font-medium text-dark leading-loose mb-4">
+                In addition to software development, I have experience in <b class="font-black">computer networking</b> through an internship program, and I have also worked in a government institution, which has strengthened my ability to
+                work in structured, professional environments.
               </p>
-              <p class="text-base font-medium text-black leading-relaxed">
+              <p class="text-base font-medium text-dark leading-loose">
                 This portfolio is created to showcase my projects, work, and professional growth. I am a challenge-driven individual who adapts quickly to new environments and technologies, and I am continuously motivated to learn and grow
                 in the field of information technology.
               </p>
             </div>
 
-            <div class="w-full px-4 mb-10 lg:mb-0 lg:w-4/10">
+            <div class="font-space-grotesk w-full px-4 mb-10 lg:mb-0 lg:w-4/10">
               <div class="relative border-4 shadow-c-2xl rounded-md p-8 bg-white hover:shadow-none hover:translate-1 smooth-transition-300">
-                <div class="absolute inline-block -top-5 left-1/2 -translate-x-1/2 px-4 py-1 bg-black shadow-c-md shadow-black/60 border-2 border-black text-sm font-bold text-white uppercase tracking-widest">My Skills</div>
+                <div class="absolute inline-block -top-5 left-1/2 -translate-x-1/2 px-4 py-1 bg-dark shadow-c-md shadow-black/60 border-2 border-black text-sm font-bold text-light uppercase tracking-widest">My Skills</div>
                 <h3 class="text-xl font-black text-center mb-2 uppercase mt-2">Technical Skills</h3>
-                <p class="text-sm font-medium text-gray-600 text-center mb-8">These skills reflect my experience in building efficient, scalable, and maintainable systems.</p>
+                <p class="text-sm font-medium text-tertiary text-center mb-8">These skills reflect my experience in building efficient, scalable, and maintainable systems.</p>
 
                 <div class="flex flex-wrap gap-3 justify-center items-center">
                   <span class="skill-item hover:bg-amber-500/30 smooth-transition-300"><i class="devicon-html5-plain colored text-base me-1.5"></i>HTML5</span>
@@ -136,12 +154,13 @@
                   <span class="skill-item hover:bg-blue-500/30 smooth-transition-300"><i class="devicon-mysql-plain colored text-base me-1.5"></i>MySQL</span>
                   <span class="skill-item hover:bg-amber-500/30 smooth-transition-300"><i class="devicon-codeigniter-plain colored text-base me-1.5"></i>CodeIgniter</span>
                   <span class="skill-item hover:bg-red-500/30 smooth-transition-300"><i class="devicon-laravel-plain colored text-base me-1.5"></i>Laravel</span>
+                  <span class="skill-item hover:bg-indigo-500/30 smooth-transition-300"><i class="devicon-alpinejs-plain colored text-base me-1.5"></i>Alpine.js</span>
                   <span class="skill-item hover:bg-cyan-500/30 smooth-transition-300"><i class="devicon-react-plain colored text-base me-1.5"></i>React</span>
                   <span class="skill-item hover:bg-amber-500/30 smooth-transition-300"><i class="devicon-git-plain colored text-base me-1.5"></i>Git</span>
                   <span class="skill-item hover:bg-blue-500/30 smooth-transition-300"><i class="devicon-canva-plain colored text-base me-1.5"></i>Canva</span>
                   <span class="skill-item hover:bg-indigo-500/30 smooth-transition-300"><i class="fa-solid fa-file-word text-blue-600 text-base me-1.5"></i>Word</span>
                   <span class="skill-item hover:bg-amber-500/30 smooth-transition-300"><i class="fa-solid fa-file-powerpoint text-orange-600 text-base me-1.5"></i>Powerpoint</span>
-                  <span class="skill-item hover:bg-green-500/30 smooth-transition-300"><i class="fa-solid fa-file-excel text-green-600 text-base me-1.5"></i>Excel</span>
+                  <span class="skill-item hover:bg-green-500/30 smooth-transition-300"><i class="fa-solid fa-file-excel text-primary text-base me-1.5"></i>Excel</span>
                 </div>
               </div>
             </div>
@@ -151,14 +170,14 @@
       <!-- ABOUT END -->
 
       <!-- SERVICES -->
-      <section id="services" class="relative py-25 bg-gray-100">
-        <div class="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-body to-transparent"></div>
+      <section id="services" class="relative py-25 bg-body-2 bg-grid-dark">
+        <div class="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-body-1 to-transparent"></div>
 
         <div class="container">
           <div class="w-full px-4">
             <div class="max-w-xl mx-auto text-center mb-10">
-              <h1 class="text-3xl font-bold text-black lg:text-4xl">My <span class="text-green-600">Services</span></h1>
-              <h3 class="text-xl font-light text-gray-600 lg:text-2xl">Personalized services for every project</h3>
+              <h1 class="text-3xl font-black text-dark tracking-tighter lg:text-4xl">My <span class="text-primary">Services</span></h1>
+              <h3 class="text-xl font-light text-tertiary lg:text-2xl">Personalized services for every project</h3>
             </div>
             <div class="font-space-grotesk grid gap-8 md:grid-cols-2">
               <div class="card-services smooth-transition-300 group">
@@ -167,7 +186,7 @@
                   <p class="text-base">Building responsive, fast, and reliable websites</p>
                 </div>
                 <div class="badge-services smooth-transition-300">
-                  <i class="fa-solid fa-laptop-code icon-services text-green-600 smooth-transition-300"></i>
+                  <i class="fa-solid fa-laptop-code text-2xl text-primary group-hover:text-light sm:text-4xl smooth-transition-300"></i>
                 </div>
               </div>
               <div class="card-services smooth-transition-300 group">
@@ -176,7 +195,7 @@
                   <p class="text-base">Creating modern and user-friendly interfaces</p>
                 </div>
                 <div class="badge-services smooth-transition-300">
-                  <i class="fa-solid fa-layer-group icon-services text-green-600 smooth-transition-300"></i>
+                  <i class="fa-solid fa-layer-group text-2xl text-primary group-hover:text-light sm:text-4xl smooth-transition-300"></i>
                 </div>
               </div>
               <div class="card-services smooth-transition-300 group">
@@ -185,7 +204,7 @@
                   <p class="text-base">Developing secure and scalable applications</p>
                 </div>
                 <div class="badge-services smooth-transition-300">
-                  <i class="fa-solid fa-server icon-services text-green-600 smooth-transition-300"></i>
+                  <i class="fa-solid fa-server text-2xl text-primary group-hover:text-light sm:text-4xl smooth-transition-300"></i>
                 </div>
               </div>
               <div class="card-services smooth-transition-300 group">
@@ -194,7 +213,7 @@
                   <p class="text-base">Providing ongoing website maintenance and updates</p>
                 </div>
                 <div class="badge-services smooth-transition-300">
-                  <i class="fa-solid fa-screwdriver-wrench icon-services text-green-600 smooth-transition-300"></i>
+                  <i class="fa-solid fa-screwdriver-wrench text-2xl text-primary group-hover:text-light sm:text-4xl smooth-transition-300"></i>
                 </div>
               </div>
             </div>
@@ -205,34 +224,34 @@
 
       <!-- PROJECTS -->
       <section id="projects" class="relative pt-25 pb-15 min-h-screen">
-        <div class="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-gray-100 to-transparent"></div>
+        <div class="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-body-2 to-transparent"></div>
 
         <div class="container">
           <div class="w-full px-4">
             <div class="max-w-xl mx-auto text-center mb-10">
-              <h1 class="text-3xl font-bold text-black mb-3 lg:text-4xl">Project <span class="text-green-600">Completed</span></h1>
-              <h3 class="text-xl font-light text-gray-600 lg:text-2xl">A featured project that uses multiple tech stacks</h3>
+              <h1 class="text-3xl font-black text-dark tracking-tighter mb-3 lg:text-4xl">Project <span class="text-primary">Completed</span></h1>
+              <h3 class="text-xl font-light text-tertiary lg:text-2xl">A featured project that uses multiple tech stacks</h3>
             </div>
             <div x-data="projectList" class="font-space-grotesk grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               <template x-for="item in projects" :key="item.id">
-                <div class="card-project smooth-transition-300 group">
-                  <div class="bg-yellow-200 border-b-4 p-2 flex justify-between items-center">
+                <div class="border-4 bg-white shadow-c-2xl rounded-md overflow-hidden flex flex-col hover:shadow-none hover:translate-1 smooth-transition-300 group">
+                  <div class="bg-quinary border-b-4 p-2 flex justify-between items-center">
                     <h2 class="text-base font-bold" x-text="'Project ' + item.id"></h2>
                     <div class="inline-flex items-center gap-2">
-                      <span class="inline-block bg-red-800 px-1 py-1 border-2 rounded-full group-hover:bg-green-600"></span>
-                      <a :href="item.repoLink" class="btn-repo smooth-transition-300">Repo</a>
+                      <span class="inline-block bg-red-600 px-1 py-1 border-2 rounded-full group-hover:bg-primary"></span>
+                      <a :href="item.repoLink" class="inline-flex justify-center items-center bg-white px-2 border-2 rounded-full text-xs font-bold hover:shadow-c-xs hover:-translate-px cursor-pointer smooth-transition-300">Repo</a>
                     </div>
                   </div>
                   <div class="relative border-b-4 overflow-hidden aspect-video">
                     <img :src="item.image" :alt="item.title" class="w-full h-full object-cover group-hover:scale-105 smooth-transition-300" />
-                    <div class="absolute bg-green-950/10 inset-0 group-hover:bg-transparent smooth-transition-300"></div>
+                    <div class="absolute bg-dark/15 inset-0 group-hover:bg-transparent smooth-transition-300"></div>
                   </div>
                   <div class="p-5 flex flex-col flex-1">
-                    <h3 class="text-lg font-bold leading-tight mb-2 lg:text-xl" x-text="item.title"></h3>
-                    <p class="text-xs font-medium line-clamp-2 text-gray-700 mb-4 lg:text-sm" x-text="item.desc"></p>
+                    <h3 class="text-lg font-bold text-dark leading-tight mb-2 lg:text-xl" x-text="item.title"></h3>
+                    <p class="text-xs font-medium line-clamp-2 text-tertiary mb-4 lg:text-sm" x-text="item.desc"></p>
                     <div class="border-t-2 pt-4 mt-auto flex flex-wrap gap-2">
                       <template x-for="tech in item.techs">
-                        <span class="tech-projects smooth-transition-300" x-text="tech"></span>
+                        <span class="inline-block border-2 bg-red-500/50 px-2 py-0.75 shadow-c-md text-2xs font-bold uppercase tracking-wide sm:text-xs hover:bg-primary/50 hover:-translate-y-1 smooth-transition-200" x-text="tech"></span>
                       </template>
                     </div>
                   </div>
@@ -245,52 +264,60 @@
       <!-- PROJECTS END -->
 
       <!-- JOURNEY -->
-      <section id="journeys" class="relative pt-25 pb-15 bg-green2">
-        <div class="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-body to-transparent to-75%"></div>
+      <section id="journeys" class="relative pt-25 pb-15 bg-body-3 bg-grid-light">
+        <div class="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-body-1 to-transparent to-75%"></div>
 
         <div class="container">
           <div class="w-full px-4">
             <div class="max-w-xl mx-auto text-center mb-15">
-              <h2 class="text-lg font-semibold text-gray-100 mb-2 uppercase lg:text-xl">My Journey</h2>
-              <h1 class="text-3xl font-bold text-white mb-3 lg:text-4xl">Study & Work <span class="text-green-600">Experience</span></h1>
-              <h3 class="text-xl font-light text-gray-400 lg:text-2xl">A journey through my education and professional growth</h3>
+              <h2 class="text-lg font-bold text-light mb-2 uppercase tracking-widest lg:text-xl">My Journey</h2>
+              <h1 class="inline w-fit bg-light text-3xl font-black text-dark tracking-tighter leading-tight lg:text-4xl">Study & Work <span class="text-primary">Experience</span></h1>
+              <h3 class="text-xl font-light text-light/75 mt-3 lg:text-2xl">A journey through my education and professional growth</h3>
             </div>
 
             <div x-data="journeyList" class="font-space-grotesk flex flex-col gap-10">
               <template x-for="item in studies" :key="item.id">
-                <div class="card-studies smooth-transition-300 group">
-                  <div class="date-studies smooth-transition-300" x-text="item.date"></div>
+                <div class="relative p-6 bg-light/75 border-4 border-black shadow-c-2xl shadow-black rounded-md hover:bg-light hover:translate-1 hover:shadow-none smooth-transition-300 group">
+                  <div class="absolute bg-black text-light -top-5 -right-5 px-4 py-1 border-2 shadow-c-xs shadow-black/50 group-hover:rotate-3 smooth-transition-300" x-text="item.date"></div>
                   <div class="flex flex-col gap-4 items-start sm:flex-row">
-                    <div class="w-14 aspect-square bg-green-300 border-2 flex justify-center items-center shrink-0">
+                    <div class="w-12 aspect-square bg-quaternary border-2 flex justify-center items-center shrink-0 lg:w-14 group-hover:bg-black group-hover:text-light group-hover:border-black">
                       <span class="text-2xl font-bold" x-text="item.id"></span>
                     </div>
                     <div class="w-full space-y-2 px-2">
-                      <h1 class="text-2xl font-bold mb-2 leading-none" x-text="item.title"></h1>
-                      <p class="text-xl text-black/70 font-medium" x-text="item.desc"></p>
+                      <h1 class="text-xl text-dark font-bold mb-2 leading-none sm:text-2xl" x-text="item.title"></h1>
+                      <p class="text-lg text-dark/70 font-medium sm:text-xl" x-text="item.desc"></p>
                       <div class="w-full mt-3 border-t-2 border-black/30 py-4 flex flex-wrap gap-2">
                         <template x-for="tech in item.techs">
-                          <span class="tech-studies smooth-transition-300" x-text="tech"></span>
+                          <span class="text-2xs font-bold uppercase bg-green-300 px-3 py-1 border-2 border-black sm:text-xs hover:bg-green-950 hover:text-light smooth-transition-200" x-text="tech"></span>
                         </template>
                       </div>
                     </div>
                   </div>
                 </div>
               </template>
-              <div class="my-2"></div>
+
+              <div class="relative flex items-center justify-center py-2 px-2">
+                <div class="absolute w-3/4 h-0.5 border-b-4 border-dashed border-white opacity-50"></div>
+
+                <div class="relative z-10 bg-white border-2 border-black px-4 py-1 shadow-c-xs -rotate-6 hover:rotate-6 smooth-transition-300">
+                  <span class="font-black text-xl">Work Experience</span>
+                </div>
+              </div>
+
               <template x-for="item in works">
-                <div class="card-works smooth-transition-300 group">
-                  <div class="date-works smooth-transition-300" x-text="item.date"></div>
+                <div class="relative p-6 bg-secondary border-4 border-black shadow-c-2xl shadow-black rounded-md hover:bg-quinary hover:translate-1 hover:shadow-none smooth-transition-300 group">
+                  <div class="absolute bg-black text-light -top-5 -right-5 px-4 py-1 border-2 shadow-c-xs shadow-black/50 group-hover:rotate-3 smooth-transition-300" x-text="item.date"></div>
                   <div class="flex flex-col gap-4 items-start sm:flex-row">
-                    <div class="w-14 aspect-square bg-green-50 border-2 flex justify-center items-center shrink-0">
+                    <div class="w-12 aspect-square bg-white border-2 flex justify-center items-center shrink-0 lg:w-14 group-hover:bg-black group-hover:text-light group-hover:border-black">
                       <span class="text-2xl font-bold" x-text="item.id"></span>
                     </div>
                     <div class="w-full space-y-2 px-2">
-                      <h1 class="text-2xl font-bold mb-2 leading-none" x-text="item.title"></h1>
-                      <p class="text-xl text-black/70 font-medium" x-text="item.job"></p>
-                      <p class="text-sm font-medium border-s-4 px-3 my-3 py-2 bg-white/50" x-text="item.desc"></p>
+                      <h1 class="text-xl font-bold mb-2 leading-none sm:text-2xl" x-text="item.title"></h1>
+                      <p class="text-lg text-dark/80 font-medium sm:text-xl" x-text="item.job"></p>
+                      <p class="text-sm font-medium border-s-4 px-3 my-3 py-2 bg-light/75" x-text="item.desc"></p>
                       <div class="w-full mt-3 border-t-2 border-black/30 py-4 flex flex-wrap gap-2">
                         <template x-for="tech in item.techs">
-                          <span class="tech-works smooth-transition-300" x-text="tech"></span>
+                          <span class="text-2xs font-bold uppercase bg-green-50 px-3 py-1 border-2 border-black sm:text-xs hover:bg-black hover:text-light smooth-transition-300" x-text="tech"></span>
                         </template>
                       </div>
                     </div>
@@ -305,35 +332,36 @@
 
       <!-- BLOG -->
       <section id="blog" class="relative pt-25 pb-15">
-        <div class="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-green2 to-transparent to-75%"></div>
+        <div class="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-body-3 to-transparent to-75%"></div>
 
         <div class="container">
           <div class="w-full px-4">
             <div class="max-w-xl mx-auto text-center mb-10">
-              <h1 class="text-3xl font-bold lg:text-4xl">My <span class="text-green-600">Blog</span></h1>
-              <h3 class="text-xl font-light text-gray-600 lg:text-2xl">Thoughts, stories, and experiences worth sharing.</h3>
+              <h1 class="text-3xl font-black text-dark tracking-tighter mb-3 lg:text-4xl">My <span class="text-primary">Blog</span></h1>
+              <h3 class="text-xl font-light text-tertiary lg:text-2xl">Thoughts, stories, and experiences worth sharing.</h3>
             </div>
 
-            <div x-data="blogMedium()" x-init="fetchPosts()" class="font-space-grotesk grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+            <div x-data="blogMedium()" x-init="fetchPosts()" class="font-space-grotesk grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
               <!-- LOADING DATA -->
-              <div x-show="posts.length === 0" class="bg-gray-300 text-black text-center p-10 rounded-md animate-pulse">Loading articles...</div>
+              <div x-show="posts.length === 0" class="bg-light/75 text-dark text-center p-10 rounded-md animate-pulse">Loading articles...</div>
               <!-- LOADING DATA END -->
+
               <template x-for="post in posts" :key="post.link">
-                <article class="card-blog smooth-transition-300 group">
+                <article class="bg-light/75 border-4 shadow-c-2xl rounded-md overflow-hidden flex flex-col hover:shadow-none hover:translate-1 smooth-transition-300 group">
                   <div class="relative h-50 overflow-hidden border-b-4 border-black">
-                    <img :src="post.image" :alt="post.title" loading="lazy" class="h-full w-full object-cover group-hover:scale-105 smooth-transition-300" />
+                    <img :src="post.image" :alt="post.alt" loading="lazy" class="h-full w-full object-cover group-hover:scale-105 smooth-transition-300" />
                     <!-- <span class="absolute top-4 right-4 bg-yellow-400 border-2 border-black px-3 py-1 text-xs font-black uppercase tracking-wider shadow-c-xs">Category</span> -->
                   </div>
                   <div class="p-6 flex flex-col flex-1">
-                    <time class="text-sm mb-2 font-bold text-gray-500" x-text="post.date"></time>
-                    <h3 class="text-2xl font-bold leading-tight line-clamp-2 mb-6" x-text="post.title"></h3>
-                    <a :href="post.link" target="_blank" class="btn-card bg-green-300 hover:bg-green-500 smooth-transition-300">Read More<i class="fa-solid fa-arrow-right ms-1"></i></a>
+                    <time class="text-sm mb-2 font-bold text-tertiary" x-text="post.date"></time>
+                    <h3 class="text-xl font-bold leading-tight line-clamp-2 mb-6 lg:text-2xl" x-text="post.title"></h3>
+                    <a :href="post.link" target="_blank" class="btn-2 bg-quaternary hover:bg-primary smooth-transition-200">Read More<i class="fa-solid fa-arrow-right ms-1"></i></a>
                   </div>
                 </article>
               </template>
             </div>
             <div class="mt-15 text-center">
-              <a href="https://medium.com/@mrshintaro" target="_blank" class="btn bg-yellow-500 hover:bg-yellow-400 smooth-transition-300"><i class="fa-brands fa-medium fa-xl me-1"></i>View more on Medium </a>
+              <a href="https://medium.com/@mrshintaro" target="_blank" class="btn-1 bg-secondary hover:bg-quinary smooth-transition-200"><i class="fa-brands fa-medium fa-xl me-1"></i>View more on Medium</a>
             </div>
           </div>
         </div>
@@ -341,13 +369,13 @@
       <!-- BLOG END -->
 
       <!-- CONTACT -->
-      <section id="contact" class="relative pt-25 pb-15 bg-gray-100">
-        <div class="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-body to-transparent to-75%"></div>
+      <section id="contact" class="relative pt-25 pb-15 bg-body-2 bg-grid-dark">
+        <div class="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-body-1 to-transparent"></div>
 
         <div class="container">
           <div class="w-full px-4">
             <div class="max-w-xl mx-auto text-center mb-10">
-              <h1 class="text-3xl font-bold lg:text-4xl">Contact <span class="text-green-600">Me</span></h1>
+              <h1 class="text-3xl font-bold lg:text-4xl">Contact <span class="text-primary">Me</span></h1>
             </div>
             <div class="w-full lg:w-3/4 mx-auto">
               <div class="bg-white font-space-grotesk p-4 rounded-md border-4 shadow-c-3xl hover:shadow-none hover:translate-1 smooth-transition-300">
@@ -368,35 +396,35 @@
                     <label for="messages" class="form-label form-required">Messages</label>
                     <textarea name="messages" id="messages" placeholder="Your messages..." class="form-input h-32 resize-y smooth-transition-300" required></textarea>
                   </div>
-                  <button type="submit" class="block mx-auto btn-card bg-green-300 hover:bg-green-500 lg:w-full smooth-transition-300">Submit<i class="fa-regular fa-paper-plane fa-xl ms-1"></i></button>
+                  <button type="submit" class="w-full btn-2 bg-quaternary hover:bg-primary smooth-transition-200">Submit<i class="fa-regular fa-paper-plane fa-xl ms-1"></i></button>
                 </form>
 
                 <div class="relative flex items-center justify-center pt-10 pb-8 px-2">
                   <div class="absolute w-3/4 h-0.5 border-b-4 border-dashed border-black opacity-50"></div>
 
-                  <div class="relative z-10 bg-white border-2 border-black px-4 py-1 shadow-c-xs -rotate-6">
+                  <div class="relative z-10 bg-white border-2 border-black px-4 py-1 shadow-c-xs -rotate-6 hover:rotate-6 smooth-transition-300">
                     <span class="font-black text-xl">OR</span>
                   </div>
                 </div>
 
                 <div class="w-3/4 space-y-6 mx-auto px-2 pb-4">
                   <div class="text-center">
-                    <h2 class="text-xl font-bold mb-8 text-black tracking-tighter">Connect With Me</h2>
+                    <h2 class="text-xl font-bold mb-8 text-dark tracking-tighter">Connect With Me</h2>
                     <div class="flex flex-wrap justify-center gap-4">
-                      <a href="https://www.facebook.com/mnv26x" target="_blank" class="badge-socmed hover:bg-blue-600/50 smooth-transition-300"
+                      <a href="https://www.facebook.com/mnv26x" target="_blank" class="badge-socmed hover:bg-blue-600/50 smooth-transition-200"
                         ><i class="fa-brands fa-facebook fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">Facebook</span></a
                       >
-                      <a href="https://www.instagram.com/naufallevi_" target="_blank" class="badge-socmed hover:bg-pink-500/50 smooth-transition-300"
+                      <a href="https://www.instagram.com/naufallevi_" target="_blank" class="badge-socmed hover:bg-pink-500/50 smooth-transition-200"
                         ><i class="fa-brands fa-instagram fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">Instagram</span></a
                       >
-                      <a href="https://www.youtube.com/@assassinsx60" target="_blank" class="badge-socmed hover:bg-red-600/50 smooth-transition-300"
+                      <a href="https://www.youtube.com/@assassinsx60" target="_blank" class="badge-socmed hover:bg-red-600/50 smooth-transition-200"
                         ><i class="fa-brands fa-youtube fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">YouTube</span></a
                       >
-                      <a href="https://github.com/naufallevi" target="_blank" class="badge-socmed hover:bg-gray-800/50 smooth-transition-300"
+                      <a href="https://github.com/naufallevi" target="_blank" class="badge-socmed hover:bg-gray-800/50 smooth-transition-200"
                         ><i class="fa-brands fa-github fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">GitHub</span></a
                       >
-                      <a href="https://www.linkedin.com/in/muhammad-naufal-pahlevi" target="_blank" class="badge-socmed hover:bg-blue-700/50 smooth-transition-300"
-                        ><i class="fa-brands fa-github fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">LinkedIn</span></a
+                      <a href="https://www.linkedin.com/in/muhammad-naufal-pahlevi" target="_blank" class="badge-socmed hover:bg-blue-700/50 smooth-transition-200"
+                        ><i class="fa-brands fa-linkedin fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">LinkedIn</span></a
                       >
                     </div>
                   </div>
@@ -409,14 +437,17 @@
       <!-- CONTACT END -->
     </main>
 
-    <footer class="bg-gray-200 flex justify-center shadow-2xl">
+    <footer class="relative bg-white flex justify-center shadow-footer shadow-primary/20">
       <div class="w-3/4 py-8 border-t-4 border-black/30 text-center rounded-sm">
-        <p class="text-base font-medium">&copy;2026 Naufallevi. Made with <i class="fa-solid fa-heart text-red-500"></i> and <i class="fa-solid fa-mug-hot text-amber-800"></i></p>
+        <p class="text-base font-medium">&copy;2026 <b class="font-bold">Naufallevi</b>. Made with <i class="fa-solid fa-heart text-red-500"></i> and <i class="fa-solid fa-mug-hot text-amber-800"></i></p>
       </div>
     </footer>
 
-    <a href="#" class="fixed right-5 bottom-5 inline-flex justify-center items-center bg-green-600 text-white p-3 rounded-full"><i class="fa-solid fa-arrow-up"></i></a>
-    <!-- <div class="mb-200"></div> -->
+    <a
+      href="#home"
+      class="fixed right-5 bottom-5 inline-flex justify-center items-center bg-primary border-2 border-transparent shadow-c-md shadow-black rounded-md text-light p-3 hover:shadow-none hover:translate-px hover:border-2 hover:border-black smooth-transition-200"
+      ><i class="fa-solid fa-arrow-up"></i
+    ></a>
 
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/bc9983641e.js" crossorigin="anonymous"></script>
