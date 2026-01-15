@@ -24,3 +24,33 @@ hamburger.addEventListener("click", function () {
   navMenu.classList.toggle("nav-menu-active");
   navMenu.classList.toggle("opacity-0");
 });
+
+// FORM TO SHEET
+window.addEventListener("load", function () {
+  const form = document.getElementById("form-sheet");
+  const btnSubmit = document.getElementById("btn-submit");
+  const btnLoading = document.getElementById("btn-loading");
+  const alertForm = document.getElementById("alert-form");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    btnSubmit.classList.add("hidden");
+    btnLoading.classList.remove("hidden");
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: "POST",
+      body: data,
+    }).then(() => {
+      btnSubmit.classList.remove("hidden");
+      btnLoading.classList.add("hidden");
+      form.reset();
+      alertForm.classList.remove("hidden");
+      setTimeout(() => {
+        alertForm.classList.add("hidden");
+      }, 10000);
+    });
+  });
+});
+
+// YEAR AUTO UPDATE
+document.getElementById("year").textContent = new Date().getFullYear();
