@@ -4,33 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Naufallevi | Portfolio</title>
-    <link rel="shortcut icon" href="public/images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="public/images/favicon.ico"
+      type="image/x-icon"
+    />
     <!-- FONTS GOOGLE -->
     <link
       href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet"
     />
     <!-- DEVICON -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
     <!-- ALPINEJS -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
     <!-- TAILWIND OUTPUT -->
     <link rel="stylesheet" href="public/output.css" />
   </head>
 
   <body class="font-jakarta bg-body-1 bg-grid-dark">
     <!-- NAVBAR -->
-    <header id="navbar" class="w-full py-3 absolute flex items-center z-50 bg-transparent smooth-transition-500">
+    <header
+      id="navbar"
+      class="smooth-transition-500 absolute z-50 flex w-full items-center bg-transparent py-3"
+    >
       <div class="container">
-        <div class="flex items-center justify-between relative">
+        <div class="relative flex items-center justify-between">
           <div class="px-4">
-            <a href="#home" class="flex group">
-              <img src="public/images/logo-navbar.png" alt="Logo MNP" class="inline-block w-12 group-hover:scale-110 smooth-transition-300 animate-pulse" />
-              <span class="inline-block -ms-3 font-exo-2 text-lg font-bold italic text-primary tracking-wider translate-y-2 origin-left self-end group-hover:text-dark lg:text-xl smooth-transition-300">Naufallevi</span>
+            <a href="#home" class="group flex">
+              <img
+                src="public/images/logo-navbar.png"
+                alt="Logo MNP"
+                class="smooth-transition-300 inline-block w-12 animate-pulse group-hover:scale-110"
+              />
+              <span
+                class="font-exo-2 text-primary group-hover:text-dark smooth-transition-300 -ms-3 inline-block origin-left translate-y-2 self-end text-lg font-bold tracking-wider italic lg:text-xl"
+                >Naufallevi</span
+              >
             </a>
           </div>
           <div class="flex items-center px-4">
-            <button type="button" id="hamburger" class="hamburger smooth-transition-300 lg:hidden">
+            <button
+              type="button"
+              id="hamburger"
+              class="hamburger smooth-transition-300 lg:hidden"
+            >
               <span class="hamburger-line smooth-transition-300"></span>
               <span class="hamburger-line smooth-transition-300"></span>
               <span class="hamburger-line smooth-transition-300"></span>
@@ -40,25 +65,39 @@
             <nav id="nav-menu" class="nav-menu opacity-0 lg:opacity-100">
               <ul class="block lg:flex">
                 <li class="group nav-item">
-                  <a href="#home" class="nav-link smooth-transition-300">Home</a>
+                  <a href="#home" class="nav-link smooth-transition-300"
+                    >Home</a
+                  >
                 </li>
                 <li class="group nav-item">
-                  <a href="#about" class="nav-link smooth-transition-300">About</a>
+                  <a href="#about" class="nav-link smooth-transition-300"
+                    >About</a
+                  >
                 </li>
                 <li class="group nav-item smooth-transition-300">
-                  <a href="#services" class="nav-link smooth-transition-300">Services</a>
+                  <a href="#services" class="nav-link smooth-transition-300"
+                    >Services</a
+                  >
                 </li>
                 <li class="group nav-item">
-                  <a href="#projects" class="nav-link smooth-transition-300">Projects</a>
+                  <a href="#projects" class="nav-link smooth-transition-300"
+                    >Projects</a
+                  >
                 </li>
                 <li class="group nav-item">
-                  <a href="#journeys" class="nav-link smooth-transition-300">Journeys</a>
+                  <a href="#journeys" class="nav-link smooth-transition-300"
+                    >Journeys</a
+                  >
                 </li>
                 <li class="group nav-item">
-                  <a href="#blog" class="nav-link smooth-transition-300">Blog</a>
+                  <a href="#blog" class="nav-link smooth-transition-300"
+                    >Blog</a
+                  >
                 </li>
                 <li class="group nav-item">
-                  <a href="#contact" class="nav-link smooth-transition-300">Contact</a>
+                  <a href="#contact" class="nav-link smooth-transition-300"
+                    >Contact</a
+                  >
                 </li>
               </ul>
             </nav>
@@ -70,37 +109,76 @@
 
     <main>
       <!-- HERO -->
-      <section id="home" class="min-h-screen pt-20 flex">
+      <section id="home" class="flex min-h-screen pt-20">
         <div class="container flex-1">
-          <div class="grid gap-10 items-center h-full lg:grid-cols-2">
-            <div class="order-2 w-full self-center px-4 lg:order-2 boder">
-              <h1 class="text-xl font-bold text-dark mb-4 md:mb-8 lg:text-3xl">
+          <div class="grid h-full items-center gap-10 lg:grid-cols-2">
+            <div class="boder order-2 w-full self-center px-4 lg:order-2">
+              <h1 class="text-dark mb-4 text-xl font-bold md:mb-8 lg:text-3xl">
                 Hi there!
-                <span class="block text-3xl font-black tracking-tight lg:text-5xl">
+                <span
+                  class="block text-3xl font-black tracking-tight lg:text-5xl"
+                >
                   I'm
-                  <span class="text-primary ms-1">Muhammad Naufal Pahlevi </span>
+                  <span class="text-primary ms-1"
+                    >Muhammad Naufal Pahlevi
+                  </span>
                 </span>
               </h1>
-              <h2 class="text-lg font-bold text-dark lg:text-xl">Web Developer | Informatics Engineer</h2>
-              <p class="font-medium text-tertiary mb-4 md:mb-8">Turning ideas into functional, scalable, and user-friendly web applications</p>
+              <h2 class="text-dark text-lg font-bold lg:text-xl">
+                Web Developer | Informatics Engineer
+              </h2>
+              <p class="text-tertiary mb-4 font-medium md:mb-8">
+                Turning ideas into functional, scalable, and user-friendly web
+                applications
+              </p>
               <div class="flex flex-wrap gap-2 md:gap-4">
-                <a href="#" class="btn-1 bg-primary hover:bg-quaternary smooth-transition-200"><i class="fa-solid fa-briefcase me-1"></i>View Portfolio</a>
-                <a href="#" class="btn-1 bg-secondary hover:bg-quinary smooth-transition-200"> <i class="fa-solid fa-envelope me-1"></i>Contact Me</a>
+                <a
+                  href="#"
+                  class="btn-1 bg-primary hover:bg-quaternary smooth-transition-200"
+                  ><i class="fa-solid fa-briefcase me-1"></i>View Portfolio</a
+                >
+                <a
+                  href="#"
+                  class="btn-1 bg-secondary hover:bg-quinary smooth-transition-200"
+                >
+                  <i class="fa-solid fa-envelope me-1"></i>Contact Me</a
+                >
               </div>
             </div>
 
-            <div class="order-1 self-center w-full px-4 pt-6 flex justify-center lg:justify-end lg:order-2">
-              <div class="relative border-4 rounded-xl shadow-c-xl bg-[#FFD72E] p-4 max-w-5/6 hover:shadow-none hover:translate-1 hover:bg-[#FF9600] sm:max-w-3/5 md:max-w-1/2 lg:pt-0 lg:max-w-8/12 smooth-transition-300 group">
-                <div class="absolute z-11 -top-6 -left-6 w-15 sm:w-20 sm:-top-8 sm:-right-8 animate-rotate-scale-up group-hover:[animation-play-state:paused]">
-                  <img src="public/images/hero-star.png" alt="" class="max-w-full" />
+            <div
+              class="order-1 flex w-full justify-center self-center px-4 pt-6 lg:order-2 lg:justify-end lg:pt-0"
+            >
+              <div
+                class="shadow-c-xl smooth-transition-300 group relative max-w-5/6 rounded-xl border-4 bg-[#FFD72E] p-4 hover:translate-1 hover:bg-[#FF9600] hover:shadow-none sm:max-w-3/5 md:max-w-1/2 lg:max-w-8/12"
+              >
+                <div
+                  class="animate-rotate-scale-up absolute -top-6 -left-6 z-11 w-15 group-hover:[animation-play-state:paused] sm:-top-8 sm:-right-8 sm:w-20"
+                >
+                  <img
+                    src="public/images/hero-star.png"
+                    alt=""
+                    class="max-w-full"
+                  />
                 </div>
-                <div class="border-4 rounded-lg h-5/6 bg-green-50 overflow-hidden">
-                  <div class="relative mt-10 z-10">
-                    <img src="public/images/hero-picture.webp" alt="My Pictures" class="mx-auto -mt-10" />
+                <div
+                  class="h-5/6 overflow-hidden rounded-lg border-4 bg-green-50"
+                >
+                  <div class="relative z-10 mt-10">
+                    <img
+                      src="public/images/hero-picture.webp"
+                      alt="My Pictures"
+                      class="mx-auto -mt-10"
+                    />
                     <span
-                      class="absolute left-1/2 -translate-x-1/2 -z-10 scale-40 -bottom-30 mobile-m:scale-55 mobile-m:-bottom-28 mobile-l:scale-65 mobile-l:-bottom-20 sm:scale-75 sm:-bottom-15 lg:scale-62 lg:-bottom-19 xl:scale-85 xl:-bottom-10 animate-pulse"
+                      class="mobile-m:scale-55 mobile-m:-bottom-28 mobile-l:scale-65 mobile-l:-bottom-20 absolute -bottom-30 left-1/2 -z-10 -translate-x-1/2 scale-40 animate-pulse sm:-bottom-15 sm:scale-75 lg:-bottom-19 lg:scale-62 xl:-bottom-10 xl:scale-85"
                     >
-                      <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                      <svg
+                        width="400"
+                        height="400"
+                        viewBox="0 0 200 200"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
                         <path
                           fill="#00A63E"
                           d="M53.3,-52.6C66.2,-40.4,71.7,-20.2,72,0.3C72.2,20.7,67.2,41.5,54.3,53.7C41.5,65.8,20.7,69.5,-0.8,70.2C-22.2,71,-44.5,68.9,-56.4,56.7C-68.4,44.5,-70,22.2,-67.8,2.3C-65.5,-17.7,-59.3,-35.4,-47.3,-47.6C-35.4,-59.8,-17.7,-66.6,1.3,-67.9C20.2,-69.1,40.4,-64.9,53.3,-52.6Z"
@@ -120,48 +198,159 @@
       <!-- ABOUT -->
       <section id="about" class="pt-25 pb-15">
         <div class="container">
-          <div class="max-w-xl mx-auto text-center mb-10 lg:mb-20">
-            <h1 class="text-3xl font-black text-dark tracking-tighter lg:text-4xl">About <span class="text-primary">Me</span></h1>
+          <div class="mx-auto mb-10 max-w-xl text-center lg:mb-20">
+            <h1
+              class="text-dark text-3xl font-black tracking-tighter lg:text-4xl"
+            >
+              About <span class="text-primary">Me</span>
+            </h1>
           </div>
           <div class="flex flex-wrap items-center lg:justify-between">
-            <div class="w-full px-4 mb-15 lg:mb-0 lg:w-1/2">
-              <h2 class="text-lg font-black mb-6 uppercase leading-tight lg:text-2xl">Honestly, I love the world of <span class="bg-quinary px-1">web development</span> 😊</h2>
-              <p class="text-base font-medium text-dark leading-loose mb-4">
-                I am a Informatics Engineering graduate with a strong interest in web development, specializing in <b class="font-black">PHP</b> and <b class="font-black">JavaScript</b>, as well as frameworks such as CodeIgniter and
-                Laravel. I am experienced in handling projects from <b class="font-black">planning and requirements analysis</b> through <b class="font-black">implementation and evaluation</b>, both independently and as part of a team.
+            <div class="mb-15 w-full px-4 lg:mb-0 lg:w-1/2">
+              <h2
+                class="mb-6 text-lg leading-tight font-black uppercase lg:text-2xl"
+              >
+                Honestly, I love the world of
+                <span class="bg-quinary px-1">web development</span> 😊
+              </h2>
+              <p class="text-dark mb-4 text-base leading-loose font-medium">
+                I am a Informatics Engineering graduate with a strong interest
+                in web development, specializing in
+                <b class="font-black">PHP</b> and
+                <b class="font-black">JavaScript</b>, as well as frameworks such
+                as CodeIgniter and Laravel. I am experienced in handling
+                projects from
+                <b class="font-black">planning and requirements analysis</b>
+                through <b class="font-black">implementation and evaluation</b>,
+                both independently and as part of a team.
               </p>
-              <p class="text-base font-medium text-dark leading-loose mb-4">
-                In addition to software development, I have experience in <b class="font-black">computer networking</b> through an internship program, and I have also worked in a government institution, which has strengthened my ability to
-                work in structured, professional environments.
+              <p class="text-dark mb-4 text-base leading-loose font-medium">
+                In addition to software development, I have experience in
+                <b class="font-black">computer networking</b> through an
+                internship program, and I have also worked in a government
+                institution, which has strengthened my ability to work in
+                structured, professional environments.
               </p>
-              <p class="text-base font-medium text-dark leading-loose">
-                This portfolio is created to showcase my projects, work, and professional growth. I am a challenge-driven individual who adapts quickly to new environments and technologies, and I am continuously motivated to learn and grow
-                in the field of information technology.
+              <p class="text-dark text-base leading-loose font-medium">
+                This portfolio is created to showcase my projects, work, and
+                professional growth. I am a challenge-driven individual who
+                adapts quickly to new environments and technologies, and I am
+                continuously motivated to learn and grow in the field of
+                information technology.
               </p>
             </div>
 
-            <div class="font-space-grotesk w-full px-4 mb-10 lg:mb-0 lg:w-4/10">
-              <div class="relative border-4 shadow-c-2xl rounded-md p-8 bg-white hover:shadow-none hover:translate-1 smooth-transition-300">
-                <div class="absolute inline-block -top-5 left-1/2 -translate-x-1/2 px-4 py-1 bg-dark shadow-c-md shadow-black/60 border-2 border-black text-sm font-bold text-light uppercase tracking-widest">My Skills</div>
-                <h3 class="text-xl font-black text-center mb-2 uppercase mt-2">Technical Skills</h3>
-                <p class="text-sm font-medium text-tertiary text-center mb-8">These skills reflect my experience in building efficient, scalable, and maintainable systems.</p>
+            <div class="font-space-grotesk mb-10 w-full px-4 lg:mb-0 lg:w-4/10">
+              <div
+                class="shadow-c-2xl smooth-transition-300 relative rounded-md border-4 bg-white p-8 hover:translate-1 hover:shadow-none"
+              >
+                <div
+                  class="bg-dark shadow-c-md text-light absolute -top-5 left-1/2 inline-block -translate-x-1/2 border-2 border-black px-4 py-1 text-sm font-bold tracking-widest uppercase shadow-black/60"
+                >
+                  My Skills
+                </div>
+                <h3 class="mt-2 mb-2 text-center text-xl font-black uppercase">
+                  Technical Skills
+                </h3>
+                <p class="text-tertiary mb-8 text-center text-sm font-medium">
+                  These skills reflect my experience in building efficient,
+                  scalable, and maintainable systems.
+                </p>
 
-                <div class="flex flex-wrap gap-3 justify-center items-center">
-                  <span class="skill-item hover:bg-amber-500/30 smooth-transition-300"><i class="devicon-html5-plain colored text-base me-1.5"></i>HTML5</span>
-                  <span class="skill-item hover:bg-blue-500/30 smooth-transition-300"><i class="devicon-css3-plain colored text-base me-1.5"></i>CSS3</span>
-                  <span class="skill-item hover:bg-cyan-500/30 smooth-transition-300"><i class="devicon-tailwindcss-plain colored text-base me-1.5"></i>TailwindCSS</span>
-                  <span class="skill-item hover:bg-indigo-500/30 smooth-transition-300"><i class="devicon-bootstrap-plain colored text-base me-1.5"></i>Bootstrap</span>
-                  <span class="skill-item hover:bg-yellow-500/30 smooth-transition-300"><i class="devicon-javascript-plain colored text-base me-1.5"></i>Javascript</span>
-                  <span class="skill-item hover:bg-blue-500/30 smooth-transition-300"><i class="devicon-mysql-plain colored text-base me-1.5"></i>MySQL</span>
-                  <span class="skill-item hover:bg-amber-500/30 smooth-transition-300"><i class="devicon-codeigniter-plain colored text-base me-1.5"></i>CodeIgniter</span>
-                  <span class="skill-item hover:bg-red-500/30 smooth-transition-300"><i class="devicon-laravel-plain colored text-base me-1.5"></i>Laravel</span>
-                  <span class="skill-item hover:bg-indigo-500/30 smooth-transition-300"><i class="devicon-alpinejs-plain colored text-base me-1.5"></i>Alpine.js</span>
-                  <span class="skill-item hover:bg-cyan-500/30 smooth-transition-300"><i class="devicon-react-plain colored text-base me-1.5"></i>React</span>
-                  <span class="skill-item hover:bg-amber-500/30 smooth-transition-300"><i class="devicon-git-plain colored text-base me-1.5"></i>Git</span>
-                  <span class="skill-item hover:bg-blue-500/30 smooth-transition-300"><i class="devicon-canva-plain colored text-base me-1.5"></i>Canva</span>
-                  <span class="skill-item hover:bg-indigo-500/30 smooth-transition-300"><i class="fa-solid fa-file-word text-blue-600 text-base me-1.5"></i>Word</span>
-                  <span class="skill-item hover:bg-amber-500/30 smooth-transition-300"><i class="fa-solid fa-file-powerpoint text-orange-600 text-base me-1.5"></i>Powerpoint</span>
-                  <span class="skill-item hover:bg-green-500/30 smooth-transition-300"><i class="fa-solid fa-file-excel text-primary text-base me-1.5"></i>Excel</span>
+                <div class="flex flex-wrap items-center justify-center gap-3">
+                  <span
+                    class="skill-item smooth-transition-300 hover:bg-amber-500/30"
+                    ><i class="devicon-html5-plain colored me-1.5 text-base"></i
+                    >HTML5</span
+                  >
+                  <span
+                    class="skill-item smooth-transition-300 hover:bg-blue-500/30"
+                    ><i class="devicon-css3-plain colored me-1.5 text-base"></i
+                    >CSS3</span
+                  >
+                  <span
+                    class="skill-item smooth-transition-300 hover:bg-cyan-500/30"
+                    ><i
+                      class="devicon-tailwindcss-plain colored me-1.5 text-base"
+                    ></i
+                    >TailwindCSS</span
+                  >
+                  <span
+                    class="skill-item smooth-transition-300 hover:bg-indigo-500/30"
+                    ><i
+                      class="devicon-bootstrap-plain colored me-1.5 text-base"
+                    ></i
+                    >Bootstrap</span
+                  >
+                  <span
+                    class="skill-item smooth-transition-300 hover:bg-yellow-500/30"
+                    ><i
+                      class="devicon-javascript-plain colored me-1.5 text-base"
+                    ></i
+                    >Javascript</span
+                  >
+                  <span
+                    class="skill-item smooth-transition-300 hover:bg-blue-500/30"
+                    ><i class="devicon-mysql-plain colored me-1.5 text-base"></i
+                    >MySQL</span
+                  >
+                  <span
+                    class="skill-item smooth-transition-300 hover:bg-amber-500/30"
+                    ><i
+                      class="devicon-codeigniter-plain colored me-1.5 text-base"
+                    ></i
+                    >CodeIgniter</span
+                  >
+                  <span
+                    class="skill-item smooth-transition-300 hover:bg-red-500/30"
+                    ><i
+                      class="devicon-laravel-plain colored me-1.5 text-base"
+                    ></i
+                    >Laravel</span
+                  >
+                  <span
+                    class="skill-item smooth-transition-300 hover:bg-indigo-500/30"
+                    ><i
+                      class="devicon-alpinejs-plain colored me-1.5 text-base"
+                    ></i
+                    >Alpine.js</span
+                  >
+                  <span
+                    class="skill-item smooth-transition-300 hover:bg-cyan-500/30"
+                    ><i class="devicon-react-plain colored me-1.5 text-base"></i
+                    >React</span
+                  >
+                  <span
+                    class="skill-item smooth-transition-300 hover:bg-amber-500/30"
+                    ><i class="devicon-git-plain colored me-1.5 text-base"></i
+                    >Git</span
+                  >
+                  <span
+                    class="skill-item smooth-transition-300 hover:bg-blue-500/30"
+                    ><i class="devicon-canva-plain colored me-1.5 text-base"></i
+                    >Canva</span
+                  >
+                  <span
+                    class="skill-item smooth-transition-300 hover:bg-indigo-500/30"
+                    ><i
+                      class="fa-solid fa-file-word me-1.5 text-base text-blue-600"
+                    ></i
+                    >Word</span
+                  >
+                  <span
+                    class="skill-item smooth-transition-300 hover:bg-amber-500/30"
+                    ><i
+                      class="fa-solid fa-file-powerpoint me-1.5 text-base text-orange-600"
+                    ></i
+                    >Powerpoint</span
+                  >
+                  <span
+                    class="skill-item smooth-transition-300 hover:bg-green-500/30"
+                    ><i
+                      class="fa-solid fa-file-excel text-primary me-1.5 text-base"
+                    ></i
+                    >Excel</span
+                  >
                 </div>
               </div>
             </div>
@@ -171,50 +360,82 @@
       <!-- ABOUT END -->
 
       <!-- SERVICES -->
-      <section id="services" class="relative py-25 bg-body-2 bg-grid-dark">
-        <div class="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-body-1 to-transparent"></div>
+      <section id="services" class="bg-body-2 bg-grid-dark relative py-25">
+        <div
+          class="from-body-1 absolute inset-x-0 top-0 h-24 bg-linear-to-b to-transparent"
+        ></div>
 
         <div class="container">
           <div class="w-full px-4">
-            <div class="max-w-xl mx-auto text-center mb-10">
-              <h1 class="text-3xl font-black text-dark tracking-tighter lg:text-4xl">My <span class="text-primary">Services</span></h1>
-              <h3 class="text-xl font-light text-tertiary lg:text-2xl">Personalized services for every project</h3>
+            <div class="mx-auto mb-10 max-w-xl text-center">
+              <h1
+                class="text-dark text-3xl font-black tracking-tighter lg:text-4xl"
+              >
+                My <span class="text-primary">Services</span>
+              </h1>
+              <h3 class="text-tertiary text-xl font-light lg:text-2xl">
+                Personalized services for every project
+              </h3>
             </div>
             <div class="font-space-grotesk grid gap-8 md:grid-cols-2">
               <div class="card-services smooth-transition-300 group">
-                <div class="p-5 pe-2 flex-1">
-                  <h3 class="text-xl font-bold mb-3 lg:text-2xl">Web Development</h3>
-                  <p class="text-base">Building responsive, fast, and reliable websites</p>
+                <div class="flex-1 p-5 pe-2">
+                  <h3 class="mb-3 text-xl font-bold lg:text-2xl">
+                    Web Development
+                  </h3>
+                  <p class="text-base">
+                    Building responsive, fast, and reliable websites
+                  </p>
                 </div>
                 <div class="badge-services smooth-transition-300">
-                  <i class="fa-solid fa-laptop-code text-2xl text-primary group-hover:text-light sm:text-4xl smooth-transition-300"></i>
+                  <i
+                    class="fa-solid fa-laptop-code text-primary group-hover:text-light smooth-transition-300 text-2xl sm:text-4xl"
+                  ></i>
                 </div>
               </div>
               <div class="card-services smooth-transition-300 group">
-                <div class="p-5 pe-2 flex-1">
-                  <h3 class="text-xl font-bold mb-3 lg:text-2xl">Frontend Development</h3>
-                  <p class="text-base">Creating modern and user-friendly interfaces</p>
+                <div class="flex-1 p-5 pe-2">
+                  <h3 class="mb-3 text-xl font-bold lg:text-2xl">
+                    Frontend Development
+                  </h3>
+                  <p class="text-base">
+                    Creating modern and user-friendly interfaces
+                  </p>
                 </div>
                 <div class="badge-services smooth-transition-300">
-                  <i class="fa-solid fa-layer-group text-2xl text-primary group-hover:text-light sm:text-4xl smooth-transition-300"></i>
+                  <i
+                    class="fa-solid fa-layer-group text-primary group-hover:text-light smooth-transition-300 text-2xl sm:text-4xl"
+                  ></i>
                 </div>
               </div>
               <div class="card-services smooth-transition-300 group">
-                <div class="p-5 pe-2 flex-1">
-                  <h3 class="text-xl font-bold mb-3 lg:text-2xl">Backend Development</h3>
-                  <p class="text-base">Developing secure and scalable applications</p>
+                <div class="flex-1 p-5 pe-2">
+                  <h3 class="mb-3 text-xl font-bold lg:text-2xl">
+                    Backend Development
+                  </h3>
+                  <p class="text-base">
+                    Developing secure and scalable applications
+                  </p>
                 </div>
                 <div class="badge-services smooth-transition-300">
-                  <i class="fa-solid fa-server text-2xl text-primary group-hover:text-light sm:text-4xl smooth-transition-300"></i>
+                  <i
+                    class="fa-solid fa-server text-primary group-hover:text-light smooth-transition-300 text-2xl sm:text-4xl"
+                  ></i>
                 </div>
               </div>
               <div class="card-services smooth-transition-300 group">
-                <div class="p-5 pe-2 flex-1">
-                  <h3 class="text-xl font-bold mb-3 lg:text-2xl">Maintenance & Support</h3>
-                  <p class="text-base">Providing ongoing website maintenance and updates</p>
+                <div class="flex-1 p-5 pe-2">
+                  <h3 class="mb-3 text-xl font-bold lg:text-2xl">
+                    Maintenance & Support
+                  </h3>
+                  <p class="text-base">
+                    Providing ongoing website maintenance and updates
+                  </p>
                 </div>
                 <div class="badge-services smooth-transition-300">
-                  <i class="fa-solid fa-screwdriver-wrench text-2xl text-primary group-hover:text-light sm:text-4xl smooth-transition-300"></i>
+                  <i
+                    class="fa-solid fa-screwdriver-wrench text-primary group-hover:text-light smooth-transition-300 text-2xl sm:text-4xl"
+                  ></i>
                 </div>
               </div>
             </div>
@@ -224,35 +445,74 @@
       <!-- SERVICES END -->
 
       <!-- PROJECTS -->
-      <section id="projects" class="relative pt-25 pb-15 min-h-screen">
-        <div class="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-body-2 to-transparent"></div>
+      <section id="projects" class="relative min-h-screen pt-25 pb-15">
+        <div
+          class="from-body-2 absolute inset-x-0 top-0 h-24 bg-linear-to-b to-transparent"
+        ></div>
 
         <div class="container">
           <div class="w-full px-4">
-            <div class="max-w-xl mx-auto text-center mb-10">
-              <h1 class="text-3xl font-black text-dark tracking-tighter mb-3 lg:text-4xl">Project <span class="text-primary">Completed</span></h1>
-              <h3 class="text-xl font-light text-tertiary lg:text-2xl">A featured project that uses multiple tech stacks</h3>
+            <div class="mx-auto mb-10 max-w-xl text-center">
+              <h1
+                class="text-dark mb-3 text-3xl font-black tracking-tighter lg:text-4xl"
+              >
+                Project <span class="text-primary">Completed</span>
+              </h1>
+              <h3 class="text-tertiary text-xl font-light lg:text-2xl">
+                A featured project that uses multiple tech stacks
+              </h3>
             </div>
-            <div x-data="projectList" class="font-space-grotesk grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div
+              x-data="projectList"
+              class="font-space-grotesk grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+            >
               <template x-for="item in projects" :key="item.id">
-                <div class="border-4 bg-white shadow-c-2xl rounded-md overflow-hidden flex flex-col hover:shadow-none hover:translate-1 smooth-transition-300 group">
-                  <div class="bg-quinary border-b-4 p-2 flex justify-between items-center">
-                    <h2 class="text-base font-bold" x-text="'Project ' + item.id"></h2>
+                <div
+                  class="shadow-c-2xl smooth-transition-300 group flex flex-col overflow-hidden rounded-md border-4 bg-white hover:translate-1 hover:shadow-none"
+                >
+                  <div
+                    class="bg-quinary flex items-center justify-between border-b-4 p-2"
+                  >
+                    <h2
+                      class="text-base font-bold"
+                      x-text="'Project ' + item.id"
+                    ></h2>
                     <div class="inline-flex items-center gap-2">
-                      <span class="inline-block bg-red-600 px-1 py-1 border-2 rounded-full group-hover:bg-primary"></span>
-                      <a :href="item.repoLink" class="inline-flex justify-center items-center bg-white px-2 border-2 rounded-full text-xs font-bold hover:shadow-c-xs hover:-translate-px cursor-pointer smooth-transition-300">Repo</a>
+                      <span
+                        class="group-hover:bg-primary inline-block rounded-full border-2 bg-red-600 px-1 py-1"
+                      ></span>
+                      <a
+                        :href="item.repoLink"
+                        class="hover:shadow-c-xs smooth-transition-300 inline-flex cursor-pointer items-center justify-center rounded-full border-2 bg-white px-2 text-xs font-bold hover:-translate-px"
+                        >Repo</a
+                      >
                     </div>
                   </div>
-                  <div class="relative border-b-4 overflow-hidden aspect-video">
-                    <img :src="item.image" :alt="item.title" class="w-full h-full object-cover group-hover:scale-105 smooth-transition-300" />
-                    <div class="absolute bg-dark/15 inset-0 group-hover:bg-transparent smooth-transition-300"></div>
+                  <div class="relative aspect-video overflow-hidden border-b-4">
+                    <img
+                      :src="item.image"
+                      :alt="item.title"
+                      class="smooth-transition-300 h-full w-full object-cover group-hover:scale-105"
+                    />
+                    <div
+                      class="bg-dark/15 smooth-transition-300 absolute inset-0 group-hover:bg-transparent"
+                    ></div>
                   </div>
-                  <div class="p-5 flex flex-col flex-1">
-                    <h3 class="text-lg font-bold text-dark leading-tight mb-2 lg:text-xl" x-text="item.title"></h3>
-                    <p class="text-xs font-medium line-clamp-2 text-tertiary mb-4 lg:text-sm" x-text="item.desc"></p>
-                    <div class="border-t-2 pt-4 mt-auto flex flex-wrap gap-2">
+                  <div class="flex flex-1 flex-col p-5">
+                    <h3
+                      class="text-dark mb-2 text-lg leading-tight font-bold lg:text-xl"
+                      x-text="item.title"
+                    ></h3>
+                    <p
+                      class="text-tertiary mb-4 line-clamp-2 text-xs font-medium lg:text-sm"
+                      x-text="item.desc"
+                    ></p>
+                    <div class="mt-auto flex flex-wrap gap-2 border-t-2 pt-4">
                       <template x-for="tech in item.techs">
-                        <span class="inline-block border-2 bg-red-500/50 px-2 py-0.75 shadow-c-md text-2xs font-bold uppercase tracking-wide sm:text-xs hover:bg-primary/50 hover:-translate-y-1 smooth-transition-200" x-text="tech"></span>
+                        <span
+                          class="shadow-c-md text-2xs hover:bg-primary/50 smooth-transition-200 inline-block border-2 bg-red-500/50 px-2 py-0.75 font-bold tracking-wide uppercase hover:-translate-y-1 sm:text-xs"
+                          x-text="tech"
+                        ></span>
                       </template>
                     </div>
                   </div>
@@ -265,31 +525,67 @@
       <!-- PROJECTS END -->
 
       <!-- JOURNEY -->
-      <section id="journeys" class="relative pt-25 pb-15 bg-body-3 bg-grid-light">
-        <div class="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-body-1 to-transparent to-75%"></div>
+      <section
+        id="journeys"
+        class="bg-body-3 bg-grid-light relative pt-25 pb-15"
+      >
+        <div
+          class="from-body-1 absolute inset-x-0 top-0 h-24 bg-linear-to-b to-transparent to-75%"
+        ></div>
 
         <div class="container">
           <div class="w-full px-4">
-            <div class="max-w-xl mx-auto text-center mb-15">
-              <h2 class="text-lg font-bold text-light mb-2 uppercase tracking-widest lg:text-xl">My Journey</h2>
-              <h1 class="inline w-fit bg-light text-3xl font-black text-dark tracking-tighter leading-tight lg:text-4xl">Study & Work <span class="text-primary">Experience</span></h1>
-              <h3 class="text-xl font-light text-light/75 mt-3 lg:text-2xl">A journey through my education and professional growth</h3>
+            <div class="mx-auto mb-15 max-w-xl text-center">
+              <h2
+                class="text-light mb-2 text-lg font-bold tracking-widest uppercase lg:text-xl"
+              >
+                My Journey
+              </h2>
+              <h1
+                class="bg-light text-dark inline w-fit text-3xl leading-tight font-black tracking-tighter lg:text-4xl"
+              >
+                Study & Work <span class="text-primary">Experience</span>
+              </h1>
+              <h3 class="text-light/75 mt-3 text-xl font-light lg:text-2xl">
+                A journey through my education and professional growth
+              </h3>
             </div>
 
-            <div x-data="journeyList" class="font-space-grotesk flex flex-col gap-10">
+            <div
+              x-data="journeyList"
+              class="font-space-grotesk flex flex-col gap-10"
+            >
               <template x-for="item in studies" :key="item.id">
-                <div class="relative p-6 bg-light/75 border-4 border-black shadow-c-2xl shadow-black rounded-md hover:bg-light hover:translate-1 hover:shadow-none smooth-transition-300 group">
-                  <div class="absolute bg-black text-light -top-5 -right-5 px-4 py-1 border-2 shadow-c-xs shadow-black/50 group-hover:rotate-3 smooth-transition-300" x-text="item.date"></div>
-                  <div class="flex flex-col gap-4 items-start sm:flex-row">
-                    <div class="w-12 aspect-square bg-quaternary border-2 flex justify-center items-center shrink-0 lg:w-14 group-hover:bg-black group-hover:text-light group-hover:border-black">
+                <div
+                  class="bg-light/75 shadow-c-2xl hover:bg-light smooth-transition-300 group relative rounded-md border-4 border-black p-6 shadow-black hover:translate-1 hover:shadow-none"
+                >
+                  <div
+                    class="text-light shadow-c-xs smooth-transition-300 absolute -top-5 -right-5 border-2 bg-black px-4 py-1 shadow-black/50 group-hover:rotate-3"
+                    x-text="item.date"
+                  ></div>
+                  <div class="flex flex-col items-start gap-4 sm:flex-row">
+                    <div
+                      class="bg-quaternary group-hover:text-light flex aspect-square w-12 shrink-0 items-center justify-center border-2 group-hover:border-black group-hover:bg-black lg:w-14"
+                    >
                       <span class="text-2xl font-bold" x-text="item.id"></span>
                     </div>
                     <div class="w-full space-y-2 px-2">
-                      <h1 class="text-xl text-dark font-bold mb-2 leading-none sm:text-2xl" x-text="item.title"></h1>
-                      <p class="text-lg text-dark/70 font-medium sm:text-xl" x-text="item.desc"></p>
-                      <div class="w-full mt-3 border-t-2 border-black/30 py-4 flex flex-wrap gap-2">
+                      <h1
+                        class="text-dark mb-2 text-xl leading-none font-bold sm:text-2xl"
+                        x-text="item.title"
+                      ></h1>
+                      <p
+                        class="text-dark/70 text-lg font-medium sm:text-xl"
+                        x-text="item.desc"
+                      ></p>
+                      <div
+                        class="mt-3 flex w-full flex-wrap gap-2 border-t-2 border-black/30 py-4"
+                      >
                         <template x-for="tech in item.techs">
-                          <span class="text-2xs font-bold uppercase bg-green-300 px-3 py-1 border-2 border-black sm:text-xs hover:bg-green-950 hover:text-light smooth-transition-200" x-text="tech"></span>
+                          <span
+                            class="text-2xs hover:text-light smooth-transition-200 border-2 border-black bg-green-300 px-3 py-1 font-bold uppercase hover:bg-green-950 sm:text-xs"
+                            x-text="tech"
+                          ></span>
                         </template>
                       </div>
                     </div>
@@ -297,28 +593,53 @@
                 </div>
               </template>
 
-              <div class="relative flex items-center justify-center py-2 px-2">
-                <div class="absolute w-3/4 h-0.5 border-b-4 border-dashed border-white opacity-50"></div>
+              <div class="relative flex items-center justify-center px-2 py-2">
+                <div
+                  class="absolute h-0.5 w-3/4 border-b-4 border-dashed border-white opacity-50"
+                ></div>
 
-                <div class="relative z-10 bg-white border-2 border-black px-4 py-1 shadow-c-xs -rotate-6 hover:rotate-6 smooth-transition-300">
-                  <span class="font-black text-xl">Work Experience</span>
+                <div
+                  class="shadow-c-xs smooth-transition-300 relative z-10 -rotate-6 border-2 border-black bg-white px-4 py-1 hover:rotate-6"
+                >
+                  <span class="text-xl font-black">Work Experience</span>
                 </div>
               </div>
 
               <template x-for="item in works">
-                <div class="relative p-6 bg-secondary border-4 border-black shadow-c-2xl shadow-black rounded-md hover:bg-quinary hover:translate-1 hover:shadow-none smooth-transition-300 group">
-                  <div class="absolute bg-black text-light -top-5 -right-5 px-4 py-1 border-2 shadow-c-xs shadow-black/50 group-hover:rotate-3 smooth-transition-300" x-text="item.date"></div>
-                  <div class="flex flex-col gap-4 items-start sm:flex-row">
-                    <div class="w-12 aspect-square bg-white border-2 flex justify-center items-center shrink-0 lg:w-14 group-hover:bg-black group-hover:text-light group-hover:border-black">
+                <div
+                  class="bg-secondary shadow-c-2xl hover:bg-quinary smooth-transition-300 group relative rounded-md border-4 border-black p-6 shadow-black hover:translate-1 hover:shadow-none"
+                >
+                  <div
+                    class="text-light shadow-c-xs smooth-transition-300 absolute -top-5 -right-5 border-2 bg-black px-4 py-1 shadow-black/50 group-hover:rotate-3"
+                    x-text="item.date"
+                  ></div>
+                  <div class="flex flex-col items-start gap-4 sm:flex-row">
+                    <div
+                      class="group-hover:text-light flex aspect-square w-12 shrink-0 items-center justify-center border-2 bg-white group-hover:border-black group-hover:bg-black lg:w-14"
+                    >
                       <span class="text-2xl font-bold" x-text="item.id"></span>
                     </div>
                     <div class="w-full space-y-2 px-2">
-                      <h1 class="text-xl font-bold mb-2 leading-none sm:text-2xl" x-text="item.title"></h1>
-                      <p class="text-lg text-dark/80 font-medium sm:text-xl" x-text="item.job"></p>
-                      <p class="text-sm font-medium border-s-4 px-3 my-3 py-2 bg-light/75" x-text="item.desc"></p>
-                      <div class="w-full mt-3 border-t-2 border-black/30 py-4 flex flex-wrap gap-2">
+                      <h1
+                        class="mb-2 text-xl leading-none font-bold sm:text-2xl"
+                        x-text="item.title"
+                      ></h1>
+                      <p
+                        class="text-dark/80 text-lg font-medium sm:text-xl"
+                        x-text="item.job"
+                      ></p>
+                      <p
+                        class="bg-light/75 my-3 border-s-4 px-3 py-2 text-sm font-medium"
+                        x-text="item.desc"
+                      ></p>
+                      <div
+                        class="mt-3 flex w-full flex-wrap gap-2 border-t-2 border-black/30 py-4"
+                      >
                         <template x-for="tech in item.techs">
-                          <span class="text-2xs font-bold uppercase bg-green-50 px-3 py-1 border-2 border-black sm:text-xs hover:bg-black hover:text-light smooth-transition-300" x-text="tech"></span>
+                          <span
+                            class="text-2xs hover:text-light smooth-transition-300 border-2 border-black bg-green-50 px-3 py-1 font-bold uppercase hover:bg-black sm:text-xs"
+                            x-text="tech"
+                          ></span>
                         </template>
                       </div>
                     </div>
@@ -333,36 +654,79 @@
 
       <!-- BLOG -->
       <section id="blog" class="relative pt-25 pb-15">
-        <div class="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-body-3 to-transparent to-75%"></div>
+        <div
+          class="from-body-3 absolute inset-x-0 top-0 h-24 bg-linear-to-b to-transparent to-75%"
+        ></div>
 
         <div class="container">
           <div class="w-full px-4">
-            <div class="max-w-xl mx-auto text-center mb-10">
-              <h1 class="text-3xl font-black text-dark tracking-tighter mb-3 lg:text-4xl">My <span class="text-primary">Blog</span></h1>
-              <h3 class="text-xl font-light text-tertiary lg:text-2xl">Thoughts, stories, and experiences worth sharing.</h3>
+            <div class="mx-auto mb-10 max-w-xl text-center">
+              <h1
+                class="text-dark mb-3 text-3xl font-black tracking-tighter lg:text-4xl"
+              >
+                My <span class="text-primary">Blog</span>
+              </h1>
+              <h3 class="text-tertiary text-xl font-light lg:text-2xl">
+                Thoughts, stories, and experiences worth sharing.
+              </h3>
             </div>
 
-            <div x-data="blogMedium()" x-init="fetchPosts()" class="font-space-grotesk grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            <div
+              x-data="blogMedium()"
+              x-init="fetchPosts()"
+              class="font-space-grotesk grid gap-10 sm:grid-cols-2 lg:grid-cols-3"
+            >
               <!-- LOADING DATA -->
-              <div x-show="posts.length === 0" class="bg-light/75 text-dark text-center p-10 rounded-md animate-pulse">Loading articles...</div>
+              <div
+                x-show="posts.length === 0"
+                class="bg-light/75 text-dark animate-pulse rounded-md p-10 text-center"
+              >
+                Loading articles...
+              </div>
               <!-- LOADING DATA END -->
 
               <template x-for="post in posts" :key="post.link">
-                <article class="bg-light/75 border-4 shadow-c-2xl rounded-md overflow-hidden flex flex-col hover:shadow-none hover:translate-1 smooth-transition-300 group">
-                  <div class="relative h-50 overflow-hidden border-b-4 border-black">
-                    <img :src="post.image" :alt="post.alt" loading="lazy" class="h-full w-full object-cover group-hover:scale-105 smooth-transition-300" />
+                <article
+                  class="bg-light/75 shadow-c-2xl smooth-transition-300 group flex flex-col overflow-hidden rounded-md border-4 hover:translate-1 hover:shadow-none"
+                >
+                  <div
+                    class="relative h-50 overflow-hidden border-b-4 border-black"
+                  >
+                    <img
+                      :src="post.image"
+                      :alt="post.alt"
+                      loading="lazy"
+                      class="smooth-transition-300 h-full w-full object-cover group-hover:scale-105"
+                    />
                     <!-- <span class="absolute top-4 right-4 bg-yellow-400 border-2 border-black px-3 py-1 text-xs font-black uppercase tracking-wider shadow-c-xs">Category</span> -->
                   </div>
-                  <div class="p-6 flex flex-col flex-1">
-                    <time class="text-sm mb-2 font-bold text-tertiary" x-text="post.date"></time>
-                    <h3 class="text-xl font-bold leading-tight line-clamp-2 mb-6 lg:text-2xl" x-text="post.title"></h3>
-                    <a :href="post.link" target="_blank" class="btn-2 bg-quaternary hover:bg-primary smooth-transition-200">Read More<i class="fa-solid fa-arrow-right ms-1"></i></a>
+                  <div class="flex flex-1 flex-col p-6">
+                    <time
+                      class="text-tertiary mb-2 text-sm font-bold"
+                      x-text="post.date"
+                    ></time>
+                    <h3
+                      class="mb-6 line-clamp-2 text-xl leading-tight font-bold lg:text-2xl"
+                      x-text="post.title"
+                    ></h3>
+                    <a
+                      :href="post.link"
+                      target="_blank"
+                      class="btn-2 bg-quaternary hover:bg-primary smooth-transition-200"
+                      >Read More<i class="fa-solid fa-arrow-right ms-1"></i
+                    ></a>
                   </div>
                 </article>
               </template>
             </div>
             <div class="mt-15 text-center">
-              <a href="https://medium.com/@mrshintaro" target="_blank" class="btn-1 bg-secondary hover:bg-quinary smooth-transition-200"><i class="fa-brands fa-medium fa-xl me-1"></i>View more on Medium</a>
+              <a
+                href="https://medium.com/@mrshintaro"
+                target="_blank"
+                class="btn-1 bg-secondary hover:bg-quinary smooth-transition-200"
+                ><i class="fa-brands fa-medium fa-xl me-1"></i>View more on
+                Medium</a
+              >
             </div>
           </div>
         </div>
@@ -370,77 +734,184 @@
       <!-- BLOG END -->
 
       <!-- CONTACT -->
-      <section id="contact" class="relative pt-25 pb-15 bg-body-2 bg-grid-dark">
-        <div class="absolute inset-x-0 top-0 h-24 bg-linear-to-b from-body-1 to-transparent"></div>
+      <section id="contact" class="bg-body-2 bg-grid-dark relative pt-25 pb-15">
+        <div
+          class="from-body-1 absolute inset-x-0 top-0 h-24 bg-linear-to-b to-transparent"
+        ></div>
 
         <div class="container">
           <div class="w-full px-4">
-            <div class="max-w-xl mx-auto text-center mb-10">
-              <h1 class="text-3xl font-bold lg:text-4xl">Contact <span class="text-primary">Me</span></h1>
+            <div class="mx-auto mb-10 max-w-xl text-center">
+              <h1 class="text-3xl font-bold lg:text-4xl">
+                Contact <span class="text-primary">Me</span>
+              </h1>
             </div>
-            <div class="w-full lg:w-3/4 mx-auto">
-              <div class="bg-white font-space-grotesk p-4 rounded-md border-4 shadow-c-3xl hover:shadow-none hover:translate-1 smooth-transition-300">
-                <h3 class="text-xl text-center tracking-tighter mb-8 lg:text-2xl">Let’s work together or discuss your next project</h3>
+            <div class="mx-auto w-full lg:w-3/4">
+              <div
+                class="font-space-grotesk shadow-c-3xl smooth-transition-300 rounded-md border-4 bg-white p-4 hover:translate-1 hover:shadow-none"
+              >
+                <h3
+                  class="mb-8 text-center text-xl tracking-tighter lg:text-2xl"
+                >
+                  Let’s work together or discuss your next project
+                </h3>
 
-                <form id="form-sheet" action="https://script.google.com/macros/s/AKfycbzianRqcjepV7xrrg_QGSNRakNanGKWDwTcYJofPMnGKD_tQExKKH6gQFdjzypL64CU/exec" method="POST" class="space-y-6 px-2">
+                <form
+                  id="form-sheet"
+                  action="https://script.google.com/macros/s/AKfycbzianRqcjepV7xrrg_QGSNRakNanGKWDwTcYJofPMnGKD_tQExKKH6gQFdjzypL64CU/exec"
+                  method="POST"
+                  class="space-y-6 px-2"
+                >
                   <!-- ALERT -->
                   <div id="alert-form" class="hidden">
-                    <div class="flex items-start gap-4 p-4 border-2 border-black bg-quaternary shadow-c-lg">
-                      <div class="bg-white text-black p-1 min-w-8 h-8 flex items-center justify-center border-2 border-black">
+                    <div
+                      class="bg-quaternary shadow-c-lg flex items-start gap-4 border-2 border-black p-4"
+                    >
+                      <div
+                        class="flex h-8 min-w-8 items-center justify-center border-2 border-black bg-white p-1 text-black"
+                      >
                         <i class="fa-solid fa-thumbs-up"></i>
                       </div>
                       <div class="flex-1">
-                        <h3 class="text-lg font-black uppercase leading-none mb-1">Success!</h3>
-                        <p class="font-bold text-sm leading-tight">Thank you and data sent successfully</p>
+                        <h3
+                          class="mb-1 text-lg leading-none font-black uppercase"
+                        >
+                          Success!
+                        </h3>
+                        <p class="text-sm leading-tight font-bold">
+                          Thank you and data sent successfully
+                        </p>
                       </div>
                     </div>
                   </div>
 
-                  <div class="space-y-6 lg:space-y-0 grid lg:grid-cols-2 gap-x-6">
+                  <div
+                    class="grid space-y-6 gap-x-6 lg:grid-cols-2 lg:space-y-0"
+                  >
                     <div>
-                      <label for="name" class="form-label form-required">Name</label>
-                      <input type="text" name="name" id="name" placeholder="Your name..." class="form-input smooth-transition-300" required />
+                      <label for="name" class="form-label form-required"
+                        >Name</label
+                      >
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Your name..."
+                        class="form-input smooth-transition-300"
+                        required
+                      />
                     </div>
                     <div>
-                      <label for="email" class="form-label form-required">Email</label>
-                      <input type="email" name="email" id="email" placeholder="Your @email..." class="form-input smooth-transition-300" required />
+                      <label for="email" class="form-label form-required"
+                        >Email</label
+                      >
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Your @email..."
+                        class="form-input smooth-transition-300"
+                        required
+                      />
                     </div>
                   </div>
                   <div>
-                    <label for="messages" class="form-label form-required">Messages</label>
-                    <textarea name="messages" id="messages" placeholder="Your messages..." class="form-input h-32 resize-y smooth-transition-300" required></textarea>
+                    <label for="messages" class="form-label form-required"
+                      >Messages</label
+                    >
+                    <textarea
+                      name="messages"
+                      id="messages"
+                      placeholder="Your messages..."
+                      class="form-input smooth-transition-300 h-32 resize-y"
+                      required
+                    ></textarea>
                   </div>
-                  <button id="btn-submit" type="submit" class="w-full btn-2 bg-quaternary hover:bg-primary smooth-transition-200">Submit<i class="fa-regular fa-paper-plane fa-xl ms-1"></i></button>
+                  <button
+                    id="btn-submit"
+                    type="submit"
+                    class="btn-2 bg-quaternary hover:bg-primary smooth-transition-200 w-full"
+                  >
+                    Submit<i class="fa-regular fa-paper-plane fa-xl ms-1"></i>
+                  </button>
                   <!-- Button Loading -->
-                  <button id="btn-loading" type="button" class="hidden w-full btn-2 bg-dark hover:bg-dark/80 text-white smooth-transition-200">Loading<i class="fa-solid fa-spinner fa-xl ms-1 animate-spin"></i></button>
+                  <button
+                    id="btn-loading"
+                    type="button"
+                    class="btn-2 bg-dark hover:bg-dark/80 smooth-transition-200 hidden w-full text-white"
+                  >
+                    Loading<i
+                      class="fa-solid fa-spinner fa-xl ms-1 animate-spin"
+                    ></i>
+                  </button>
                 </form>
 
-                <div class="relative flex items-center justify-center pt-10 pb-8 px-2">
-                  <div class="absolute w-3/4 h-0.5 border-b-4 border-dashed border-black opacity-50"></div>
+                <div
+                  class="relative flex items-center justify-center px-2 pt-10 pb-8"
+                >
+                  <div
+                    class="absolute h-0.5 w-3/4 border-b-4 border-dashed border-black opacity-50"
+                  ></div>
 
-                  <div class="relative z-10 bg-white border-2 border-black px-4 py-1 shadow-c-xs -rotate-6 hover:rotate-6 smooth-transition-300">
-                    <span class="font-black text-xl">OR</span>
+                  <div
+                    class="shadow-c-xs smooth-transition-300 relative z-10 -rotate-6 border-2 border-black bg-white px-4 py-1 hover:rotate-6"
+                  >
+                    <span class="text-xl font-black">OR</span>
                   </div>
                 </div>
 
-                <div class="w-3/4 space-y-6 mx-auto px-2 pb-4">
+                <div class="mx-auto w-3/4 space-y-6 px-2 pb-4">
                   <div class="text-center">
-                    <h2 class="text-xl font-bold mb-8 text-dark tracking-tighter">Connect With Me</h2>
+                    <h2
+                      class="text-dark mb-8 text-xl font-bold tracking-tighter"
+                    >
+                      Connect With Me
+                    </h2>
                     <div class="flex flex-wrap justify-center gap-4">
-                      <a href="https://www.facebook.com/mnv26x" target="_blank" class="badge-socmed hover:bg-blue-600/50 smooth-transition-200"
-                        ><i class="fa-brands fa-facebook fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">Facebook</span></a
+                      <a
+                        href="https://www.facebook.com/mnv26x"
+                        target="_blank"
+                        class="badge-socmed smooth-transition-200 hover:bg-blue-600/50"
+                        ><i class="fa-brands fa-facebook fa-xl lg:me-1"></i>
+                        <span class="hidden text-lg font-semibold lg:inline"
+                          >Facebook</span
+                        ></a
                       >
-                      <a href="https://www.instagram.com/naufallevi_" target="_blank" class="badge-socmed hover:bg-pink-500/50 smooth-transition-200"
-                        ><i class="fa-brands fa-instagram fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">Instagram</span></a
+                      <a
+                        href="https://www.instagram.com/naufallevi_"
+                        target="_blank"
+                        class="badge-socmed smooth-transition-200 hover:bg-pink-500/50"
+                        ><i class="fa-brands fa-instagram fa-xl lg:me-1"></i>
+                        <span class="hidden text-lg font-semibold lg:inline"
+                          >Instagram</span
+                        ></a
                       >
-                      <a href="https://www.youtube.com/@assassinsx60" target="_blank" class="badge-socmed hover:bg-red-600/50 smooth-transition-200"
-                        ><i class="fa-brands fa-youtube fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">YouTube</span></a
+                      <a
+                        href="https://www.youtube.com/@assassinsx60"
+                        target="_blank"
+                        class="badge-socmed smooth-transition-200 hover:bg-red-600/50"
+                        ><i class="fa-brands fa-youtube fa-xl lg:me-1"></i>
+                        <span class="hidden text-lg font-semibold lg:inline"
+                          >YouTube</span
+                        ></a
                       >
-                      <a href="https://github.com/naufallevi" target="_blank" class="badge-socmed hover:bg-gray-800/50 smooth-transition-200"
-                        ><i class="fa-brands fa-github fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">GitHub</span></a
+                      <a
+                        href="https://github.com/naufallevi"
+                        target="_blank"
+                        class="badge-socmed smooth-transition-200 hover:bg-gray-800/50"
+                        ><i class="fa-brands fa-github fa-xl lg:me-1"></i>
+                        <span class="hidden text-lg font-semibold lg:inline"
+                          >GitHub</span
+                        ></a
                       >
-                      <a href="https://www.linkedin.com/in/muhammad-naufal-pahlevi" target="_blank" class="badge-socmed hover:bg-blue-700/50 smooth-transition-200"
-                        ><i class="fa-brands fa-linkedin fa-xl lg:me-1"></i> <span class="text-lg font-semibold hidden lg:inline">LinkedIn</span></a
+                      <a
+                        href="https://www.linkedin.com/in/muhammad-naufal-pahlevi"
+                        target="_blank"
+                        class="badge-socmed smooth-transition-200 hover:bg-blue-700/50"
+                        ><i class="fa-brands fa-linkedin fa-xl lg:me-1"></i>
+                        <span class="hidden text-lg font-semibold lg:inline"
+                          >LinkedIn</span
+                        ></a
                       >
                     </div>
                   </div>
@@ -453,21 +924,30 @@
       <!-- CONTACT END -->
     </main>
 
-    <footer class="relative bg-white flex justify-center shadow-footer shadow-primary/20">
-      <div class="w-3/4 py-8 border-t-4 border-black/30 text-center rounded-sm">
-        <p class="text-base font-medium">&copy;<span id="year"></span> <b class="font-bold">Naufallevi</b>. Made with <i class="fa-solid fa-heart text-red-500"></i> and <i class="fa-solid fa-mug-hot text-amber-800"></i></p>
+    <footer
+      class="shadow-footer shadow-primary/20 relative flex justify-center bg-white"
+    >
+      <div class="w-3/4 rounded-sm border-t-4 border-black/30 py-8 text-center">
+        <p class="text-base font-medium">
+          &copy;<span id="year"></span> <b class="font-bold">Naufallevi</b>.
+          Made with <i class="fa-solid fa-heart text-red-500"></i> and
+          <i class="fa-solid fa-mug-hot text-amber-800"></i>
+        </p>
       </div>
     </footer>
 
     <a
       id="scrollToTop"
       href="#home"
-      class="fixed -bottom-50 right-10 inline-flex justify-center items-center bg-primary border-2 border-transparent shadow-c-md shadow-black rounded-md text-light p-3 hover:shadow-none hover:translate-px hover:border-2 hover:border-black smooth-transition-500"
+      class="bg-primary shadow-c-md text-light smooth-transition-500 fixed right-10 -bottom-50 inline-flex items-center justify-center rounded-md border-2 border-transparent p-3 shadow-black hover:translate-px hover:border-2 hover:border-black hover:shadow-none"
       ><i class="fa-solid fa-arrow-up"></i
     ></a>
 
     <!-- FONTAWESOME -->
-    <script src="https://kit.fontawesome.com/bc9983641e.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/bc9983641e.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- ALPINEJS ASSETS -->
     <script src="public/js/projects.js"></script>
