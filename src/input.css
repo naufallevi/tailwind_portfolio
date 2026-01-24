@@ -70,6 +70,10 @@
   .smooth-transition-300 {
     @apply transition-all duration-300 ease-in-out;
   }
+  
+  .smooth-transition-500 {
+    @apply transition-all duration-500 ease-in-out;
+  }
 
   .btn-1 {
     @apply inline-flex justify-center items-center px-6 py-3 rounded-md border-2 border-black shadow-none text-xs tracking-widest font-bold text-center hover:shadow-c-lg hover:-translate-1 md:text-base;
@@ -80,9 +84,6 @@
   }
 
   /* ========== NAVBAR ========== */
-  .navbar {
-    @apply w-full py-3 top-0 left-0 flex items-center z-50;
-  }
   .navbar-fixed {
     @apply fixed z-9999 bg-white/75 backdrop-blur-md shadow-navbar shadow-primary/20;
   }
@@ -128,7 +129,7 @@
 
   /* ---------- NAVMENU */
   .nav-menu {
-    @apply fixed py-2 bg-white shadow-2xl shadow-primary/20 rounded-lg max-w-11/12 w-full max-h-80 overflow-y-scroll top-18 left-1/2  translate-x-full mobile-l:py-5 lg:block lg:static lg:py-0 lg:bg-transparent lg:shadow-none lg:rounded-none lg:max-w-full lg:max-h-full lg:overflow-visible lg:translate-x-0 max-lg:transition max-lg:duration-300 max-lg:ease-in-out;
+    @apply fixed py-2 border-b-18 border-white bg-white shadow-2xl shadow-primary/20 rounded-lg max-w-11/12 w-full max-h-80 overflow-y-scroll top-18 left-1/2 translate-x-full mobile-l:py-5 lg:block lg:static lg:py-0 lg:border-0 lg:bg-transparent lg:shadow-none lg:rounded-none lg:max-w-full lg:max-h-full lg:overflow-visible lg:translate-x-0 max-lg:transition max-lg:duration-300 max-lg:ease-in-out;
   }
 
   .nav-menu-active {
@@ -140,7 +141,7 @@
   }
 
   .nav-link {
-    @apply relative text-sm text-dark mx-5 py-1.75 group-hover:text-primary group-hover:font-semibold mobile-l:text-lg lg:text-base;
+    @apply relative text-sm font-semibold text-dark mx-5 py-1.75 group-hover:text-primary mobile-l:text-lg lg:text-base;
   }
 
   .nav-link::after {

@@ -2,15 +2,25 @@
 window.onscroll = function () {
   const header = document.querySelector("#navbar");
   const navbarFixed = header.offsetTop;
+  // Scroll To Top Button
+  const scrollToTop = document.querySelector("#scrollToTop");
 
   if (window.pageYOffset > navbarFixed) {
     header.classList.remove("absolute");
     header.classList.remove("bg-transparent");
     header.classList.add("navbar-fixed");
+    // Scroll To Top Button
+    scrollToTop.classList.add("bottom-5");
+    scrollToTop.classList.remove("-bottom-50");
+
   } else {
     header.classList.add("absolute");
     header.classList.add("bg-transparent");
     header.classList.remove("navbar-fixed");
+    // Scroll To Top Button
+    scrollToTop.classList.remove("bottom-5");
+    scrollToTop.classList.add("-bottom-50");
+
   }
 };
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -20,13 +20,13 @@
 
   <body class="font-jakarta bg-body-1 bg-grid-dark">
     <!-- NAVBAR -->
-    <header id="navbar" class="navbar absolute bg-transparent smooth-transition-300">
+    <header id="navbar" class="w-full py-3 absolute flex items-center z-50 bg-transparent smooth-transition-500">
       <div class="container">
         <div class="flex items-center justify-between relative">
           <div class="px-4">
             <a href="#home" class="flex group">
-              <img src="public/images/logo-navbar.png" alt="Logo MNP" class="inline-block w-12 group-hover:scale-110 smooth-transition-300" />
-              <span class="inline-block ms-1 font-exo-2 text-lg font-bold italic text-primary tracking-wider translate-y-2 origin-left self-end group-hover:text-quaternary lg:text-xl smooth-transition-300">Naufallevi</span>
+              <img src="public/images/logo-navbar.png" alt="Logo MNP" class="inline-block w-12 group-hover:scale-110 smooth-transition-300 animate-pulse" />
+              <span class="inline-block -ms-3 font-exo-2 text-lg font-bold italic text-primary tracking-wider translate-y-2 origin-left self-end group-hover:text-dark lg:text-xl smooth-transition-300">Naufallevi</span>
             </a>
           </div>
           <div class="flex items-center px-4">
@@ -70,15 +70,15 @@
 
     <main>
       <!-- HERO -->
-      <section id="home" class="h-screen pt-20">
-        <div class="container h-full">
+      <section id="home" class="min-h-screen pt-20 flex">
+        <div class="container flex-1">
           <div class="grid gap-10 items-center h-full lg:grid-cols-2">
             <div class="order-2 w-full self-center px-4 lg:order-2 boder">
               <h1 class="text-xl font-bold text-dark mb-4 md:mb-8 lg:text-3xl">
                 Hi there!
                 <span class="block text-3xl font-black tracking-tight lg:text-5xl">
                   I'm
-                  <span class="text-primary ms-1"> Muhammad Naufal Pahlevi </span>
+                  <span class="text-primary ms-1">Muhammad Naufal Pahlevi </span>
                 </span>
               </h1>
               <h2 class="text-lg font-bold text-dark lg:text-xl">Web Developer | Informatics Engineer</h2>
@@ -89,16 +89,16 @@
               </div>
             </div>
 
-            <div class="order-1 self-center w-full px-4 flex justify-center lg:justify-end lg:order-2">
-              <div class="relative border-4 rounded-xl shadow-c-xl bg-yellow-200 p-4 max-w-5/6 sm:max-w-3/5 md:max-w-1/2 lg:max-w-10/12">
-                <div class="absolute z-11 -top-6 -right-6 w-20 sm:w-25 sm:-top-8 sm:-right-8 animate-rotate-scale-up">
+            <div class="order-1 self-center w-full px-4 pt-6 flex justify-center lg:justify-end lg:order-2">
+              <div class="relative border-4 rounded-xl shadow-c-xl bg-[#FFD72E] p-4 max-w-5/6 hover:shadow-none hover:translate-1 hover:bg-[#FF9600] sm:max-w-3/5 md:max-w-1/2 lg:pt-0 lg:max-w-8/12 smooth-transition-300 group">
+                <div class="absolute z-11 -top-6 -left-6 w-15 sm:w-20 sm:-top-8 sm:-right-8 animate-rotate-scale-up group-hover:[animation-play-state:paused]">
                   <img src="public/images/hero-star.png" alt="" class="max-w-full" />
                 </div>
                 <div class="border-4 rounded-lg h-5/6 bg-green-50 overflow-hidden">
                   <div class="relative mt-10 z-10">
                     <img src="public/images/hero-picture.webp" alt="My Pictures" class="mx-auto -mt-10" />
                     <span
-                      class="absolute left-1/2 -translate-x-1/2 -z-10 scale-40 -bottom-30 mobile-m:scale-55 mobile-m:-bottom-28 mobile-l:scale-65 mobile-l:-bottom-20 sm:scale-72 sm:-bottom-15 lg:scale-80 xl:scale-95 xl:-bottom-10 animate-pulse"
+                      class="absolute left-1/2 -translate-x-1/2 -z-10 scale-40 -bottom-30 mobile-m:scale-55 mobile-m:-bottom-28 mobile-l:scale-65 mobile-l:-bottom-20 sm:scale-75 sm:-bottom-15 lg:scale-62 lg:-bottom-19 xl:scale-85 xl:-bottom-10 animate-pulse"
                     >
                       <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -460,8 +460,9 @@
     </footer>
 
     <a
+      id="scrollToTop"
       href="#home"
-      class="fixed right-5 bottom-5 inline-flex justify-center items-center bg-primary border-2 border-transparent shadow-c-md shadow-black rounded-md text-light p-3 hover:shadow-none hover:translate-px hover:border-2 hover:border-black smooth-transition-200"
+      class="fixed -bottom-50 right-10 inline-flex justify-center items-center bg-primary border-2 border-transparent shadow-c-md shadow-black rounded-md text-light p-3 hover:shadow-none hover:translate-px hover:border-2 hover:border-black smooth-transition-500"
       ><i class="fa-solid fa-arrow-up"></i
     ></a>
 
