@@ -12,7 +12,6 @@ window.onscroll = function () {
     // Scroll To Top Button
     scrollToTop.classList.add("bottom-5");
     scrollToTop.classList.remove("-bottom-50");
-
   } else {
     header.classList.add("absolute");
     header.classList.add("bg-transparent");
@@ -20,19 +19,33 @@ window.onscroll = function () {
     // Scroll To Top Button
     scrollToTop.classList.remove("bottom-5");
     scrollToTop.classList.add("-bottom-50");
-
   }
 };
 
 // HAMBURGER TOGGLE
 const hamburger = document.querySelector("#hamburger");
 const navMenu = document.querySelector("#nav-menu");
+const navbar = document.querySelector("#navbar");
 
 hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("hamburger-active");
   // navMenu.classList.toggle("hidden");
   navMenu.classList.toggle("nav-menu-active");
   navMenu.classList.toggle("opacity-0");
+});
+
+// CLICK OUTSIDE TO CLOSE NAVBAR MENU
+window.addEventListener("click", function (e) {
+  const isClickInsideNav = navMenu.contains(e.target);
+  const isClickMenuBtn = hamburger.contains(e.target);
+  const isClickNavbar = navbar.contains(e.target);
+
+  if (!isClickInsideNav && !isClickMenuBtn && !isClickNavbar) {
+    hamburger.classList.toggle("hamburger-active");
+    // navMenu.classList.toggle("hidden");
+    navMenu.classList.toggle("nav-menu-active");
+    navMenu.classList.toggle("opacity-0");
+  }
 });
 
 // FORM TO SHEET
