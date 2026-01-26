@@ -1,11 +1,13 @@
 <!-- BLOG VANILLA JS -->
-<section class="max-w-4xl mx-auto py-10">
-  <h2 class="text-3xl font-bold mb-6">Latest Articles</h2>
-  <div id="blog" class="grid md:grid-cols-2 gap-6"></div>
+<section class="mx-auto max-w-4xl py-10">
+  <h2 class="mb-6 text-3xl font-bold">Latest Articles</h2>
+  <div id="blog" class="grid gap-6 md:grid-cols-2"></div>
 </section>
 
 <script>
-  fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@mrshintaro")
+  fetch(
+    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@mrshintaro",
+  )
     .then((res) => res.json())
     .then((data) => {
       const container = document.getElementById("blog");
@@ -16,7 +18,9 @@
         const doc = parser.parseFromString(item.content, "text/html");
         const imgTag = doc.querySelector("img");
 
-        const image = imgTag ? imgTag.src : "https://via.placeholder.com/600x400?text=No+Image";
+        const image = imgTag
+          ? imgTag.src
+          : "https://via.placeholder.com/600x400?text=No+Image";
 
         container.innerHTML += `
         <a href="${item.link}" target="_blank"
@@ -34,23 +38,32 @@
       });
     })
     .catch(() => {
-      document.getElementById("blog").innerHTML = '<p class="text-gray-500">Failed to load articles.</p>';
+      document.getElementById("blog").innerHTML =
+        '<p class="text-gray-500">Failed to load articles.</p>';
     });
 </script>
 
 <!-- PROJECT CARD OLD -->
 <template x-for="item in projects" :key="item.id">
-  <div class="border-2 card-project group smooth-transition">
+  <div class="card-project group smooth-transition border-2">
     <div class="relative aspect-video overflow-hidden">
       <img :src="item.image" :alt="item.title" class="card-img" />
       <div class="img-overlay smooth-transition">
-        <a :href="item.repoLink" class="btn-card-project"><i class="fa-solid fa-link me-1"></i>Repo</a>
+        <a :href="item.repoLink" class="btn-card-project"
+          ><i class="fa-solid fa-link me-1"></i>Repo</a
+        >
       </div>
     </div>
-    <div class="p-4 flex flex-col flex-1">
-      <h3 class="text-lg font-semibold text-green2 mb-1 group-hover:text-green-600 leading-tight smooth-transition" x-text="item.title"></h3>
-      <p class="text-xs text-gray-600 mb-4 line-clamp-3 leading-relaxed" x-text="item.desc"></p>
-      <div class="mt-auto border-t-2 border-gray-300 py-4 flex flex-wrap gap-1">
+    <div class="flex flex-1 flex-col p-4">
+      <h3
+        class="text-green2 smooth-transition mb-1 text-lg leading-tight font-semibold group-hover:text-green-600"
+        x-text="item.title"
+      ></h3>
+      <p
+        class="mb-4 line-clamp-3 text-xs leading-relaxed text-gray-600"
+        x-text="item.desc"
+      ></p>
+      <div class="mt-auto flex flex-wrap gap-1 border-t-2 border-gray-300 py-4">
         <template x-for="tech in item.techs">
           <span class="tech-info smooth-transition" x-text="tech"></span>
         </template>
@@ -59,29 +72,123 @@
   </div>
 </template>
 
-/* ========== PROJECTS ========== */ .card-project { @apply bg-white shadow-md rounded-xl overflow-hidden flex flex-col hover:shadow-xl hover:shadow-green-600/20; } .card-img { @apply w-full h-full object-cover group-hover:scale-110
-transition duration-700 ease-in-out; } .img-overlay { @apply absolute inset-0 bg-green-900/10 group-hover:bg-transparent flex justify-end items-end p-3 delay-300; } .btn-card-project { @apply text-sm px-2 py-1 bg-green-600 rounded-full
-text-white translate-x-50 group-hover:translate-x-0 hover:bg-green-800 transition duration-700 ease-in-out; } .tech-info { @apply py-1 px-2 text-xs text-gray-500 bg-gray-300 rounded-lg group-hover:text-green2 group-hover:font-medium; } /*
-========== PROJECTS END ========== */
+/* ========== PROJECTS ========== */ .card-project { @apply bg-white shadow-md
+rounded-xl overflow-hidden flex flex-col hover:shadow-xl
+hover:shadow-green-600/20; } .card-img { @apply w-full h-full object-cover
+group-hover:scale-110 transition duration-700 ease-in-out; } .img-overlay {
+@apply absolute inset-0 bg-green-900/10 group-hover:bg-transparent flex
+justify-end items-end p-3 delay-300; } .btn-card-project { @apply text-sm px-2
+py-1 bg-green-600 rounded-full text-white translate-x-50
+group-hover:translate-x-0 hover:bg-green-800 transition duration-700
+ease-in-out; } .tech-info { @apply py-1 px-2 text-xs text-gray-500 bg-gray-300
+rounded-lg group-hover:text-green2 group-hover:font-medium; } /* ==========
+PROJECTS END ========== */
 
 <!-- ABOUT SKILLS -->
-<div class="w-full px-4 lg:w-1/2 text-center">
-  <h3 class="text-xl font-semibold text-green3 uppercase mb-3 lg:text-2xl">My Skill</h3>
-  <p class="text-base font-medium text-gray-600 mb-5 lg:text-lg">Skills that grow from experience and curiosity.</p>
-  <div class="flex flex-wrap gap-4 justify-center items-center lg:max-w-2xl">
-    <span class="skill-item smooth-transition-300"><i class="devicon-html5-plain colored text-xl me-1.5"></i>HTML5</span>
-    <span class="skill-item smooth-transition-300"><i class="devicon-css3-plain colored text-xl me-1.5"></i>CSS3</span>
-    <span class="skill-item smooth-transition-300"><i class="devicon-tailwindcss-plain colored text-xl me-1.5"></i>TailwindCSS</span>
-    <span class="skill-item smooth-transition-300"><i class="devicon-bootstrap-plain colored text-xl me-1.5"></i>Bootstrap</span>
-    <span class="skill-item smooth-transition-300"><i class="devicon-javascript-plain colored text-xl me-1.5"></i>Javascript</span>
-    <span class="skill-item smooth-transition-300"><i class="devicon-mysql-plain colored text-xl me-1.5"></i>MySQL</span>
-    <span class="skill-item smooth-transition-300"><i class="devicon-codeigniter-plain colored text-xl me-1.5"></i>CodeIgniter</span>
-    <span class="skill-item smooth-transition-300"><i class="devicon-laravel-plain colored text-xl me-1.5"></i>Laravel</span>
-    <span class="skill-item smooth-transition-300"><i class="devicon-react-plain colored text-xl me-1.5"></i>React</span>
-    <span class="skill-item smooth-transition-300"><i class="devicon-git-plain colored text-xl me-1.5"></i>Git</span>
-    <span class="skill-item smooth-transition-300"><i class="devicon-canva-plain colored text-xl me-1.5"></i>Canva</span>
-    <span class="skill-item smooth-transition-300"><i class="fa-solid fa-file-word text-blue-600 text-xl me-1.5"></i>Word</span>
-    <span class="skill-item smooth-transition-300"><i class="fa-solid fa-file-powerpoint text-orange-600 text-xl me-1.5"></i>Powerpoint</span>
-    <span class="skill-item smooth-transition-300"><i class="fa-solid fa-file-excel text-green-600 text-xl me-1.5"></i>Excel</span>
+<div class="w-full px-4 text-center lg:w-1/2">
+  <h3 class="text-green3 mb-3 text-xl font-semibold uppercase lg:text-2xl">
+    My Skill
+  </h3>
+  <p class="mb-5 text-base font-medium text-gray-600 lg:text-lg">
+    Skills that grow from experience and curiosity.
+  </p>
+  <div class="flex flex-wrap items-center justify-center gap-4 lg:max-w-2xl">
+    <span class="skill-item smooth-transition-300"
+      ><i class="devicon-html5-plain colored me-1.5 text-xl"></i>HTML5</span
+    >
+    <span class="skill-item smooth-transition-300"
+      ><i class="devicon-css3-plain colored me-1.5 text-xl"></i>CSS3</span
+    >
+    <span class="skill-item smooth-transition-300"
+      ><i class="devicon-tailwindcss-plain colored me-1.5 text-xl"></i
+      >TailwindCSS</span
+    >
+    <span class="skill-item smooth-transition-300"
+      ><i class="devicon-bootstrap-plain colored me-1.5 text-xl"></i
+      >Bootstrap</span
+    >
+    <span class="skill-item smooth-transition-300"
+      ><i class="devicon-javascript-plain colored me-1.5 text-xl"></i
+      >Javascript</span
+    >
+    <span class="skill-item smooth-transition-300"
+      ><i class="devicon-mysql-plain colored me-1.5 text-xl"></i>MySQL</span
+    >
+    <span class="skill-item smooth-transition-300"
+      ><i class="devicon-codeigniter-plain colored me-1.5 text-xl"></i
+      >CodeIgniter</span
+    >
+    <span class="skill-item smooth-transition-300"
+      ><i class="devicon-laravel-plain colored me-1.5 text-xl"></i>Laravel</span
+    >
+    <span class="skill-item smooth-transition-300"
+      ><i class="devicon-react-plain colored me-1.5 text-xl"></i>React</span
+    >
+    <span class="skill-item smooth-transition-300"
+      ><i class="devicon-git-plain colored me-1.5 text-xl"></i>Git</span
+    >
+    <span class="skill-item smooth-transition-300"
+      ><i class="devicon-canva-plain colored me-1.5 text-xl"></i>Canva</span
+    >
+    <span class="skill-item smooth-transition-300"
+      ><i class="fa-solid fa-file-word me-1.5 text-xl text-blue-600"></i
+      >Word</span
+    >
+    <span class="skill-item smooth-transition-300"
+      ><i class="fa-solid fa-file-powerpoint me-1.5 text-xl text-orange-600"></i
+      >Powerpoint</span
+    >
+    <span class="skill-item smooth-transition-300"
+      ><i class="fa-solid fa-file-excel me-1.5 text-xl text-green-600"></i
+      >Excel</span
+    >
   </div>
 </div>
+
+<!-- JS COLOR THEME -->
+<script>
+  // COLOR THEME TOGGLE
+  const colorThemeToggle = document.querySelector("#color-theme-toggle");
+  const html = document.querySelector("html");
+
+  function isDarkTheme() {
+    return (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    );
+  }
+
+  // SET TOGGLE
+  if (colorThemeToggle) {
+    colorThemeToggle.checked = isDarkTheme();
+  }
+
+  // EVENT LISTENER
+  if (colorThemeToggle) {
+    colorThemeToggle.addEventListener("change", function () {
+      if (this.checked) {
+        html.classList.add("dark");
+        localStorage.theme = "dark";
+      } else {
+        html.classList.remove("dark");
+        localStorage.theme = "light";
+      }
+    });
+  }
+
+  // REAL TIME THEME
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => {
+      if (!("theme" in localStorage)) {
+        if (e.matches) {
+          html.classList.add("dark");
+          if (colorThemeToggle) colorThemeToggle.checked = true;
+        } else {
+          html.classList.remove("dark");
+          if (colorThemeToggle) colorThemeToggle.checked = false;
+        }
+      }
+    });
+</script>

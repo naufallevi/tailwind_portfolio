@@ -40,7 +40,12 @@ window.addEventListener("click", function (e) {
   const isClickMenuBtn = hamburger.contains(e.target);
   const isClickNavbar = navbar.contains(e.target);
 
-  if (!isClickInsideNav && !isClickMenuBtn && !isClickNavbar) {
+  if (
+    !isClickInsideNav &&
+    !isClickMenuBtn &&
+    !isClickNavbar &&
+    navMenu.classList.contains("nav-menu-active")
+  ) {
     hamburger.classList.toggle("hamburger-active");
     // navMenu.classList.toggle("hidden");
     navMenu.classList.toggle("nav-menu-active");
@@ -77,3 +82,45 @@ window.addEventListener("load", function () {
 
 // YEAR AUTO UPDATE
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// COLOR THEME TOGGLE
+const colorThemeToggle = document.querySelector("#color-theme-toggle");
+const html = document.documentElement;
+
+// CHECK THEME
+function isDarkTheme() {
+  return (
+    localStorage.theme === "dark" ||
+    (!("theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  );
+}
+
+// APPLY THEME
+function applyTheme(isDark, save = false) {
+  html.classList.toggle("dark", isDark);
+  if (colorThemeToggle) colorThemeToggle.checked = isDark;
+
+  if (save) {
+    localStorage.theme = isDark ? "dark" : "light";
+  }
+}
+
+// SET INITIAL STATE
+applyTheme(isDarkTheme());
+
+// USER TOGGLE
+if (colorThemeToggle) {
+  colorThemeToggle.addEventListener("change", function () {
+    applyTheme(this.checked, true);
+  });
+}
+
+// REAL TIME SYSTEM THEME
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", (e) => {
+    if (!("theme" in localStorage)) {
+      applyTheme(e.matches);
+    }
+  });

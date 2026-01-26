@@ -29,26 +29,36 @@
     ></script>
     <!-- TAILWIND OUTPUT -->
     <link rel="stylesheet" href="public/output.css" />
+    <!-- LOCAL STORAGE THEME -->
+    <script>
+      const isDark =
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches);
+      document.documentElement.classList.toggle("dark", isDark);
+    </script>
   </head>
 
-  <body class="font-jakarta bg-body-1 bg-grid-dark">
+  <body
+    class="font-jakarta bg-body-1 bg-grid-dark dark:bg-body-1-dark dark:bg-grid-light"
+  >
     <!-- NAVBAR -->
     <header
       id="navbar"
-      class="smooth-transition-500 absolute z-50 flex w-full items-center bg-transparent py-3"
+      class="smooth-transition-500 absolute z-50 flex w-full items-center bg-transparent py-1"
     >
       <div class="container">
         <div class="relative flex items-center justify-between">
           <div class="px-4">
-            <a href="#home" class="group flex animate-pulse">
+            <a href="#home" class="group inset-shadow-light flex animate-pulse">
               <img
                 id="gambar"
-                src="public/images/logo-navbar.png"
-                alt="Logo MNP"
+                src="public/images/logo-navbar.webp"
+                alt="Logo Naufallevi"
                 class="smooth-transition-300 inline-block w-12 group-hover:scale-110"
               />
               <span
-                class="font-exo-2 text-primary group-hover:text-dark smooth-transition-300 -ms-3 inline-block origin-left translate-y-2 self-end text-lg font-bold tracking-wider italic lg:text-xl"
+                class="font-exo-2 text-primary group-hover:text-light smooth-transition-300 -ms-3 inline-block origin-left translate-y-2 self-end text-lg font-bold tracking-wider italic lg:text-xl"
                 >Naufallevi</span
               >
             </a>
@@ -102,6 +112,39 @@
                     >Contact</a
                   >
                 </li>
+                <li class="flex items-center justify-evenly">
+                  <div class="nav-link group flex">
+                    <input
+                      type="checkbox"
+                      id="color-theme-toggle"
+                      class="hidden"
+                    />
+                    <label for="color-theme-toggle">
+                      <div
+                        class="shadow-c-md smooth-transition-200 relative inline-flex h-8 w-16 cursor-pointer items-center justify-between rounded-full border-2 border-slate-200 bg-slate-700 p-1 shadow-black group-has-checked:border-black group-has-checked:bg-slate-400 group-has-checked:shadow-slate-600 active:shadow-none"
+                      >
+                        <i
+                          class="fa-solid fa-cloud-sun smooth-transition-300 group-hover:text-dark! group-has-checked:text-secondary text-secondary/10"
+                        ></i>
+                        <div
+                          id="color-theme-circle"
+                          class="ease-elastic bg-secondary group-has-checked:bg-octonary absolute h-5 w-5 rounded-full ring-1 ring-black transition duration-600 group-has-checked:translate-x-8"
+                        ></div>
+                        <i
+                          class="fa-solid fa-moon smooth-transition-300 group-hover:text-light text-octonary group-has-checked:text-octonary/10"
+                        ></i>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="nav-link group flex">
+                    <input type="checkbox" id="lang-toggle" class="hidden" />
+                    <label for="lang-toggle">
+                      <div
+                        class="shadow-c-md smooth-transition-300 h-8 w-8 cursor-pointer rounded-full border-2 border-slate-200 bg-yellow-400 bg-[url('/public/images/eng.webp')] bg-cover bg-center shadow-black group-has-checked:bg-[url('/public/images/ind.webp')] active:shadow-none dark:border-black dark:shadow-slate-600"
+                      ></div>
+                    </label>
+                  </div>
+                </li>
               </ul>
             </nav>
           </div>
@@ -116,18 +159,22 @@
         <div class="container flex-1">
           <div class="grid h-full items-center gap-10 lg:grid-cols-2">
             <div class="boder order-2 w-full self-center px-4 lg:order-2">
-              <h1 class="text-dark mb-4 text-xl font-bold md:mb-8 lg:text-3xl">
+              <h1
+                class="text-dark dark:text-senary mb-4 text-xl font-bold md:mb-8 lg:text-3xl"
+              >
                 Hi there!
                 <span
                   class="block text-3xl font-black tracking-tight lg:text-5xl"
                 >
                   I'm
-                  <span class="text-primary ms-1"
-                    >Muhammad Naufal Pahlevi
+                  <span class="text-primary ms-1">
+                    Muhammad Naufal Pahlevi
                   </span>
                 </span>
               </h1>
-              <h2 class="text-dark text-lg font-bold lg:text-xl">
+              <h2
+                class="text-dark dark:text-senary text-lg font-bold lg:text-xl"
+              >
                 Web Developer | Informatics Engineer
               </h2>
               <p class="text-tertiary mb-4 font-medium md:mb-8">
@@ -137,12 +184,12 @@
               <div class="flex flex-wrap gap-2 md:gap-4">
                 <a
                   href="#"
-                  class="btn-1 bg-primary hover:bg-quaternary smooth-transition-200"
+                  class="btn-1 bg-primary hover:bg-quaternary smooth-transition-200 dark:text-senary shadow-black"
                   ><i class="fa-solid fa-briefcase me-1"></i>View Portfolio</a
                 >
                 <a
                   href="#"
-                  class="btn-1 bg-secondary hover:bg-quinary smooth-transition-200"
+                  class="btn-1 bg-secondary hover:bg-nonary smooth-transition-200 dark:bg-octonary dark:hover:bg-denary dark:text-senary shadow-black"
                 >
                   <i class="fa-solid fa-envelope me-1"></i>Contact Me</a
                 >
@@ -153,19 +200,24 @@
               class="order-1 flex w-full justify-center self-center px-4 pt-6 lg:order-2 lg:justify-end lg:pt-0"
             >
               <div
-                class="shadow-c-xl smooth-transition-300 group relative max-w-5/6 rounded-xl border-4 bg-[#FFD72E] p-4 hover:translate-1 hover:bg-[#FF9600] hover:shadow-none sm:max-w-3/5 md:max-w-1/2 lg:max-w-8/12"
+                class="shadow-c-xl smooth-transition-300 group bg-secondary hover:bg-nonary dark:bg-octonary dark:hover:bg-denary relative max-w-5/6 rounded-xl border-4 p-4 hover:translate-1 hover:shadow-none sm:max-w-3/5 md:max-w-1/2 lg:max-w-8/12"
               >
                 <div
                   class="animate-rotate-scale-up absolute -top-6 -left-6 z-11 w-15 group-hover:[animation-play-state:paused] sm:-top-8 sm:-right-8 sm:w-20"
                 >
                   <img
-                    src="public/images/hero-star.png"
+                    src="public/images/hero-star.webp"
                     alt=""
-                    class="max-w-full"
+                    class="max-w-full dark:hidden"
+                  />
+                  <img
+                    src="public/images/dark-hero-star.webp"
+                    alt=""
+                    class="hidden max-w-full dark:block"
                   />
                 </div>
                 <div
-                  class="h-5/6 overflow-hidden rounded-lg border-4 bg-green-50"
+                  class="dark:bg-dark h-5/6 overflow-hidden rounded-lg border-4 bg-green-50"
                 >
                   <div class="relative z-10 mt-10">
                     <img
@@ -203,7 +255,7 @@
         <div class="container">
           <div class="mx-auto mb-10 max-w-xl text-center lg:mb-20">
             <h1
-              class="text-dark text-3xl font-black tracking-tighter lg:text-4xl"
+              class="text-dark dark:text-senary text-3xl font-black tracking-tighter lg:text-4xl"
             >
               About <span class="text-primary">Me</span>
             </h1>
@@ -211,30 +263,43 @@
           <div class="flex flex-wrap items-center lg:justify-between">
             <div class="mb-15 w-full px-4 lg:mb-0 lg:w-1/2">
               <h2
-                class="mb-6 text-lg leading-tight font-black uppercase lg:text-2xl"
+                class="text-dark dark:text-senary mb-6 text-lg leading-tight font-black uppercase lg:text-2xl"
               >
                 Honestly, I love the world of
-                <span class="bg-quinary px-1">web development</span> 😊
+                <span class="bg-quinary dark:bg-octonary px-1"
+                  >web development</span
+                >
+                😊
               </h2>
-              <p class="text-dark mb-4 text-base leading-loose font-medium">
+              <p
+                class="text-dark dark:text-septenary mb-4 text-base leading-loose font-medium"
+              >
                 I am a Informatics Engineering graduate with a strong interest
                 in web development, specializing in
-                <b class="font-black">PHP</b> and
-                <b class="font-black">JavaScript</b>, as well as frameworks such
-                as CodeIgniter and Laravel. I am experienced in handling
-                projects from
-                <b class="font-black">planning and requirements analysis</b>
-                through <b class="font-black">implementation and evaluation</b>,
-                both independently and as part of a team.
+                <b class="dark:text-senary font-black">PHP</b> and
+                <b class="dark:text-senary font-black">JavaScript</b>, as well
+                as frameworks such as CodeIgniter and Laravel. I am experienced
+                in handling projects from
+                <b class="dark:text-senary font-black"
+                  >planning and requirements analysis</b
+                >
+                through
+                <b class="dark:text-senary font-black"
+                  >implementation and evaluation</b
+                >, both independently and as part of a team.
               </p>
-              <p class="text-dark mb-4 text-base leading-loose font-medium">
+              <p
+                class="text-dark dark:text-septenary mb-4 text-base leading-loose font-medium"
+              >
                 In addition to software development, I have experience in
-                <b class="font-black">computer networking</b> through an
-                internship program, and I have also worked in a government
-                institution, which has strengthened my ability to work in
-                structured, professional environments.
+                <b class="dark:text-senary font-black">computer networking</b>
+                through an internship program, and I have also worked in a
+                government institution, which has strengthened my ability to
+                work in structured, professional environments.
               </p>
-              <p class="text-dark text-base leading-loose font-medium">
+              <p
+                class="text-dark dark:text-septenary text-base leading-loose font-medium"
+              >
                 This portfolio is created to showcase my projects, work, and
                 professional growth. I am a challenge-driven individual who
                 adapts quickly to new environments and technologies, and I am
@@ -245,17 +310,19 @@
 
             <div class="font-space-grotesk mb-10 w-full px-4 lg:mb-0 lg:w-4/10">
               <div
-                class="shadow-c-2xl smooth-transition-300 relative rounded-md border-4 bg-white p-8 hover:translate-1 hover:shadow-none"
+                class="shadow-c-2xl smooth-transition-300 bg-light dark:bg-septenary relative rounded-md border-4 p-8 hover:translate-1 hover:shadow-none"
               >
                 <div
-                  class="bg-dark shadow-c-md text-light absolute -top-5 left-1/2 inline-block -translate-x-1/2 border-2 border-black px-4 py-1 text-sm font-bold tracking-widest uppercase shadow-black/60"
+                  class="bg-dark shadow-c-md text-light dark:bg-octonary absolute -top-5 left-1/2 inline-block -translate-x-1/2 border-2 border-black px-4 py-1 text-sm font-bold tracking-widest uppercase shadow-black/60"
                 >
                   My Skills
                 </div>
                 <h3 class="mt-2 mb-2 text-center text-xl font-black uppercase">
                   Technical Skills
                 </h3>
-                <p class="text-tertiary mb-8 text-center text-sm font-medium">
+                <p
+                  class="text-tertiary dark:text-dark/70 mb-8 text-center text-sm font-medium"
+                >
                   These skills reflect my experience in building efficient,
                   scalable, and maintainable systems.
                 </p>
@@ -363,21 +430,26 @@
       <!-- ABOUT END -->
 
       <!-- SERVICES -->
-      <section id="services" class="bg-body-2 bg-grid-dark relative py-25">
+      <section
+        id="services"
+        class="bg-body-2 bg-grid-dark dark:bg-body-2-dark dark:bg-grid-light relative py-25"
+      >
         <div
-          class="from-body-1 absolute inset-x-0 top-0 h-24 bg-linear-to-b to-transparent"
+          class="from-body-1 dark:from-body-1-dark absolute inset-x-0 top-0 h-24 bg-linear-to-b to-transparent"
         ></div>
 
         <div class="container">
           <div class="w-full px-4">
             <div class="mx-auto mb-10 max-w-xl text-center">
               <h1
-                class="text-dark text-3xl font-black tracking-tighter lg:text-4xl"
+                class="text-dark dark:text-senary text-3xl font-black tracking-tighter lg:text-4xl"
               >
                 My <span class="text-primary">Services</span>
               </h1>
-              <h3 class="text-tertiary text-xl font-light lg:text-2xl">
-                Personalized services for every project
+              <h3
+                class="text-tertiary dark:text-senary/60 text-xl font-light lg:text-2xl"
+              >
+                Solutions built specifically for your project
               </h3>
             </div>
             <div class="font-space-grotesk grid gap-8 md:grid-cols-2">
@@ -392,7 +464,7 @@
                 </div>
                 <div class="badge-services smooth-transition-300">
                   <i
-                    class="fa-solid fa-laptop-code text-primary group-hover:text-light smooth-transition-300 text-2xl sm:text-4xl"
+                    class="fa-solid fa-laptop-code text-primary group-hover:text-light smooth-transition-300 dark:text-senary text-2xl sm:text-4xl"
                   ></i>
                 </div>
               </div>
@@ -407,7 +479,7 @@
                 </div>
                 <div class="badge-services smooth-transition-300">
                   <i
-                    class="fa-solid fa-layer-group text-primary group-hover:text-light smooth-transition-300 text-2xl sm:text-4xl"
+                    class="fa-solid fa-layer-group text-primary group-hover:text-light smooth-transition-300 dark:text-senary text-2xl sm:text-4xl"
                   ></i>
                 </div>
               </div>
@@ -422,7 +494,7 @@
                 </div>
                 <div class="badge-services smooth-transition-300">
                   <i
-                    class="fa-solid fa-server text-primary group-hover:text-light smooth-transition-300 text-2xl sm:text-4xl"
+                    class="fa-solid fa-server text-primary group-hover:text-light smooth-transition-300 dark:text-senary text-2xl sm:text-4xl"
                   ></i>
                 </div>
               </div>
@@ -437,7 +509,7 @@
                 </div>
                 <div class="badge-services smooth-transition-300">
                   <i
-                    class="fa-solid fa-screwdriver-wrench text-primary group-hover:text-light smooth-transition-300 text-2xl sm:text-4xl"
+                    class="fa-solid fa-screwdriver-wrench text-primary group-hover:text-light smooth-transition-300 dark:text-senary text-2xl sm:text-4xl"
                   ></i>
                 </div>
               </div>
@@ -450,18 +522,20 @@
       <!-- PROJECTS -->
       <section id="projects" class="relative min-h-screen pt-25 pb-15">
         <div
-          class="from-body-2 absolute inset-x-0 top-0 h-24 bg-linear-to-b to-transparent"
+          class="from-body-2 dark:from-body-2-dark absolute inset-x-0 top-0 h-24 bg-linear-to-b to-transparent"
         ></div>
 
         <div class="container">
           <div class="w-full px-4">
             <div class="mx-auto mb-10 max-w-xl text-center">
               <h1
-                class="text-dark mb-3 text-3xl font-black tracking-tighter lg:text-4xl"
+                class="text-dark dark:text-senary mb-3 text-3xl font-black tracking-tighter lg:text-4xl"
               >
                 Project <span class="text-primary">Completed</span>
               </h1>
-              <h3 class="text-tertiary text-xl font-light lg:text-2xl">
+              <h3
+                class="text-tertiary dark:text-senary/60 text-xl font-light lg:text-2xl"
+              >
                 A featured project that uses multiple tech stacks
               </h3>
             </div>
@@ -471,10 +545,10 @@
             >
               <template x-for="item in projects" :key="item.id">
                 <div
-                  class="shadow-c-2xl smooth-transition-300 group flex flex-col overflow-hidden rounded-md border-4 bg-white hover:translate-1 hover:shadow-none"
+                  class="shadow-c-2xl smooth-transition-300 group dark:bg-dark flex flex-col overflow-hidden rounded-md border-4 bg-white hover:translate-1 hover:shadow-none"
                 >
                   <div
-                    class="bg-quinary flex items-center justify-between border-b-4 p-2"
+                    class="bg-quinary dark:bg-octonary text-dark dark:text-senary flex items-center justify-between border-b-4 border-black p-2"
                   >
                     <h2
                       class="text-base font-bold"
@@ -482,11 +556,11 @@
                     ></h2>
                     <div class="inline-flex items-center gap-2">
                       <span
-                        class="group-hover:bg-primary inline-block rounded-full border-2 bg-red-600 px-1 py-1"
+                        class="group-hover:bg-primary inline-block rounded-full border-2 border-black bg-red-600 px-1 py-1"
                       ></span>
                       <a
                         :href="item.repoLink"
-                        class="hover:shadow-c-xs smooth-transition-300 inline-flex cursor-pointer items-center justify-center rounded-full border-2 bg-white px-2 text-xs font-bold hover:-translate-px"
+                        class="hover:shadow-c-xs smooth-transition-300 dark:bg-dark dark:text-light inline-flex cursor-pointer items-center justify-center rounded-full border-2 border-black bg-white px-2 text-xs font-bold shadow-black hover:-translate-px"
                         >Repo</a
                       >
                     </div>
@@ -503,7 +577,7 @@
                   </div>
                   <div class="flex flex-1 flex-col p-5">
                     <h3
-                      class="text-dark mb-2 text-lg leading-tight font-bold lg:text-xl"
+                      class="text-dark dark:text-light mb-2 text-lg leading-tight font-bold lg:text-xl"
                       x-text="item.title"
                     ></h3>
                     <p
@@ -513,7 +587,7 @@
                     <div class="mt-auto flex flex-wrap gap-2 border-t-2 pt-4">
                       <template x-for="tech in item.techs">
                         <span
-                          class="shadow-c-md text-2xs hover:bg-primary/50 smooth-transition-200 inline-block border-2 bg-red-500/50 px-2 py-0.75 font-bold tracking-wide uppercase hover:-translate-y-1 sm:text-xs"
+                          class="shadow-c-md text-2xs hover:bg-primary/50 smooth-transition-200 dark:text-senary inline-block border-2 border-black bg-red-500/50 px-2 py-0.75 font-bold tracking-wide uppercase shadow-black hover:-translate-y-1 sm:text-xs"
                           x-text="tech"
                         ></span>
                       </template>
@@ -530,26 +604,28 @@
       <!-- JOURNEY -->
       <section
         id="journeys"
-        class="bg-body-3 bg-grid-light relative pt-25 pb-15"
+        class="bg-body-3 bg-grid-light dark:bg-body-3-dark relative pt-25 pb-15"
       >
         <div
-          class="from-body-1 absolute inset-x-0 top-0 h-24 bg-linear-to-b to-transparent to-75%"
+          class="from-body-1 dark:from-body-1-dark absolute inset-x-0 top-0 h-24 bg-linear-to-b to-transparent to-75%"
         ></div>
 
         <div class="container">
           <div class="w-full px-4">
             <div class="mx-auto mb-15 max-w-xl text-center">
               <h2
-                class="text-light mb-2 text-lg font-bold tracking-widest uppercase lg:text-xl"
+                class="text-light dark:text-senary mb-2 text-lg font-bold tracking-widest uppercase lg:text-xl"
               >
                 My Journey
               </h2>
               <h1
-                class="bg-light text-dark inline w-fit text-3xl leading-tight font-black tracking-tighter lg:text-4xl"
+                class="bg-light text-dark dark:text-senary dark:bg-dark inline w-fit text-3xl leading-tight font-black tracking-tighter lg:text-4xl"
               >
                 Study & Work <span class="text-primary">Experience</span>
               </h1>
-              <h3 class="text-light/75 mt-3 text-xl font-light lg:text-2xl">
+              <h3
+                class="text-light/75 dark:text-septenary/60 mt-3 text-xl font-light lg:text-2xl"
+              >
                 A journey through my education and professional growth
               </h3>
             </div>
@@ -560,7 +636,7 @@
             >
               <template x-for="item in studies" :key="item.id">
                 <div
-                  class="bg-light/75 shadow-c-2xl hover:bg-light smooth-transition-300 group relative rounded-md border-4 border-black p-6 shadow-black hover:translate-1 hover:shadow-none"
+                  class="bg-light/75 shadow-c-2xl hover:bg-light smooth-transition-300 group dark:bg-septenary dark:hover:bg-tertiary relative rounded-md border-4 border-black p-6 shadow-black hover:translate-1 hover:shadow-none"
                 >
                   <div
                     class="text-light shadow-c-xs smooth-transition-300 absolute -top-5 -right-5 border-2 bg-black px-4 py-1 shadow-black/50 group-hover:rotate-3"
@@ -568,7 +644,7 @@
                   ></div>
                   <div class="flex flex-col items-start gap-4 sm:flex-row">
                     <div
-                      class="bg-quaternary group-hover:text-light flex aspect-square w-12 shrink-0 items-center justify-center border-2 group-hover:border-black group-hover:bg-black lg:w-14"
+                      class="bg-quaternary group-hover:text-light dark:text-light dark:bg-primary flex aspect-square w-12 shrink-0 items-center justify-center border-2 border-black group-hover:border-black group-hover:bg-black lg:w-14"
                     >
                       <span class="text-2xl font-bold" x-text="item.id"></span>
                     </div>
@@ -586,7 +662,7 @@
                       >
                         <template x-for="tech in item.techs">
                           <span
-                            class="text-2xs hover:text-light smooth-transition-200 border-2 border-black bg-green-300 px-3 py-1 font-bold uppercase hover:bg-green-950 sm:text-xs"
+                            class="text-2xs hover:text-light smooth-transition-200 bg-quaternary dark:text-light dark:bg-primary border-2 border-black px-3 py-1 font-bold uppercase hover:bg-green-950 sm:text-xs"
                             x-text="tech"
                           ></span>
                         </template>
@@ -602,7 +678,7 @@
                 ></div>
 
                 <div
-                  class="shadow-c-xs smooth-transition-300 relative z-10 -rotate-6 border-2 border-black bg-white px-4 py-1 hover:rotate-6"
+                  class="shadow-c-xs smooth-transition-300 dark:bg-senary relative z-10 -rotate-6 border-2 border-black bg-white px-4 py-1 hover:rotate-6"
                 >
                   <span class="text-xl font-black">Work Experience</span>
                 </div>
@@ -610,7 +686,7 @@
 
               <template x-for="item in works">
                 <div
-                  class="bg-secondary shadow-c-2xl hover:bg-quinary smooth-transition-300 group relative rounded-md border-4 border-black p-6 shadow-black hover:translate-1 hover:shadow-none"
+                  class="bg-secondary shadow-c-2xl hover:bg-nonary smooth-transition-300 group dark:bg-octonary dark:hover:bg-denary relative rounded-md border-4 border-black p-6 shadow-black hover:translate-1 hover:shadow-none"
                 >
                   <div
                     class="text-light shadow-c-xs smooth-transition-300 absolute -top-5 -right-5 border-2 bg-black px-4 py-1 shadow-black/50 group-hover:rotate-3"
@@ -618,21 +694,21 @@
                   ></div>
                   <div class="flex flex-col items-start gap-4 sm:flex-row">
                     <div
-                      class="group-hover:text-light flex aspect-square w-12 shrink-0 items-center justify-center border-2 bg-white group-hover:border-black group-hover:bg-black lg:w-14"
+                      class="group-hover:text-light dark:bg-senary flex aspect-square w-12 shrink-0 items-center justify-center border-2 bg-white group-hover:border-black group-hover:bg-black lg:w-14"
                     >
                       <span class="text-2xl font-bold" x-text="item.id"></span>
                     </div>
                     <div class="w-full space-y-2 px-2">
                       <h1
-                        class="mb-2 text-xl leading-none font-bold sm:text-2xl"
+                        class="dark:text-senary mb-2 text-xl leading-none font-bold sm:text-2xl"
                         x-text="item.title"
                       ></h1>
                       <p
-                        class="text-dark/80 text-lg font-medium sm:text-xl"
+                        class="text-dark/80 dark:text-senary text-lg font-medium sm:text-xl"
                         x-text="item.job"
                       ></p>
                       <p
-                        class="bg-light/75 my-3 border-s-4 px-3 py-2 text-sm font-medium"
+                        class="bg-light/75 dark:bg-senary my-3 border-s-4 px-3 py-2 text-sm font-medium"
                         x-text="item.desc"
                       ></p>
                       <div
@@ -640,7 +716,7 @@
                       >
                         <template x-for="tech in item.techs">
                           <span
-                            class="text-2xs hover:text-light smooth-transition-300 border-2 border-black bg-green-50 px-3 py-1 font-bold uppercase hover:bg-black sm:text-xs"
+                            class="text-2xs hover:text-light smooth-transition-300 bg-light dark:bg-senary border-2 border-black px-3 py-1 font-bold uppercase hover:bg-black sm:text-xs"
                             x-text="tech"
                           ></span>
                         </template>
@@ -658,18 +734,20 @@
       <!-- BLOG -->
       <section id="blog" class="relative pt-25 pb-15">
         <div
-          class="from-body-3 absolute inset-x-0 top-0 h-24 bg-linear-to-b to-transparent to-75%"
+          class="from-body-3 dark:from-body-3-dark absolute inset-x-0 top-0 h-24 bg-linear-to-b to-transparent to-75%"
         ></div>
 
         <div class="container">
           <div class="w-full px-4">
             <div class="mx-auto mb-10 max-w-xl text-center">
               <h1
-                class="text-dark mb-3 text-3xl font-black tracking-tighter lg:text-4xl"
+                class="text-dark dark:text-senary mb-3 text-3xl font-black tracking-tighter lg:text-4xl"
               >
                 My <span class="text-primary">Blog</span>
               </h1>
-              <h3 class="text-tertiary text-xl font-light lg:text-2xl">
+              <h3
+                class="text-tertiary dark:text-senary/60 text-xl font-light lg:text-2xl"
+              >
                 Thoughts, stories, and experiences worth sharing.
               </h3>
             </div>
@@ -682,7 +760,7 @@
               <!-- LOADING DATA -->
               <div
                 x-show="posts.length === 0"
-                class="bg-light/75 text-dark animate-pulse rounded-md p-10 text-center"
+                class="bg-light/75 text-dark dark:bg-dark dark:text-light animate-pulse rounded-md p-10 text-center"
               >
                 Loading articles...
               </div>
@@ -690,7 +768,7 @@
 
               <template x-for="post in posts" :key="post.link">
                 <article
-                  class="bg-light/75 shadow-c-2xl smooth-transition-300 group flex flex-col overflow-hidden rounded-md border-4 hover:translate-1 hover:shadow-none"
+                  class="bg-light/75 shadow-c-2xl smooth-transition-300 group dark:bg-dark flex flex-col overflow-hidden rounded-md border-4 hover:translate-1 hover:shadow-none"
                 >
                   <div
                     class="relative h-50 overflow-hidden border-b-4 border-black"
@@ -709,14 +787,14 @@
                       x-text="post.date"
                     ></time>
                     <h3
-                      class="mb-6 line-clamp-2 text-xl leading-tight font-bold lg:text-2xl"
+                      class="text-dark dark:text-light mb-6 line-clamp-2 text-xl leading-tight font-bold lg:text-2xl"
                       x-text="post.title"
                     ></h3>
                     <a
                       :href="post.link"
                       target="_blank"
-                      class="btn-2 bg-quaternary hover:bg-primary smooth-transition-200"
-                      >Read More<i class="fa-solid fa-arrow-right ms-1"></i
+                      class="btn-2 bg-quaternary hover:bg-primary smooth-transition-200 dark:bg-primary dark:text-light ms-1 shadow-black dark:hover:bg-black"
+                      >Read More<i class="fa-solid fa-arrow-right"></i
                     ></a>
                   </div>
                 </article>
@@ -726,7 +804,7 @@
               <a
                 href="https://medium.com/@mrshintaro"
                 target="_blank"
-                class="btn-1 bg-secondary hover:bg-quinary smooth-transition-200"
+                class="btn-1 bg-secondary hover:bg-nonary smooth-transition-200 dark:bg-octonary dark:hover:bg-denary dark:text-senary shadow-black"
                 ><i class="fa-brands fa-medium fa-xl me-1"></i>View more on
                 Medium</a
               >
@@ -737,24 +815,29 @@
       <!-- BLOG END -->
 
       <!-- CONTACT -->
-      <section id="contact" class="bg-body-2 bg-grid-dark relative pt-25 pb-15">
+      <section
+        id="contact"
+        class="bg-body-2 bg-grid-dark dark:bg-body-2-dark dark:bg-grid-light relative pt-25 pb-15"
+      >
         <div
-          class="from-body-1 absolute inset-x-0 top-0 h-24 bg-linear-to-b to-transparent"
+          class="from-body-1 dark:from-body-1-dark absolute inset-x-0 top-0 h-24 bg-linear-to-b to-transparent"
         ></div>
 
         <div class="container">
-          <div class="w-full px-4">
+          <div class="w-full">
             <div class="mx-auto mb-10 max-w-xl text-center">
-              <h1 class="text-3xl font-bold lg:text-4xl">
+              <h1
+                class="text-dark dark:text-senary text-3xl font-bold lg:text-4xl"
+              >
                 Contact <span class="text-primary">Me</span>
               </h1>
             </div>
             <div class="mx-auto w-full lg:w-3/4">
               <div
-                class="font-space-grotesk shadow-c-3xl smooth-transition-300 rounded-md border-4 bg-white p-4 hover:translate-1 hover:shadow-none"
+                class="font-space-grotesk shadow-c-3xl smooth-transition-300 dark:bg-dark rounded-md border-4 bg-white p-4 hover:translate-1 hover:shadow-none"
               >
                 <h3
-                  class="mb-8 text-center text-xl tracking-tighter lg:text-2xl"
+                  class="text-dark dark:text-septenary/60 mb-8 text-center text-xl tracking-tighter lg:text-2xl"
                 >
                   Let’s work together or discuss your next project
                 </h3>
@@ -833,7 +916,7 @@
                   <button
                     id="btn-submit"
                     type="submit"
-                    class="btn-2 bg-quaternary hover:bg-primary smooth-transition-200 w-full"
+                    class="btn-2 bg-quaternary hover:bg-primary smooth-transition-200 dark:bg-primary dark:text-light w-full shadow-black dark:hover:bg-black"
                   >
                     Submit<i class="fa-regular fa-paper-plane fa-xl ms-1"></i>
                   </button>
@@ -841,7 +924,7 @@
                   <button
                     id="btn-loading"
                     type="button"
-                    class="btn-2 bg-dark hover:bg-dark/80 smooth-transition-200 hidden w-full text-white"
+                    class="btn-2 bg-dark hover:bg-dark/80 smooth-transition-200 dark:bg-senary dark:hover:bg-septenary text-light dark:text-dark hidden w-full"
                   >
                     Loading<i
                       class="fa-solid fa-spinner fa-xl ms-1 animate-spin"
@@ -850,14 +933,14 @@
                 </form>
 
                 <div
-                  class="relative flex items-center justify-center px-2 pt-10 pb-8"
+                  class="relative flex items-center justify-center px-2 pt-10 pb-1"
                 >
                   <div
-                    class="absolute h-0.5 w-3/4 border-b-4 border-dashed border-black opacity-50"
+                    class="absolute h-0.5 w-3/4 border-b-4 border-dashed border-black opacity-50 dark:border-white"
                   ></div>
 
                   <div
-                    class="shadow-c-xs smooth-transition-300 relative z-10 -rotate-6 border-2 border-black bg-white px-4 py-1 hover:rotate-6"
+                    class="shadow-c-xs smooth-transition-300 dark:bg-senary relative z-10 -rotate-6 border-2 border-black bg-white px-4 py-1 hover:rotate-6"
                   >
                     <span class="text-xl font-black">OR</span>
                   </div>
@@ -928,10 +1011,12 @@
     </main>
 
     <footer
-      class="shadow-footer shadow-primary/20 relative flex justify-center bg-white"
+      class="shadow-footer shadow-primary/20 relative flex justify-center bg-white dark:bg-slate-900"
     >
-      <div class="w-3/4 rounded-sm border-t-4 border-black/30 py-8 text-center">
-        <p class="text-base font-medium">
+      <div
+        class="w-3/4 rounded-sm border-t-4 border-black/30 py-8 text-center dark:border-slate-700"
+      >
+        <p class="text-dark dark:text-senary text-base font-medium">
           &copy;<span id="year"></span> <b class="font-bold">Naufallevi</b>.
           Made with <i class="fa-solid fa-heart text-red-500"></i> and
           <i class="fa-solid fa-mug-hot text-amber-800"></i>
@@ -939,10 +1024,11 @@
       </div>
     </footer>
 
+    <div class=""></div>
     <a
       id="scrollToTop"
       href="#home"
-      class="bg-primary shadow-c-md text-light smooth-transition-500 fixed right-10 -bottom-50 inline-flex items-center justify-center rounded-md border-2 border-transparent p-3 shadow-black hover:translate-px hover:border-2 hover:border-black hover:shadow-none"
+      class="bg-primary hover:bg-quaternary shadow-c-md text-dark smooth-transition-500 fixed right-10 -bottom-50 inline-flex items-center justify-center rounded-md border-2 border-transparent p-3 shadow-black hover:translate-px hover:border-2 hover:border-black hover:shadow-none"
       ><i class="fa-solid fa-arrow-up"></i
     ></a>
 
